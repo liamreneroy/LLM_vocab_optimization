@@ -1,0 +1,190 @@
+>>>>>>>>> PROMPT <<<<<<<<<<<
+
+You are an expert roboticist and understand how to design communicative expressions for human-robot interaction.
+
+Consider a scenario where you are collaborating with a dog-shaped quadruped robot to locate and pick strawberries in a strawberry patch.
+
+In this scenario, the robot can be in one of 5 possible states. The data in this list is in the format: "State Number: [State Name, State Description]"
+
+S04: [Needs Help, The robot is experiencing an error and needs help from the user]
+
+S05: [Confused, The robot is confused and unsure what to do]
+
+S02: [Analyzing Object, The robot is analyzing a target object in front of it on the ground]
+
+S01: [Waiting for Input, The robot is in standby mode waiting for a command from the user]
+
+S03: [Found Object, The robot has found a target object in front of it on the ground]
+
+S06: [Unsure, It is unclear as the robot does not appear to be in any of the described states.]
+
+—————————
+
+Below is a description of the robot using its body pose to express its internal state:
+
+In this scenario, the dog-shaped quadruped robot tilts its torso to the left and leans it forward, maintaining this position for 8 seconds.
+
+—————————
+
+Your task:
+
+Please estimate what state you think the robot is in based on this description. If none of the states seem to match the description, select 'Unsure'.
+
+Your response must be a single line in the exact format shown below (see example and reference):
+
+[State_Number, State_Name]
+
+Reference: 
+State_Number = number of the selected robot state (e.g. S01)
+State_Name = name of the selected robot state (e.g. Analyzing Object)
+
+
+
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+
+>>>>>>>>> SAMPLE REPLY FOR 20 ITERATIONS <<<<<<<<<<<
+
+
+~~~~~~~~~~~~ Iteration 00
+[S04, Needs Help] 
+
+
+Appending: S04, Needs Help
+
+
+~~~~~~~~~~~~ Iteration 01
+[S03, Found Object] 
+
+
+Appending: S03, Found Object
+
+
+~~~~~~~~~~~~ Iteration 02
+[S03, Found Object] 
+
+
+Appending: S03, Found Object
+
+
+~~~~~~~~~~~~ Iteration 03
+[S05, Confused] 
+
+
+Appending: S05, Confused
+
+
+~~~~~~~~~~~~ Iteration 04
+[S05, Confused] 
+
+
+Appending: S05, Confused
+
+
+~~~~~~~~~~~~ Iteration 05
+[S03, Found Object] 
+
+
+Appending: S03, Found Object
+
+
+~~~~~~~~~~~~ Iteration 06
+[S05, Confused] 
+
+
+Appending: S05, Confused
+
+
+~~~~~~~~~~~~ Iteration 07
+[S03, Found Object] 
+
+
+Appending: S03, Found Object
+
+
+~~~~~~~~~~~~ Iteration 08
+[S03, Found Object] 
+
+
+Appending: S03, Found Object
+
+
+~~~~~~~~~~~~ Iteration 09
+[S03, Found Object] 
+
+
+Appending: S03, Found Object
+
+
+~~~~~~~~~~~~ Iteration 10
+[S04, Needs Help] 
+
+
+Appending: S04, Needs Help
+
+
+~~~~~~~~~~~~ Iteration 11
+[S03, Found Object] 
+
+
+Appending: S03, Found Object
+
+
+~~~~~~~~~~~~ Iteration 12
+[S05, Confused] 
+
+
+Appending: S05, Confused
+
+
+~~~~~~~~~~~~ Iteration 13
+[S03, Found Object] 
+
+
+Appending: S03, Found Object
+
+
+~~~~~~~~~~~~ Iteration 14
+[S05, Confused] 
+
+
+Appending: S05, Confused
+
+
+~~~~~~~~~~~~ Iteration 15
+[S03, Found Object] 
+
+
+Appending: S03, Found Object
+
+
+~~~~~~~~~~~~ Iteration 16
+[S03, Found Object] 
+
+
+Appending: S03, Found Object
+
+
+~~~~~~~~~~~~ Iteration 17
+[S02, Analyzing Object] 
+
+
+Appending: S02, Analyzing Object
+
+
+~~~~~~~~~~~~ Iteration 18
+[S04, Needs Help] 
+
+
+Appending: S04, Needs Help
+
+
+~~~~~~~~~~~~ Iteration 19
+[S05, Confused] 
+
+
+Appending: S05, Confused
+
+
+completed 20 iterations with 0 match errors
