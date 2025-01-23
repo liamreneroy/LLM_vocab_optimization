@@ -1,0 +1,98 @@
+Script started on Thu Jan 23 14:27:10 2025
+^[^[^Z^Z^C^[[A
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization]1;.._optimization]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization[39m % [K[?1h=[?2004hconda update all[?1l>[?2004l
+]2;conda update all]1;conda
+PackageNotInstalledError: Package is not installed in prefix.
+  prefix: /Users/liamroy/miniforge3
+  package name: all
+
+
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization]1;.._optimization]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization[39m % [K[?1h=[?2004hconda update all            c  ccd scripts[1m/[0m[0m [?1l>[?2004l
+]2;cd scripts]1;cd[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hlls[?1l>[?2004l
+]2;ls -G]1;ls[1m[36m__pycache__[39;49m[0m                   [1m[36marchive[39;49m[0m                       go1_obj.py                    main.py
+accuracy_proxy_gpt4o_V5.ipynb confusion_matrix.ipynb        helper_functions.py           prompt_builder.py
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hggo
+[J[0m_bogofilter  [J_django      [J_go          [Jlogout     [J[A[0m[27m[24m[39m[105Cgo[K[39mg  ppthon3 go1_obj.py[1m [0m[0m [?1l>[?2004l
+[J]2;pthon3 go1_obj.py]1;pthon3zsh: command not found: pthon3
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hpthon3 go1_obj.py[1Cpython3 go1_obj.py[16D[?1l>[?2004l
+]2;python3 go1_obj.py]1;python3Parameter ranges:
+Body Tilt: 3
+Body Lean: 3
+Body Height: 3
+Body Direction: 2
+Motion Velocity: 3
+Motion Smoothness: 2
+
+Generated description with test values:
+
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hpython3 go1_obj.py[?1l>[?2004l
+]2;python3 go1_obj.py]1;python3Parameter ranges:
+Body Tilt: 3
+Body Lean: 3
+Body Height: 3
+Body Direction: 2
+Motion Velocity: 3
+Motion Smoothness: 2
+
+Generated description with test values:
+, , , , , and  
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hpython3 go1_obj.py[?1l>[?2004l
+]2;python3 go1_obj.py]1;python3Parameter ranges:
+Body Tilt: 3
+Body Lean: 3
+Body Height: 3
+Body Direction: 2
+Motion Velocity: 3
+Motion Smoothness: 2
+
+Generated description with test values:
+, , , , , and  
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hpython3 go1_obj.py[?1l>[?2004l
+]2;python3 go1_obj.py]1;python3Parameter ranges:
+Body Tilt: 3
+Body Lean: 3
+Body Height: 3
+Body Direction: 2
+Motion Velocity: 3
+Motion Smoothness: 2
+
+Generated description with test values:
+, , , , , and  
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hpython3 go1_obj.py[?1l>[?2004l
+]2;python3 go1_obj.py]1;python3Parameter ranges:
+Body Tilt: 3
+Body Lean: 3
+Body Height: 3
+Body Direction: 2
+Motion Velocity: 3
+Motion Smoothness: 2
+
+Generated description with test values:
+parameter_strings:  {'Body Tilt': '', 'Body Lean': '', 'Body Height': '', 'Body Direction': '', 'Motion Velocity': '', 'Motion Smoothness': ''}
+, , , , , and  
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004h[?1l>[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hpython3 go1_obj.py[?1l>[?2004l
+]2;python3 go1_obj.py]1;python3Parameter ranges:
+Body Tilt: 3
+Body Lean: 3
+Body Height: 3
+Body Direction: 2
+Motion Velocity: 3
+Motion Smoothness: 2
+
+Generated description with test values:
+parameter_strings:  {'Body Tilt': '', 'Body Lean': 'The robot leans its torso forward', 'Body Height': '', 'Body Direction': '', 'Motion Velocity': '', 'Motion Smoothness': "The robot's motion is unsmooth and shaky."}
+, The robot leans its torso forward, , , , The robot's motion is unsmooth and shaky and .
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hpython3 go1_obj.py[?1l>[?2004l
+]2;python3 go1_obj.py]1;python3Parameter ranges:
+Body Tilt: 3
+Body Lean: 3
+Body Height: 3
+Body Direction: 2
+Motion Velocity: 3
+Motion Smoothness: 2
+
+Generated description with test values:
+parameter_strings:  {'Body Tilt': 'The robot tilts its torso to the right', 'Body Lean': 'The robot leans its torso forward', 'Body Height': '', 'Body Direction': 'The robot faces a nearby strawberry in the scene.', 'Motion Velocity': '', 'Motion Smoothness': ''}
+The robot tilts its torso to the right, The robot leans its torso forward and The robot faces a nearby strawberry in the scene.
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004h

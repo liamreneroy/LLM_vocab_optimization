@@ -58,32 +58,32 @@ class Robot:
 
         # USER TUNED: Adjust index of non-default descriptions to generate a dictionary of strings for each parameter
         parameter_strings = {
-            "Body Tilt": maybe_include(omission_probability, self.parameter_descriptions["Body Tilt"][0] if self.active_parameters[0] == "left" else self.parameter_descriptions["Body Tilt"][2] if self.active_parameters[0] == "right" else ""),
-            "Body Lean": maybe_include(omission_probability, self.parameter_descriptions["Body Lean"][0] if self.active_parameters[1] == "backward" else self.parameter_descriptions["Body Lean"][2] if self.active_parameters[1] == "forward" else ""),
-            "Body Height": maybe_include(omission_probability, self.parameter_descriptions["Body Height"][0] if self.active_parameters[2] == "low" else self.parameter_descriptions["Body Height"][2] if self.active_parameters[2] == "high" else ""),
-            "Body Direction": maybe_include(omission_probability, self.parameter_descriptions["Body Direction"][1] if self.active_parameters[3] == "user" else self.parameter_descriptions["Body Direction"][2] if self.active_parameters[3] == "object" else ""),
-            "Motion Velocity": maybe_include(omission_probability, self.parameter_descriptions["Motion Velocity"][0] if self.active_parameters[4] == "slow" else self.parameter_descriptions["Motion Velocity"][2] if self.active_parameters[4] == "fast" else ""),
-            "Motion Smoothness": maybe_include(omission_probability, self.parameter_descriptions["Motion Smoothness"][1] if self.active_parameters[5] == "smooth" else self.parameter_descriptions["Motion Smoothness"][2] if self.active_parameters[5] == "shaky" else "")
+            "Body Tilt": maybe_include(omission_probability, self.parameter_descriptions["Body Tilt"][0] if self.active_parameters[0] == 0 else self.parameter_descriptions["Body Tilt"][2] if self.active_parameters[0] == 2 else ""),
+            "Body Lean": maybe_include(omission_probability, self.parameter_descriptions["Body Lean"][0] if self.active_parameters[1] == 0 else self.parameter_descriptions["Body Lean"][2] if self.active_parameters[1] == 2 else ""),
+            "Body Height": maybe_include(omission_probability, self.parameter_descriptions["Body Height"][0] if self.active_parameters[2] == 0 else self.parameter_descriptions["Body Height"][2] if self.active_parameters[2] == 2 else ""),
+            "Body Direction": maybe_include(omission_probability, self.parameter_descriptions["Body Direction"][0] if self.active_parameters[3] == 0 else self.parameter_descriptions["Body Direction"][1] if self.active_parameters[3] == 1 else ""),
+            "Motion Velocity": maybe_include(omission_probability, self.parameter_descriptions["Motion Velocity"][0] if self.active_parameters[4] == 0 else self.parameter_descriptions["Motion Velocity"][2] if self.active_parameters[4] == 2 else ""),
+            "Motion Smoothness": maybe_include(omission_probability, self.parameter_descriptions["Motion Smoothness"][0] if self.active_parameters[5] == 0 else self.parameter_descriptions["Motion Smoothness"][1] if self.active_parameters[5] == 1 else "")
         }
         
+        print("parameter_strings: ", parameter_strings)
 
-        ## FIX THIS BELOW LATER
 
-        # Filter out None values and empty strings
-        non_empty_strings = [s for s in parameter_strings.values() if s is not None and s != ""]
+        # Filter out empty strings and combine non-empty parameter strings
+        non_empty_strings = [s for s in parameter_strings.values() if s]
         
-        # Format with commas and 'and' before last item
-        if len(non_empty_strings) > 1:
-            formatted_text = ", ".join(non_empty_strings[:-1]) + " and " + non_empty_strings[-1]
+        if not non_empty_strings:
+            return ""
         elif len(non_empty_strings) == 1:
-            formatted_text = non_empty_strings[0]
+            return non_empty_strings[0]
         else:
-            formatted_text = ""
-            
-        return formatted_text
+            # Join all but last item with commas, then add 'and' before last item
+            return ", ".join(non_empty_strings[:-1]) + " and " + non_empty_strings[-1]
 
 
-
+        # Notes for above code to change later: 
+        # 1. We want to order the parameters in a way that makes sense for the robot to perform the action
+        # Achieve this by adjusting the order that parameters are defined in the parameter_descriptions dictionary (See old main)
 
 
     # Class Getters
@@ -123,3 +123,4 @@ robot.set_active_parameter(test_values)
 print("\nGenerated description with test values:")
 description = robot.generate_description(omission_probability=0.5)
 print(description)
+
