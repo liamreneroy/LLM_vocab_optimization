@@ -95,4 +95,409 @@ Motion Smoothness: 2
 Generated description with test values:
 parameter_strings:  {'Body Tilt': 'The robot tilts its torso to the right', 'Body Lean': 'The robot leans its torso forward', 'Body Height': '', 'Body Direction': 'The robot faces a nearby strawberry in the scene.', 'Motion Velocity': '', 'Motion Smoothness': ''}
 The robot tilts its torso to the right, The robot leans its torso forward and The robot faces a nearby strawberry in the scene.
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hpython3 go1_obj.py[?1l>[?2004l
+]2;python3 go1_obj.py]1;python3Parameter ranges:
+Body Direction: 2
+Body Tilt: 3
+Body Lean: 3
+Body Height: 3
+Motion Smoothness: 2
+Motion Velocity: 3
+Traceback (most recent call last):
+  File "/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts/go1_obj.py", line 122, in <module>
+    robot.set_active_parameter(test_values)
+  File "/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts/go1_obj.py", line 50, in set_active_parameter
+    raise ValueError(f"Value index {value_idx} out of range for parameter {param_name}")
+ValueError: Value index 2 out of range for parameter Body Direction
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hpython3 go1_obj.py[?1l>[?2004l
+]2;python3 go1_obj.py]1;python3Parameter ranges:
+Body Direction: 2
+Body Tilt: 3
+Body Lean: 3
+Body Height: 3
+Motion Smoothness: 2
+Motion Velocity: 3
+
+Generated description with test values:
+parameter_strings:  {'Body Direction': '', 'Body Tilt': '', 'Body Lean': '', 'Body Height': '', 'Motion Smoothness': "The robot's motion is unsmooth and shaky.", 'Motion Velocity': ''}
+The robot's motion is unsmooth and shaky.
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hpython3 go1_obj.py[?1l>[?2004l
+]2;python3 go1_obj.py]1;python3Parameter ranges:
+Body Direction: 2
+Body Tilt: 3
+Body Lean: 3
+Body Height: 3
+Motion Smoothness: 2
+Motion Velocity: 3
+
+Generated description with test values:
+parameter_strings:  {'Body Direction': '', 'Body Tilt': '', 'Body Lean': '', 'Body Height': '', 'Motion Smoothness': '', 'Motion Velocity': 'The robot moves slowly to achieve this pose.'}
+The robot moves slowly to achieve this pose.
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hpython3 go1_obj.py[?1l>[?2004l
+]2;python3 go1_obj.py]1;python3Parameter ranges:
+Body Direction: 2
+Body Tilt: 3
+Body Lean: 3
+Body Height: 3
+Motion Smoothness: 2
+Motion Velocity: 3
+
+Generated description with test values:
+parameter_strings:  {'Body Direction': '', 'Body Tilt': 'The robot tilts its torso to the left', 'Body Lean': 'The robot leans its torso backwards', 'Body Height': 'The robot lowers its body to the ground', 'Motion Smoothness': "The robot's motion is unsmooth and shaky.", 'Motion Velocity': 'The robot moves slowly to achieve this pose.'}
+The robot tilts its torso to the left, The robot leans its torso backwards, The robot lowers its body to the ground, The robot's motion is unsmooth and shaky. and The robot moves slowly to achieve this pose.
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hpython3 go1_obj.py[?1l>[?2004l
+]2;python3 go1_obj.py]1;python3Parameter ranges:
+Body Direction: 2
+Body Tilt: 3
+Body Lean: 3
+Body Height: 3
+Motion Smoothness: 2
+Motion Velocity: 3
+
+Generated description with test values:
+parameter_strings:  {'Body Direction': '', 'Body Tilt': '', 'Body Lean': '', 'Body Height': 'The robot lowers its body to the ground', 'Motion Smoothness': "The robot's motion is unsmooth and shaky.", 'Motion Velocity': 'The robot moves slowly to achieve this pose.'}
+The robot lowers its body to the ground, The robot's motion is unsmooth and shaky. and The robot moves slowly to achieve this pose.
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hpython3 go1_obj.py[?1l>[?2004l
+]2;python3 go1_obj.py]1;python3
+Generated description with test values:
+parameter_strings:  {'Body Direction': 'The robot faces a nearby strawberry in the scene.', 'Body Tilt': '', 'Body Lean': '', 'Body Height': 'The robot lowers its body to the ground', 'Motion Smoothness': "The robot's motion is unsmooth and shaky.", 'Motion Velocity': ''}
+The robot faces a nearby strawberry in the scene., The robot lowers its body to the ground and The robot's motion is unsmooth and shaky.
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hpython3 go1_obj.py[?1l>[?2004l
+]2;python3 go1_obj.py]1;python3
+Generated description with test values:
+parameter_strings:  {'Body Direction': 'The robot faces a nearby strawberry in the scene.', 'Body Tilt': 'The robot tilts its torso to the left', 'Body Lean': 'The robot leans its torso backwards', 'Body Height': 'The robot lowers its body to the ground', 'Motion Smoothness': "The robot's motion is unsmooth and shaky.", 'Motion Velocity': 'The robot moves slowly to achieve this pose.'}
+The robot faces a nearby strawberry in the scene., The robot tilts its torso to the left, The robot leans its torso backwards, The robot lowers its body to the ground, The robot's motion is unsmooth and shaky. and The robot moves slowly to achieve this pose.
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hpython3 go1_obj.py[?1l>[?2004l
+]2;python3 go1_obj.py]1;python3
+Generated description with test values:
+parameter_strings:
+  Body Direction: The robot faces a nearby strawberry in the scene.
+  Body Tilt: The robot tilts its torso to the left
+  Body Lean: The robot leans its torso backwards
+  Body Height: The robot lowers its body to the ground
+  Motion Smoothness: The robot's motion is unsmooth and shaky.
+  Motion Velocity: The robot moves slowly to achieve this pose.
+The robot faces a nearby strawberry in the scene., The robot tilts its torso to the left, The robot leans its torso backwards, The robot lowers its body to the ground, The robot's motion is unsmooth and shaky. and The robot moves slowly to achieve this pose.
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hpython3 go1_obj.py[?1l>[?2004l
+]2;python3 go1_obj.py]1;python3
+Generated description with test values:
+
+parameter_strings:
+  Body Direction: The robot faces a nearby strawberry in the scene.
+  Body Tilt: The robot tilts its torso to the left
+  Body Lean: The robot leans its torso backwards
+  Body Height: The robot lowers its body to the ground
+  Motion Smoothness: The robot's motion is unsmooth and shaky.
+  Motion Velocity: The robot moves slowly to achieve this pose.
+
+The robot faces a nearby strawberry in the scene., The robot tilts its torso to the left, The robot leans its torso backwards, The robot lowers its body to the ground, The robot's motion is unsmooth and shaky. and The robot moves slowly to achieve this pose.
+
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hpython3 go1_obj.py[?1l>[?2004l
+]2;python3 go1_obj.py]1;python3
+Generated description with test values:
+
+unadjusted parameter_strings:
+  Body Direction: The robot faces a nearby strawberry in the scene.
+  Body Tilt: The robot tilts its torso to the left
+  Body Lean: The robot leans its torso backwards
+  Body Height: The robot lowers its body to the ground
+  Motion Smoothness: The robot's motion is unsmooth and shaky.
+  Motion Velocity: The robot moves slowly to achieve this pose.
+
+parameter_strings:
+  Body Direction: 
+  Body Tilt: The robot tilts its torso to the left
+  Body Lean: 
+  Body Height: 
+  Motion Smoothness: 
+  Motion Velocity: 
+
+The robot tilts its torso to the left
+
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hpython3 go1_obj.py[?1l>[?2004l
+]2;python3 go1_obj.py]1;python3
+Generated description with test values:
+
+unadjusted parameter_strings:
+  Body Direction: The robot faces a nearby strawberry in the scene.
+  Body Tilt: The robot tilts its torso to the left
+  Body Lean: The robot leans its torso backwards
+  Body Height: The robot lowers its body to the ground
+  Motion Smoothness: The robot's motion is unsmooth and shaky.
+  Motion Velocity: The robot moves slowly to achieve this pose.
+
+parameter_strings:
+  Body Direction: The robot faces a nearby strawberry in the scene.
+  Body Tilt: The robot tilts its torso to the left
+  Body Lean: The robot leans its torso backwards
+  Body Height: 
+  Motion Smoothness: 
+  Motion Velocity: The robot moves slowly to achieve this pose.
+
+The robot faces a nearby strawberry in the scene., The robot tilts its torso to the left, The robot leans its torso backwards and The robot moves slowly to achieve this pose.
+
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hpython3 go1_obj.py[?1l>[?2004l
+]2;python3 go1_obj.py]1;python3
+Generated description with test values:
+
+unadjusted parameter_strings:
+  Body Direction: The robot faces a nearby strawberry in the scene.
+  Body Tilt: The robot tilts its torso to the left
+  Body Lean: The robot leans its torso backwards
+  Body Height: The robot lowers its body to the ground
+  Motion Smoothness: The robot's motion is unsmooth and shaky.
+  Motion Velocity: The robot moves slowly to achieve this pose.
+
+parameter_strings:
+  Body Direction: 
+  Body Tilt: 
+  Body Lean: The robot leans its torso backwards
+  Body Height: 
+  Motion Smoothness: The robot's motion is unsmooth and shaky.
+  Motion Velocity: The robot moves slowly to achieve this pose.
+
+The robot leans its torso backwards, The robot's motion is unsmooth and shaky. and The robot moves slowly to achieve this pose.
+
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hpython3 go1_obj.py[?1l>[?2004l
+]2;python3 go1_obj.py]1;python3
+Generated description with test values:
+
+unadjusted parameter_strings:
+  Body Direction: The robot faces a nearby strawberry in the scene.
+  Body Tilt: The robot tilts its torso to the left
+  Body Lean: The robot leans its torso backwards
+  Body Height: The robot lowers its body to the ground
+  Motion Smoothness: The robot's motion is unsmooth and shaky.
+  Motion Velocity: The robot moves slowly to achieve this pose.
+
+parameter_strings:
+  Body Direction: The robot faces a nearby strawberry in the scene.
+  Body Tilt: The robot tilts its torso to the left
+  Body Lean: 
+  Body Height: 
+  Motion Smoothness: The robot's motion is unsmooth and shaky.
+  Motion Velocity: The robot moves slowly to achieve this pose.
+
+The robot faces a nearby strawberry in the scene., The robot tilts its torso to the left, The robot's motion is unsmooth and shaky. and The robot moves slowly to achieve this pose.
+
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hpython3 go1_obj.py[?1l>[?2004l
+]2;python3 go1_obj.py]1;python3
+Generated description with test values:
+
+unadjusted parameter_strings:
+  Body Direction: The robot faces a nearby strawberry in the scene.
+  Body Tilt: The robot tilts its torso to the left
+  Body Lean: The robot leans its torso backwards
+  Body Height: The robot lowers its body to the ground
+  Motion Smoothness: The robot's motion is unsmooth and shaky.
+  Motion Velocity: The robot moves slowly to achieve this pose.
+
+parameter_strings:
+  Body Direction: The robot faces a nearby strawberry in the scene.
+  Body Tilt: The robot tilts its torso to the left
+  Body Lean: The robot leans its torso backwards
+  Body Height: The robot lowers its body to the ground
+  Motion Smoothness: The robot's motion is unsmooth and shaky.
+  Motion Velocity: The robot moves slowly to achieve this pose.
+
+The robot faces a nearby strawberry in the scene., The robot tilts its torso to the left, The robot leans its torso backwards, The robot lowers its body to the ground, The robot's motion is unsmooth and shaky. and The robot moves slowly to achieve this pose.
+
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hpython3 go1_obj.py[?1l>[?2004l
+]2;python3 go1_obj.py]1;python3
+Generated description with test values:
+
+unadjusted parameter_strings:
+  Body Direction: The robot faces a nearby strawberry in the scene.
+  Body Tilt: The robot tilts its torso to the left
+  Body Lean: The robot leans its torso backwards
+  Body Height: The robot lowers its body to the ground
+  Motion Smoothness: The robot's motion is unsmooth and shaky.
+  Motion Velocity: The robot moves slowly to achieve this pose.
+
+parameter_strings:
+  Body Direction: 
+  Body Tilt: The robot tilts its torso to the left
+  Body Lean: 
+  Body Height: 
+  Motion Smoothness: 
+  Motion Velocity: 
+
+The robot tilts its torso to the left
+
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hpython3 go1_obj.py[?1l>[?2004l
+]2;python3 go1_obj.py]1;python3
+Generated description with test values:
+
+unadjusted parameter_strings:
+  Body Direction: The robot faces a nearby strawberry in the scene.
+  Body Tilt: The robot tilts its torso to the left
+  Body Lean: The robot leans its torso backwards
+  Body Height: The robot lowers its body to the ground
+  Motion Smoothness: The robot's motion is unsmooth and shaky.
+  Motion Velocity: The robot moves slowly to achieve this pose.
+
+parameter_strings:
+  Body Direction: 
+  Body Tilt: 
+  Body Lean: 
+  Body Height: 
+  Motion Smoothness: The robot's motion is unsmooth and shaky.
+  Motion Velocity: 
+
+The robot's motion is unsmooth and shaky.
+
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hpython3 go1_obj.py[?1l>[?2004l
+]2;python3 go1_obj.py]1;python3
+Generated description with test values:
+
+unadjusted parameter_strings:
+  Body Direction: The robot faces a nearby strawberry in the scene.
+  Body Tilt: The robot tilts its torso to the left
+  Body Lean: The robot leans its torso backwards
+  Body Height: The robot lowers its body to the ground
+  Motion Smoothness: The robot's motion is unsmooth and shaky.
+  Motion Velocity: The robot moves slowly to achieve this pose.
+
+parameter_strings:
+  Body Direction: The robot faces a nearby strawberry in the scene.
+  Body Tilt: 
+  Body Lean: 
+  Body Height: 
+  Motion Smoothness: 
+  Motion Velocity: 
+
+The robot faces a nearby strawberry in the scene.
+
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hpython3 go1_obj.py[?1l>[?2004l
+]2;python3 go1_obj.py]1;python3
+Generated description with test values:
+
+unadjusted parameter_strings:
+  Body Direction: The robot faces a nearby strawberry in the scene.
+  Body Tilt: The robot tilts its torso to the left
+  Body Lean: The robot leans its torso backwards
+  Body Height: The robot lowers its body to the ground
+  Motion Smoothness: The robot's motion is unsmooth and shaky.
+  Motion Velocity: The robot moves slowly to achieve this pose.
+
+parameter_strings:
+  Body Direction: 
+  Body Tilt: The robot tilts its torso to the left
+  Body Lean: The robot leans its torso backwards
+  Body Height: The robot lowers its body to the ground
+  Motion Smoothness: The robot's motion is unsmooth and shaky.
+  Motion Velocity: The robot moves slowly to achieve this pose.
+
+The robot tilts its torso to the left, The robot leans its torso backwards, The robot lowers its body to the ground, The robot's motion is unsmooth and shaky. and The robot moves slowly to achieve this pose.
+
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hpython3 go1_obj.py[?1l>[?2004l
+]2;python3 go1_obj.py]1;python3
+Generated description with test values:
+
+unadjusted parameter_strings:
+  Body Direction: The robot faces a nearby strawberry in the scene.
+  Body Tilt: The robot tilts its torso to the left
+  Body Lean: The robot leans its torso backwards
+  Body Height: The robot lowers its body to the ground
+  Motion Smoothness: The robot's motion is unsmooth and shaky.
+  Motion Velocity: The robot moves slowly to achieve this pose.
+
+parameter_strings:
+  Body Direction: 
+  Body Tilt: The robot tilts its torso to the left
+  Body Lean: The robot leans its torso backwards
+  Body Height: The robot lowers its body to the ground
+  Motion Smoothness: The robot's motion is unsmooth and shaky.
+  Motion Velocity: 
+
+The robot tilts its torso to the left, The robot leans its torso backwards, The robot lowers its body to the ground and The robot's motion is unsmooth and shaky.
+
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hpython3 go1_obj.py[?1l>[?2004l
+]2;python3 go1_obj.py]1;python3
+Generated description with test values:
+
+unadjusted parameter_strings:
+  Body Direction: The robot faces a nearby strawberry in the scene.
+  Body Tilt: The robot tilts its torso to the left
+  Body Lean: The robot leans its torso backwards
+  Body Height: The robot lowers its body to the ground
+  Motion Smoothness: The robot's motion is unsmooth and shaky.
+  Motion Velocity: The robot moves slowly to achieve this pose.
+
+parameter_strings:
+  Body Direction: 
+  Body Tilt: 
+  Body Lean: 
+  Body Height: The robot lowers its body to the ground
+  Motion Smoothness: 
+  Motion Velocity: 
+
+The robot lowers its body to the ground
+
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hpython3 go1_obj.py[?1l>[?2004l
+]2;python3 go1_obj.py]1;python3
+Generated description with test values:
+
+unadjusted parameter_strings:
+  Body Direction: The robot faces a nearby strawberry in the scene.
+  Body Tilt: The robot tilts its torso to the left
+  Body Lean: The robot leans its torso backwards
+  Body Height: The robot lowers its body to the ground
+  Motion Smoothness: The robot's motion is unsmooth and shaky.
+  Motion Velocity: The robot moves slowly to achieve this pose.
+
+parameter_strings:
+  Body Direction: The robot faces a nearby strawberry in the scene.
+  Body Tilt: The robot tilts its torso to the left
+  Body Lean: The robot leans its torso backwards
+  Body Height: The robot lowers its body to the ground
+  Motion Smoothness: The robot's motion is unsmooth and shaky.
+  Motion Velocity: The robot moves slowly to achieve this pose.
+
+The robot faces a nearby strawberry in the scene., The robot tilts its torso to the left, The robot leans its torso backwards, The robot lowers its body to the ground, The robot's motion is unsmooth and shaky. and The robot moves slowly to achieve this pose.
+
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hpython3 go1_obj.py[?1l>[?2004l
+]2;python3 go1_obj.py]1;python3
+Generated description with test values:
+
+unadjusted parameter_strings:
+  Body Direction: The robot faces a nearby strawberry in the scene.
+  Body Tilt: The robot tilts its torso to the left
+  Body Lean: The robot leans its torso backwards
+  Body Height: The robot lowers its body to the ground
+  Motion Smoothness: The robot's motion is unsmooth and shaky.
+  Motion Velocity: The robot moves slowly to achieve this pose.
+
+parameter_strings:
+  Body Direction: 
+  Body Tilt: The robot tilts its torso to the left
+  Body Lean: 
+  Body Height: 
+  Motion Smoothness: The robot's motion is unsmooth and shaky.
+  Motion Velocity: 
+
+The robot tilts its torso to the left and The robot's motion is unsmooth and shaky.
+
+[1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004hpython3 go1_obj.py[?1l>[?2004l
+]2;python3 go1_obj.py]1;python3
+Generated description with test values:
+
+unadjusted parameter_strings:
+  Body Direction: The robot faces a nearby strawberry in the scene.
+  Body Tilt: The robot tilts its torso to the left
+  Body Lean: The robot leans its torso backwards
+  Body Height: The robot lowers its body to the ground
+  Motion Smoothness: The robot's motion is unsmooth and shaky.
+  Motion Velocity: The robot moves slowly to achieve this pose.
+
+parameter_strings:
+  Body Direction: 
+  Body Tilt: 
+  Body Lean: The robot leans its torso backwards
+  Body Height: The robot lowers its body to the ground
+  Motion Smoothness: The robot's motion is unsmooth and shaky.
+  Motion Velocity: 
+
+The robot leans its torso backwards The robot lowers its body to the ground and The robot's motion is unsmooth and shaky.
+
 [1m[7m%[27m[1m[0m                                                                                                                                                        ]2;liamroy@liams-mbp:~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts]1;..ation/scripts]7;file://liams-mbp.ucalgary.ca/Users/liamroy/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts\[0m[27m[24m[J(base) [38;5;226mliamroy[39m [38;5;121m~/Documents/Studies/Monash_31194990/PHD/Studies/Study_04/LLM_vocab_optimization/scripts[39m % [K[?1h=[?2004h

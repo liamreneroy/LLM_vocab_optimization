@@ -12,12 +12,12 @@ class Robot:
         # USER TUNED: PARAMETER DESCRIPTIONS
         # Descriptions of each parameter. Note "" is the default description.
         self.parameter_descriptions = {             
+            "Body Direction": ["The robot faces the user in the scene.", "The robot faces a nearby strawberry in the scene."],
             "Body Tilt": ["The robot tilts its torso to the left", "", "The robot tilts its torso to the right"],
             "Body Lean": ["The robot leans its torso backwards", "", "The robot leans its torso forward"],
             "Body Height": ["The robot lowers its body to the ground", "", "The robot raises its torso as high as it can"],
-            "Body Direction": ["The robot faces the user in the scene.", "The robot faces a nearby strawberry in the scene."],
-            "Motion Velocity": ["The robot moves slowly to achieve this pose.", "", "The robot moves quickly to achieve this pose."],
-            "Motion Smoothness": ["The robot's motion is smooth without any disturbances.", "The robot's motion is unsmooth and shaky."]
+            "Motion Smoothness": ["The robot's motion is smooth without any disturbances.", "The robot's motion is unsmooth and shaky."],
+            "Motion Velocity": ["The robot moves slowly to achieve this pose.", "", "The robot moves quickly to achieve this pose."]
         }
 
         # PASSIVE PARAMETERS
@@ -56,17 +56,36 @@ class Robot:
     def generate_description(self, omission_probability=0.5):
         """Generates a description of active parameters with random omissions"""
 
+        # Direction -> Pose -> Smoothness -> Velocity
+
+
+        unadjusted_parameter_strings = {
+            "Body Direction": self.parameter_descriptions["Body Direction"][0] if self.active_parameters[0] == 0 else self.parameter_descriptions["Body Direction"][1] if self.active_parameters[0] == 1 else "",
+            "Body Tilt": self.parameter_descriptions["Body Tilt"][0] if self.active_parameters[1] == 0 else self.parameter_descriptions["Body Tilt"][2] if self.active_parameters[1] == 2 else "",
+            "Body Lean": self.parameter_descriptions["Body Lean"][0] if self.active_parameters[2] == 0 else self.parameter_descriptions["Body Lean"][2] if self.active_parameters[2] == 2 else "",
+            "Body Height": self.parameter_descriptions["Body Height"][0] if self.active_parameters[3] == 0 else self.parameter_descriptions["Body Height"][2] if self.active_parameters[3] == 2 else "",
+            "Motion Smoothness": self.parameter_descriptions["Motion Smoothness"][0] if self.active_parameters[4] == 0 else self.parameter_descriptions["Motion Smoothness"][1] if self.active_parameters[4] == 1 else "",
+            "Motion Velocity": self.parameter_descriptions["Motion Velocity"][0] if self.active_parameters[5] == 0 else self.parameter_descriptions["Motion Velocity"][2] if self.active_parameters[5] == 2 else ""
+        }
+
+        print("\nunadjusted parameter_strings:")
+        for param, value in unadjusted_parameter_strings.items():
+            print(f"  {param}: {value}")
+
+
         # USER TUNED: Adjust index of non-default descriptions to generate a dictionary of strings for each parameter
         parameter_strings = {
-            "Body Tilt": maybe_include(omission_probability, self.parameter_descriptions["Body Tilt"][0] if self.active_parameters[0] == 0 else self.parameter_descriptions["Body Tilt"][2] if self.active_parameters[0] == 2 else ""),
-            "Body Lean": maybe_include(omission_probability, self.parameter_descriptions["Body Lean"][0] if self.active_parameters[1] == 0 else self.parameter_descriptions["Body Lean"][2] if self.active_parameters[1] == 2 else ""),
-            "Body Height": maybe_include(omission_probability, self.parameter_descriptions["Body Height"][0] if self.active_parameters[2] == 0 else self.parameter_descriptions["Body Height"][2] if self.active_parameters[2] == 2 else ""),
-            "Body Direction": maybe_include(omission_probability, self.parameter_descriptions["Body Direction"][0] if self.active_parameters[3] == 0 else self.parameter_descriptions["Body Direction"][1] if self.active_parameters[3] == 1 else ""),
-            "Motion Velocity": maybe_include(omission_probability, self.parameter_descriptions["Motion Velocity"][0] if self.active_parameters[4] == 0 else self.parameter_descriptions["Motion Velocity"][2] if self.active_parameters[4] == 2 else ""),
-            "Motion Smoothness": maybe_include(omission_probability, self.parameter_descriptions["Motion Smoothness"][0] if self.active_parameters[5] == 0 else self.parameter_descriptions["Motion Smoothness"][1] if self.active_parameters[5] == 1 else "")
+            "Body Direction": maybe_include(omission_probability, self.parameter_descriptions["Body Direction"][0] if self.active_parameters[0] == 0 else self.parameter_descriptions["Body Direction"][1] if self.active_parameters[0] == 1 else ""),
+            "Body Tilt": maybe_include(omission_probability, self.parameter_descriptions["Body Tilt"][0] if self.active_parameters[1] == 0 else self.parameter_descriptions["Body Tilt"][2] if self.active_parameters[1] == 2 else ""),
+            "Body Lean": maybe_include(omission_probability, self.parameter_descriptions["Body Lean"][0] if self.active_parameters[2] == 0 else self.parameter_descriptions["Body Lean"][2] if self.active_parameters[2] == 2 else ""),
+            "Body Height": maybe_include(omission_probability, self.parameter_descriptions["Body Height"][0] if self.active_parameters[3] == 0 else self.parameter_descriptions["Body Height"][2] if self.active_parameters[3] == 2 else ""),
+            "Motion Smoothness": maybe_include(omission_probability, self.parameter_descriptions["Motion Smoothness"][0] if self.active_parameters[4] == 0 else self.parameter_descriptions["Motion Smoothness"][1] if self.active_parameters[4] == 1 else ""),
+            "Motion Velocity": maybe_include(omission_probability, self.parameter_descriptions["Motion Velocity"][0] if self.active_parameters[5] == 0 else self.parameter_descriptions["Motion Velocity"][2] if self.active_parameters[5] == 2 else "")
         }
-        
-        print("parameter_strings: ", parameter_strings)
+
+        print("\nparameter_strings:")
+        for param, value in parameter_strings.items():
+            print(f"  {param}: {value}")
 
 
         # Filter out empty strings and combine non-empty parameter strings
@@ -77,13 +96,8 @@ class Robot:
         elif len(non_empty_strings) == 1:
             return non_empty_strings[0]
         else:
-            # Join all but last item with commas, then add 'and' before last item
-            return ", ".join(non_empty_strings[:-1]) + " and " + non_empty_strings[-1]
-
-
-        # Notes for above code to change later: 
-        # 1. We want to order the parameters in a way that makes sense for the robot to perform the action
-        # Achieve this by adjusting the order that parameters are defined in the parameter_descriptions dictionary (See old main)
+            # Join strings with spaces and add 'and' before the last one
+            return " ".join(non_empty_strings[:-1]) + " and " + non_empty_strings[-1]
 
 
     # Class Getters
@@ -108,19 +122,17 @@ class Robot:
 
 
 robot = Robot()
-# Test getting parameter ranges
-parameter_ranges = robot.get_parameter_ranges()
 
-print("Parameter ranges:")
-
-for param, range_vals in parameter_ranges.items():
-    print(f"{param}: {range_vals}")
+# # Test getting parameter ranges
+# parameter_ranges = robot.get_parameter_ranges()
+# print("Parameter ranges:")
+# for param, range_vals in parameter_ranges.items():
+#     print(f"{param}: {range_vals}")
 
 # Test setting parameters and generating description
-test_values = [2, 2, 1, 1, 1, 1]  # Example values within range for each parameter
+test_values = [1, 0, 0, 0, 1, 0]  # Example values within range for each parameter
 robot.set_active_parameter(test_values)
 
 print("\nGenerated description with test values:")
 description = robot.generate_description(omission_probability=0.5)
-print(description)
-
+print(f"\n{description}\n")
