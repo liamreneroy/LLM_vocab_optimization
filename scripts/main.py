@@ -49,32 +49,20 @@ set_of_states = [
 
 gpt_assistant_prompt = "You are an expert roboticist and understand how to design communicative expressions for human-robot interaction."
 
-# Helper Functions
 
-# Simple pass-return which passes a string to GPT4o model and returns the reply
-def gpt4_prompt_reply(prompt: str) -> str:
-            
-    # calling GPT client
-    completion = client.chat.completions.create(
-        model=gpt_model,
-        messages=[
-            {"role": "system", "content": gpt_assistant_prompt},  # System message with custom prompt
-            {"role": "user", "content": prompt}],                 # User input
-        temperature=temperature_coefficient,
-        frequency_penalty=frequency_penalty_coefficient,
-        top_p=top_p_coefficient
-    )
+# Test helper functions 
+test_prompt = "What is the capital of France?"
+test_reply = gpt4_prompt_reply(test_prompt, client, gpt_model, gpt_assistant_prompt, temperature_coefficient, frequency_penalty_coefficient, top_p_coefficient)
+print(f"\nTest reply: {test_reply}")
 
-    # Return the assistant's reply
-    return completion.choices[0].message.content
-
+test_values = [1, 1, 0, 0, 1, 0]
 
 
 
 def main():
     
 
-    build_prompt(parameter_values, states=set_of_states, deployment_context=deployment_context, omission_probability=omission_probability, gpt_assistant_prompt=gpt_assistant_prompt)
+    build_prompt(parameter_values=test_values, states=set_of_states, deployment_context=deployment_context, omission_probability=omission_probability, gpt_assistant_prompt=gpt_assistant_prompt)
     
 
 

@@ -1,3 +1,4 @@
+import sys
 import numpy as np
 import random
 from helper_functions import maybe_include
@@ -13,9 +14,9 @@ class Robot:
         # Descriptions of each parameter. Note "" is the default description.
         self.parameter_descriptions = {             
             "Body Direction": ["The robot faces the user in the scene.", "The robot faces a nearby strawberry in the scene."],
-            "Body Tilt": ["The robot tilts its torso to the left", "", "The robot tilts its torso to the right"],
-            "Body Lean": ["The robot leans its torso backwards", "", "The robot leans its torso forward"],
-            "Body Height": ["The robot lowers its body to the ground", "", "The robot raises its torso as high as it can"],
+            "Body Tilt": ["The robot tilts its torso to the left.", "", "The robot tilts its torso to the right."],
+            "Body Lean": ["The robot leans its torso backwards.", "", "The robot leans its torso forward."],
+            "Body Height": ["The robot lowers its body to the ground.", "", "The robot raises its torso as high as it can."],
             "Motion Smoothness": ["The robot's motion is smooth without any disturbances.", "The robot's motion is unsmooth and shaky."],
             "Motion Velocity": ["The robot moves slowly to achieve this pose.", "", "The robot moves quickly to achieve this pose."]
         }
@@ -68,9 +69,19 @@ class Robot:
             "Motion Velocity": self.parameter_descriptions["Motion Velocity"][0] if self.active_parameters[5] == 0 else self.parameter_descriptions["Motion Velocity"][2] if self.active_parameters[5] == 2 else ""
         }
 
-        print("\nunadjusted parameter_strings:")
-        for param, value in unadjusted_parameter_strings.items():
-            print(f"  {param}: {value}")
+        ### Print each parameter string before omission step
+        # print("\nunadjusted parameter_strings:")
+        # for param, value in unadjusted_parameter_strings.items():
+        #     print(f"  {param}: {value}")
+
+        ### Print the joined string before omission step
+        # non_empty_unadjusted = [s for s in unadjusted_parameter_strings.values() if s]
+        # if non_empty_unadjusted:
+        #     print("\nJoined description before omissions:")
+        #     print("  " + " ".join(non_empty_unadjusted))
+        # else:
+        #     print("\nJoined description before omissions:")
+        #     print("  <empty string>")
 
 
         # USER TUNED: Adjust index of non-default descriptions to generate a dictionary of strings for each parameter
@@ -83,21 +94,20 @@ class Robot:
             "Motion Velocity": maybe_include(omission_probability, self.parameter_descriptions["Motion Velocity"][0] if self.active_parameters[5] == 0 else self.parameter_descriptions["Motion Velocity"][2] if self.active_parameters[5] == 2 else "")
         }
 
-        print("\nparameter_strings:")
-        for param, value in parameter_strings.items():
-            print(f"  {param}: {value}")
+        ### Print each parameter string after omission step
+        # print("\nparameter_strings:")
+        # for param, value in parameter_strings.items():
+        #     print(f"  {param}: {value}")
 
 
-        # Filter out empty strings and combine non-empty parameter strings
+        ### Return the joined string after omission step
         non_empty_strings = [s for s in parameter_strings.values() if s]
         
         if not non_empty_strings:
             return ""
-        elif len(non_empty_strings) == 1:
-            return non_empty_strings[0]
         else:
-            # Join strings with spaces and add 'and' before the last one
-            return " ".join(non_empty_strings[:-1]) + " and " + non_empty_strings[-1]
+            # Simply join all strings with spaces
+            return " ".join(non_empty_strings)
 
 
     # Class Getters
@@ -121,18 +131,21 @@ class Robot:
         return list(self.parameter_ranges.keys())
 
 
-robot = Robot()
 
-# # Test getting parameter ranges
-# parameter_ranges = robot.get_parameter_ranges()
-# print("Parameter ranges:")
-# for param, range_vals in parameter_ranges.items():
-#     print(f"{param}: {range_vals}")
+### To run the test, run the script with the argument "test":   python3 scripts/go1_obj.py test
+if __name__ == "__main__" and len(sys.argv) > 1 and sys.argv[1] == "test":
+    ###  Test setting parameters and generating description
+    test_values = [1, 1, 0, 0, 1, 0]  # Example values within range for each parameter
+    test_omission_probability = 0.0
 
-# Test setting parameters and generating description
-test_values = [1, 0, 0, 0, 1, 0]  # Example values within range for each parameter
-robot.set_active_parameter(test_values)
+    robot = Robot()
+    robot.set_active_parameter(test_values)
 
-print("\nGenerated description with test values:")
-description = robot.generate_description(omission_probability=0.5)
-print(f"\n{description}\n")
+    print(f"\nGenerated description with {test_omission_probability*100}% omission probability and test values: {test_values}")
+    description = robot.generate_description(test_omission_probability)
+
+    print(f"\n{description}")
+
+    # Print action space shape and action space
+    print(f"\nAction space shape: {robot.get_action_space_shape()}")
+    # print(f"Action space: {robot.get_action_space()}")
