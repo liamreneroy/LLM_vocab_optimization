@@ -8,8 +8,8 @@ random.seed(time.time())
 from openai import OpenAI
 client = OpenAI()
 
-
-from prompt_builder import build_prompt, gpt4_prompt_reply
+from helper_functions import maybe_include, gpt4_prompt_reply
+from prompt_builder import build_prompt
 
 
 # Default to go1_obj
@@ -21,7 +21,7 @@ if len(sys.argv) > 1 and sys.argv[1] == 'jackal':
 
 # Import the specified robot module as robot_obj
 robot_obj = __import__(robot_module)
-
+robot_instance = robot_obj.Robot()
 
 ## Configuration parameters
 attempt_ID = '00'
@@ -36,7 +36,7 @@ temperature_coefficient = 1.0           # Moderately stochastic @ 0.6 to 1.0
 frequency_penalty_coefficient = 1.0     # Lightly penalize repetition @ 0.2
 top_p_coefficient=1.0                   # Nucleus sampling for controlled randomness @ 0.85 to 0.6
 omission_probability = 0.5
-deployment_context = f"Consider a scenario where you are collaborating with a {robot_obj.form_factor} robot to locate and pick strawberries in a strawberry patch."
+deployment_context = f"Consider a scenario where you are collaborating with a {robot_instance.form_factor} robot to locate and pick strawberries in a strawberry patch."
 
 set_of_states = [
     "S01: [Waiting for Input, The robot is in standby mode waiting for a command from the user]",
@@ -50,19 +50,19 @@ set_of_states = [
 gpt_assistant_prompt = "You are an expert roboticist and understand how to design communicative expressions for human-robot interaction."
 
 
-# Test helper functions 
-test_prompt = "What is the capital of France?"
-test_reply = gpt4_prompt_reply(test_prompt, client, gpt_model, gpt_assistant_prompt, temperature_coefficient, frequency_penalty_coefficient, top_p_coefficient)
-print(f"\nTest reply: {test_reply}")
+###  Test helper functions 
+# test_values = [1, 1, 0, 0, 1, 0]
+# test_prompt = "Write me a 3 sentence story about a robot in Paris."
+# test_reply = gpt4_prompt_reply(test_prompt, client, gpt_model, gpt_assistant_prompt, temperature_coefficient, frequency_penalty_coefficient, top_p_coefficient)
+# print(f"\nTest reply: {test_reply}")
 
-test_values = [1, 1, 0, 0, 1, 0]
 
 
 
 def main():
-    
+    pass
 
-    build_prompt(parameter_values=test_values, states=set_of_states, deployment_context=deployment_context, omission_probability=omission_probability, gpt_assistant_prompt=gpt_assistant_prompt)
+    # build_prompt(parameter_values=test_values, states=set_of_states, deployment_context=deployment_context, omission_probability=omission_probability, gpt_assistant_prompt=gpt_assistant_prompt)
     
 
 
