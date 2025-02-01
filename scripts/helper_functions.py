@@ -27,3 +27,4 @@ def gpt4_prompt_reply(prompt: str, client, gpt_model: str, gpt_assistant_prompt:
 
     # Return the assistant's reply
     return completion.choices[0].message.content
+

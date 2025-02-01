@@ -27,7 +27,7 @@ robot_instance = robot_obj.Robot()
 attempt_ID = '00'
 
 
-iteration_quantity = 20
+iteration_quantity = 4
 robot_morphology = 3
 gpt_model = "gpt-4o"                    # gpt-3.5-turbo     | Use this for dev/testing
                                         # gpt-4 / gpt-4o    | Use this when deployed, more expensive
@@ -50,20 +50,54 @@ set_of_states = [
 gpt_assistant_prompt = "You are an expert roboticist and understand how to design communicative expressions for human-robot interaction."
 
 
-###  Test helper functions 
-# test_values = [1, 1, 0, 0, 1, 0]
-# test_prompt = "Write me a 3 sentence story about a robot in Paris."
-# test_reply = gpt4_prompt_reply(test_prompt, client, gpt_model, gpt_assistant_prompt, temperature_coefficient, frequency_penalty_coefficient, top_p_coefficient)
-# print(f"\nTest reply: {test_reply}")
-
-
 
 
 def main():
     pass
 
-    # build_prompt(parameter_values=test_values, states=set_of_states, deployment_context=deployment_context, omission_probability=omission_probability, gpt_assistant_prompt=gpt_assistant_prompt)
-    
+    # Create robot object
+    robot_instance = robot_obj.Robot()
+
+    # Set active parameters based on action space shape for robot_instance
+    test_values = [1, 1, 0, 0, 1, 0]  # Example values within range for each parameter
+    robot_instance.set_active_parameter(test_values)
+
+    # Five itterations for loop
+    for i in range(iteration_quantity):
+        # Generate description with test values and omission probability
+        raw_description = robot_instance.generate_description(omission_probability)
+
+        # summarize the context + robot description using GPT 
+        summary_prompt = f"{deployment_context} Summarize the explanation below, focusing on describing the robot's actions in this scenario:\n{description}"
+        summarized_expression = gpt4_prompt_reply(summary_prompt, client, gpt_model, gpt_assistant_prompt, temperature_coefficient, frequency_penalty_coefficient, top_p_coefficient)
+
+        # Print before and after summary
+        print(f"\n\nDescription {i+1}:\n{raw_description}")
+        print(f"\nSummary {i+1}:\n{summarized_expression}")
+
+        # Pass summarized expression to prompt builder, along with set of states and robot_instance parameters 
+        acc_proxy_prompt = build_prompt(expression_string=summarized_expression, state_list=set_of_states, deployment_context=deployment_context, gpt_assistant_prompt=gpt_assistant_prompt)
+
+        # Run the prompt through the accuracy proxy model
+        acc_proxy_reply = gpt4_prompt_reply(acc_proxy_prompt, client, gpt_model, gpt_assistant_prompt, temperature_coefficient, frequency_penalty_coefficient, top_p_coefficient)
+
+        # Log the reply from the accuracy proxy model to the robot_instance action_space
+        robot_instance.action_space[1, 1, 0, 0, 1, 0] = acc_proxy_reply
+        
+        # Log the data to an external spreadsheet
+        #log_data(.......)
+
+    # Calculate the distance term for each action in action space based on the selected distance approach
+    # distance_terms = calculate_distance_terms(robot_instance.action_space)
+
+    # Analyze the action space for the robot_instance using cost function and determine the best action
+    # best_action = analyze_action_space(robot_instance.action_space)
+
+    # Log the best action to an external spreadsheet
+    #log_data(.......)
+
+    # Return the best action in terminal
+    #print(f"\n\nBest action: {best_action}")
 
 
 
