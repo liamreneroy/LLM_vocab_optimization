@@ -104,7 +104,7 @@ class Robot:
         non_empty_strings = [s for s in parameter_strings.values() if s]
         
         if not non_empty_strings:
-            return ""
+            return "The robot does nothing."
         else:
             # Simply join all strings with spaces
             return " ".join(non_empty_strings)
