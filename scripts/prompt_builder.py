@@ -1,8 +1,8 @@
 import random
 import sys
 
-def build_prompt(expression_string, state_list, deployment_context, gpt_assistant_prompt):
-    """Build a prompt for GPT based on robot parameters and states"""
+def build_prompt(expression_string, state_list, deployment_context, llm_assistant_prompt):
+    """Build a prompt for llm based on robot parameters and states"""
 
     # Shuffle all states except the last one
     shuffled_states = state_list[:-1]
@@ -11,7 +11,7 @@ def build_prompt(expression_string, state_list, deployment_context, gpt_assistan
     shuffled_states_str = "\n".join(shuffled_states)
 
     prompt = f'''
-{gpt_assistant_prompt}
+{llm_assistant_prompt}
 
 {deployment_context}
 
@@ -57,9 +57,9 @@ if __name__ == "__main__" and len(sys.argv) > 1 and sys.argv[1] == "test":
     
     deployment_context = f"Consider a scenario where you are collaborating with a dog-shaped robot to locate and pick strawberries in a strawberry patch."
     
-    gpt_assistant_prompt = "You are an expert roboticist and understand how to design communicative expressions for human-robot interaction."
+    llm_assistant_prompt = "You are an expert roboticist and understand how to design communicative expressions for human-robot interaction."
 
-    acc_proxy_prompt = build_prompt(expression_string=summarized_expression, state_list=set_of_states, deployment_context=deployment_context, gpt_assistant_prompt=gpt_assistant_prompt)
+    acc_proxy_prompt = build_prompt(expression_string=summarized_expression, state_list=set_of_states, deployment_context=deployment_context, llm_assistant_prompt=llm_assistant_prompt)
     
     print(acc_proxy_prompt)
 

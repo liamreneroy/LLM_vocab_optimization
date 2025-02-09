@@ -1,11 +1,11 @@
 import sys
 import numpy as np
 import random
-from helper_functions import maybe_include
+from helper_functions import maybe_include, create_state_dict
 
 
 class Robot:
-    def __init__(self):
+    def __init__(self, set_of_states):
         # USER TUNED: ROBOT CHARACTERISTICS
         self.form_factor = 'dog-shaped quadruped' # dog-shaped quadruped, humanoid, etc.
         self.communication_modality = 'body pose' # locomotion, body pose, audio beeps etc.
@@ -26,9 +26,15 @@ class Robot:
             param: len(descriptions) for param, descriptions in self.parameter_descriptions.items()
         }
         
-        self.action_space_shape = tuple(self.parameter_ranges.values()) # Shape of action space
-        self.action_space = np.zeros(self.action_space_shape)           # Initialize action space
 
+
+
+        self.action_space_shape = tuple(self.parameter_ranges.values())         # Shape of action space
+        self.action_space = np.empty(self.action_space_shape, dtype=object)     # Initialize action space
+        
+        # Populate the array with fresh dictionary instances
+        for index, _ in np.ndenumerate(self.action_space):                      # Creates a unique dictionary at each index
+            self.action_space[index] = create_state_dict(set_of_states)         # of the action space array to store state counts
 
         # Initialize active parameters array of zeros
         self.active_parameters = np.zeros(len(self.parameter_ranges))
@@ -137,8 +143,16 @@ if __name__ == "__main__" and len(sys.argv) > 1 and sys.argv[1] == "test":
     ###  Test setting parameters and generating description
     test_values = [1, 1, 0, 0, 1, 0]  # Example values within range for each parameter
     test_omission_probability = 0.0
+    test_set_of_states = [
+    "S01: [Waiting for Input, The robot is in standby mode waiting for a command from the user]",
+    "S02: [Analyzing Object, The robot is analyzing a target object in front of it on the ground]", 
+    "S03: [Found Object, The robot has found a target object in front of it on the ground]",
+    "S04: [Needs Help, The robot is experiencing an error and needs help from the user]",
+    "S05: [Confused, The robot is confused and unsure what to do]",
+    "S06: [Unsure, It is unclear as the robot does not appear to be in any of the described states.]"
+    ]
 
-    robot = Robot()
+    robot = Robot(set_of_states=test_set_of_states)
     robot.set_active_parameter(test_values)
 
     print(f"\nGenerated description with {test_omission_probability*100}% omission probability and test values: {test_values}")
@@ -148,4 +162,14 @@ if __name__ == "__main__" and len(sys.argv) > 1 and sys.argv[1] == "test":
 
     # Print action space shape and action space
     print(f"\nAction space shape: {robot.get_action_space_shape()}")
-    # print(f"Action space: {robot.get_action_space()}")
+
+    # index that dictionary and increment the count for second state in set_of_states
+    before_update = robot.get_action_space()[tuple(test_values)].copy()
+    robot.get_action_space()[tuple(test_values)]['S02'] += 1
+    
+    # Verify change before/after and print one of the action space dictionaries to verify they are unique
+    print("\nBefore update dictionary at test values:\t", before_update)
+    print("Updated dictionary at test values +1 for S02:\t", robot.get_action_space()[tuple(test_values)])
+    print(f"Action space dictionary at [0, 0, 0, 0, 0, 0]:\t {robot.get_action_space()[0, 0, 0, 0, 0, 0]}")
+
+    
