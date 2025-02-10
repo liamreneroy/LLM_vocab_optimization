@@ -13,7 +13,6 @@ def maybe_include(omission_prob, param_string):
     return param_string if random.random() > omission_prob else ""
 
 
-
 # Simple pass-return which passes a string to GPT4o model and returns the reply
 def llm_prompt_reply(prompt: str, client, llm_model: str, llm_assistant_prompt: str, 
                      temperature_coefficient: float = 1.0,
