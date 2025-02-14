@@ -10,27 +10,19 @@ from itertools import product
 from openai import OpenAI
 client = OpenAI()
 
-from robots_and_modules.helper_functions import llm_prompt_reply
-from robots_and_modules.prompt_builder import build_prompt
+from scripts.robots_and_modules.helper_functions import llm_prompt_reply
+from scripts.robots_and_modules.prompt_builder import build_prompt
 
-# Default to go1_obj and 'spread' state space
-robot_module = 'go1'        # 'go1' or 'jackal'
-state_space = 'spread'      # 'spread' or 'minimized'
 
-# Adjust robot_module and state_space based on command line arguments
-if len(sys.argv) > 1:
-    if sys.argv[1] in ['go1', 'jackal']:
-        robot_module = sys.argv[1]
-    else:
-        print(f"Error: Invalid robot module specified. Using default: {robot_module}")
-if len(sys.argv) > 2:
-    if sys.argv[2] in ['spread', 'minimized']:
-        state_space = sys.argv[2]
-    else:
-        print(f"Error: Invalid state space specified. Using default: {state_space}.")
+# Default to go1_obj
+robot_module = 'go1_obj'
+
+# Only change to jackal if explicitly specified
+if len(sys.argv) > 1 and sys.argv[1] == 'jackal':
+    robot_module = 'jackal_obj'
 
 # Import the specified robot module as robot_obj
-robot_obj = __import__("robot_modules/" + robot_module)
+robot_obj = __import__(robot_module)
 
 ## Configuration parameters
 attempt_ID = '00'
@@ -45,47 +37,14 @@ top_p_coefficient=1.0                   # Nucleus sampling for controlled random
 omission_probability = 0.5
 
 # The data in this should be in the format: "State Number: [State Name, State Description]"
-
-# Used for Go1 robot
-if robot_module == 'go1_obj':
-    if state_space == 'spread':
-        set_of_states = [
-        "S01: [Waiting for Input, The robot is in standby mode waiting for a command from the user.]",
-        "S02: [Analyzing Object, The robot is analyzing a target object in front of it on the ground.]", 
-        "S03: [Found Object, The robot has found a target object in front of it on the ground.]",
-        "S04: [Needs Help, The robot is experiencing an error and needs help from the user.]",
-        "S05: [Confused, The robot is confused and unsure what to do.]",
-        "S06: [Unsure, It is unclear as the robot does not appear to be in any of the described states.]"
-        ]
-        
-    elif state_space == 'minimized':
-        set_of_states = [
-        "S01: [Waiting for Input, The robot is in standby mode waiting for a command from the user.]",
-        "S02: [Interacting with Object, The robot is pointing out a target object in front of it on the ground.]", 
-        "S03: [Needs Help, The robot is in a confused error staate and needs help from the user.]",
-        "S04: [Unsure, It is unclear as the robot does not appear to be in any of the described states.]"
-        ]
-
-        
-# Used for Jackal robot
-elif robot_module == 'jackal_obj':
-    if state_space == 'spread':
-        set_of_states = [
-            "S01: [Processing, The robot is analyzing the request and planning the navigation route.]",
-            "S02: [Navigating, The robot is actively navigating toward the destination and does not require assistance.]",
-            "S03: [Danger, The robot is signaling for the user's attention due to a detected hazard.]",
-            "S04: [Stuck, The robot is signaling for the user's attention as its path is blocked.]",
-            "S05: [Accomplished, The robot has successfully reached the requested destination.]",
-            "S06: [Unsure, The robot's statr is unclear as it does not appear to be in any of the described states.]"
-        ]
-
-    elif state_space == 'minimized':
-        set_of_states = [
-            "S01: [Progressing, The robot is progressing on the assigned task and does not require assistance.]",
-            "S02: [Alert, The robot is signaling for the user's attention due to a possible hazard or blocked path.]",
-            "S03: [Accomplished, The robot has successfully reached the requested destination.]",
-            "S04: [Unsure, The robot's statr is unclear as it does not appear to be in any of the described states.]"
-        ]
+set_of_states = [
+    "S01: [Waiting for Input, The robot is in standby mode waiting for a command from the user]",
+    "S02: [Analyzing Object, The robot is analyzing a target object in front of it on the ground]", 
+    "S03: [Found Object, The robot has found a target object in front of it on the ground]",
+    "S04: [Needs Help, The robot is experiencing an error and needs help from the user]",
+    "S05: [Confused, The robot is confused and unsure what to do]",
+    "S06: [Unsure, It is unclear as the robot does not appear to be in any of the described states.]"
+]
 
 llm_assistant_prompt = "You are an expert roboticist and understand how to design communicative expressions for human-robot interaction."
 
@@ -96,8 +55,6 @@ deployment_context = f"Consider a scenario where you are collaborating with a {r
 
 
 printer = True # True or None
-
-
 
 def main():
     # pass

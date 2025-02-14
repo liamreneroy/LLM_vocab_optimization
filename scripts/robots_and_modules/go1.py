@@ -63,33 +63,6 @@ class Robot:
     def generate_description(self, omission_probability=0.5):
         """Generates a description of active parameters with random omissions"""
 
-        # Direction -> Pose -> Smoothness -> Velocity
-
-
-        unadjusted_parameter_strings = {
-            "Body Direction": self.parameter_descriptions["Body Direction"][0] if self.active_parameters[0] == 0 else self.parameter_descriptions["Body Direction"][1] if self.active_parameters[0] == 1 else "",
-            "Body Tilt": self.parameter_descriptions["Body Tilt"][0] if self.active_parameters[1] == 0 else self.parameter_descriptions["Body Tilt"][2] if self.active_parameters[1] == 2 else "",
-            "Body Lean": self.parameter_descriptions["Body Lean"][0] if self.active_parameters[2] == 0 else self.parameter_descriptions["Body Lean"][2] if self.active_parameters[2] == 2 else "",
-            "Body Height": self.parameter_descriptions["Body Height"][0] if self.active_parameters[3] == 0 else self.parameter_descriptions["Body Height"][2] if self.active_parameters[3] == 2 else "",
-            "Motion Smoothness": self.parameter_descriptions["Motion Smoothness"][0] if self.active_parameters[4] == 0 else self.parameter_descriptions["Motion Smoothness"][1] if self.active_parameters[4] == 1 else "",
-            "Motion Velocity": self.parameter_descriptions["Motion Velocity"][0] if self.active_parameters[5] == 0 else self.parameter_descriptions["Motion Velocity"][2] if self.active_parameters[5] == 2 else ""
-        }
-
-        ### Print each parameter string before omission step
-        # print("\nunadjusted parameter_strings:")
-        # for param, value in unadjusted_parameter_strings.items():
-        #     print(f"  {param}: {value}")
-
-        ### Print the joined string before omission step
-        # non_empty_unadjusted = [s for s in unadjusted_parameter_strings.values() if s]
-        # if non_empty_unadjusted:
-        #     print("\nJoined description before omissions:")
-        #     print("  " + " ".join(non_empty_unadjusted))
-        # else:
-        #     print("\nJoined description before omissions:")
-        #     print("  <empty string>")
-
-
         # USER TUNED: Adjust index of non-default descriptions to generate a dictionary of strings for each parameter
         parameter_strings = {
             "Body Direction": maybe_include(omission_probability, self.parameter_descriptions["Body Direction"][0] if self.active_parameters[0] == 0 else self.parameter_descriptions["Body Direction"][1] if self.active_parameters[0] == 1 else ""),
@@ -99,12 +72,6 @@ class Robot:
             "Motion Smoothness": maybe_include(omission_probability, self.parameter_descriptions["Motion Smoothness"][0] if self.active_parameters[4] == 0 else self.parameter_descriptions["Motion Smoothness"][1] if self.active_parameters[4] == 1 else ""),
             "Motion Velocity": maybe_include(omission_probability, self.parameter_descriptions["Motion Velocity"][0] if self.active_parameters[5] == 0 else self.parameter_descriptions["Motion Velocity"][2] if self.active_parameters[5] == 2 else "")
         }
-
-        ### Print each parameter string after omission step
-        # print("\nparameter_strings:")
-        # for param, value in parameter_strings.items():
-        #     print(f"  {param}: {value}")
-
 
         ### Return the joined string after omission step
         non_empty_strings = [s for s in parameter_strings.values() if s]
