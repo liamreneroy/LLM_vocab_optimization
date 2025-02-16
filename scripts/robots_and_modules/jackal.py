@@ -1,7 +1,7 @@
 import sys
 import numpy as np
 import random
-from helper_functions import maybe_include, create_state_dict
+from robots_and_modules.helper_functions import maybe_include, create_state_dict
 
 
 class Robot:
@@ -63,7 +63,7 @@ class Robot:
         parameter_strings = {
             "Beats Per Loop": maybe_include(omission_probability, self.parameter_descriptions["Beats Per Loop"][0] if self.active_parameters[0] == 0 else self.parameter_descriptions["Beats Per Loop"][2] if self.active_parameters[0] == 2 else ""),
             "Pitch Bend": maybe_include(omission_probability, self.parameter_descriptions["Pitch Bend"][0] if self.active_parameters[1] == 0 else self.parameter_descriptions["Pitch Bend"][2] if self.active_parameters[1] == 2 else ""),
-            "Gain": maybe_include(omission_probability, self.parameter_descriptions["Body Lean"][0] if self.active_parameters[2] == 0 else self.parameter_descriptions["Gain"][2] if self.active_parameters[2] == 2 else ""),
+            "Gain": maybe_include(omission_probability, self.parameter_descriptions["Gain"][0] if self.active_parameters[2] == 0 else self.parameter_descriptions["Gain"][2] if self.active_parameters[2] == 2 else ""),
             "Distortion": maybe_include(omission_probability, self.parameter_descriptions["Distortion"][1] if self.active_parameters[3] == 1 else self.parameter_descriptions["Distortion"][2] if self.active_parameters[3] == 2 else "")
         }
 
