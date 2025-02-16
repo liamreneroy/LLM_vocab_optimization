@@ -92,6 +92,8 @@ def calculate_distance(distance_type="none", np_a=None, np_b=None, action_space_
     else:
         raise ValueError("Invalid distance_type. Choose from 'none', 'emd', or 'kinematic'.")
 
+
+
 # Example usage
 if __name__ == "__main__" and len(sys.argv) > 1 and sys.argv[1] == "test":
 
