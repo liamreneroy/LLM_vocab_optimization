@@ -1,7 +1,7 @@
 import sys
 import numpy as np
 import random
-from helper_functions import maybe_include, create_state_dict
+from robots_and_modules.helper_functions import maybe_include, create_state_dict
 
 
 class Robot:
