@@ -71,9 +71,9 @@ def calculate_distance(distance_type="none", np_a=None, np_b=None, action_space_
         # if normmalized_emd < 0 or normmalized_emd > 1:
         #     raise ValueError("Normalized EMD value must be between 0 and 1.")
 
-        print("emd_distance:", emd_distance)
-        print("max_emd:", max_emd)
-        print("normmalized_emd:", normmalized_emd)
+        # print("emd_distance:", emd_distance)
+        # print("max_emd:", max_emd)
+        # print("normmalized_emd:", normmalized_emd)
 
         return normmalized_emd
 

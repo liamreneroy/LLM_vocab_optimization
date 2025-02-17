@@ -1,7 +1,8 @@
 import sys
 import numpy as np
 import random
-from robots_and_modules.helper_functions import maybe_include, create_state_dict
+# from robots_and_modules.helper_functions import maybe_include, create_state_dict
+from helper_functions import maybe_include, create_state_dict
 
 
 class Robot:
@@ -19,6 +20,16 @@ class Robot:
             "Body Height": ["The robot lowers its body to the ground.", "", "The robot raises its torso as high as it can."],
             "Motion Smoothness": ["The robot's motion is smooth without any disturbances.", "The robot's motion is unsmooth and shaky."],
             "Motion Velocity": ["The robot moves slowly to achieve this pose.", "", "The robot moves quickly to achieve this pose."]
+        }
+
+        # USER TUNED: INDECES OF PARAMETER DEFAULTS
+        self.parameter_defaults = {             
+            "Body Direction": 0,
+            "Body Tilt": 1,
+            "Body Lean": 1,
+            "Body Height": 1,
+            "Motion Smoothness": 0,
+            "Motion Velocity": 1
         }
 
         # PASSIVE PARAMETERS
@@ -120,6 +131,9 @@ if __name__ == "__main__" and len(sys.argv) > 1 and sys.argv[1] == "test":
     ]
 
     robot = Robot(set_of_states=test_set_of_states)
+    
+    print("Parameter Ranges in Dict:", robot.get_parameter_ranges())
+
     robot.set_active_parameter(test_values)
 
     print(f"\nGenerated description with {test_omission_probability*100}% omission probability and test values: {test_values}")

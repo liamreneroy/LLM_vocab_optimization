@@ -19,6 +19,15 @@ class Robot:
             "Distortion": ["", "The robot's beeps are mildly distorted.", "The robots sound are sharply distorted."]
             }
 
+        # USER TUNED: INDECES OF PARAMETER DEFAULTS
+        self.parameter_defaults = {             
+            "Beats Per Loop": 1,
+            "Pitch Bend": 1,
+            "Gain": 1,
+            "Distortion": 0
+            }
+
+
         # PASSIVE PARAMETERS
         self.parameter_ranges = {          # Number of values for each parameter          
             param: len(descriptions) for param, descriptions in self.parameter_descriptions.items()
