@@ -1,0 +1,9 @@
+
+gpt4o-mini or gpt-40
+jackal or go1
+spread or minimized
+## iterations
+
+gpt4o-mini | Jackal | spread | 20 iterations
+81 x 20 itterations x 2 = 3240 calls = ~ 0.25$
+

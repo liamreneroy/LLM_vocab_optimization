@@ -1,9 +1,0 @@
-
-gpt4o-mini or gpt-40
-jackal or go1
-spread or minimized
-## iterations
-
-gpt4o-mini | Jackal | spread | 3 iterations
-81 x 3 itterations x 2 = 486 calls = ~ 0.02$
-130K input tokens + 20K output tokens = 150K tokens
