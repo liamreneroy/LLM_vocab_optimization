@@ -1,11 +1,12 @@
 import random
+import numpy as np
+
 from openai import OpenAI
 client = OpenAI()
 
 # Define a function to create a fresh dictionary
 def create_state_dict(set_of_states):
     return {state[:3]: 0 for state in set_of_states}
-
 
 
 def maybe_include(omission_prob, param_string):
