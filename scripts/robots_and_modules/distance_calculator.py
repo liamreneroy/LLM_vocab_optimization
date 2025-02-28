@@ -5,6 +5,9 @@ import numpy as np
 def euclidean_distance(pointA, pointB):
     return np.linalg.norm(np.array(pointA) - np.array(pointB))
 
+
+
+
 def max_emd_from_shape(action_space_shape):
     """
     Computes the maximum possible Earth Mover's Distance (EMD) for a given array shape.
@@ -27,6 +30,8 @@ def max_emd_from_shape(action_space_shape):
     return max_emd
 
 
+
+
 # Iterate through all timesteps
 def dynamic_distance_calculator(listA, listB):
     total_distance = 0
@@ -43,6 +48,8 @@ def dynamic_distance_calculator(listA, listB):
             total_distance += euclidean_distance(listA[timestep][key], listB[timestep][key])
 
     return total_distance
+
+
 
 
 def max_dynamic_distance_calculator(trajectory_array):
@@ -74,6 +81,8 @@ def max_dynamic_distance_calculator(trajectory_array):
 
     print(f"::: Max Dynamic Distance Done: {max_dynamic_distance}")
     return max_dynamic_distance
+
+
 
 
 def calculate_distance(distance_type="none", trajectory_array=None, np_pose_a=None, np_pose_b=None, action_space_shape=None, max_dynamic_distance=None):

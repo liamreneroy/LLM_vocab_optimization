@@ -71,7 +71,7 @@ class Robot:
 
 
 
-    def generate_description(self, omission_probability=0.5):
+    def generate_description(self, omission_probability=0.4):
         """Generates a description of active parameters with random omissions"""
 
         # USER TUNED: Adjust index of non-default descriptions to generate a dictionary of strings for each parameter
