@@ -1,0 +1,3 @@
+[submodule "data/freedog"]
+	path = data/freedog
+	url = https://github.com/liamreneroy/freedog.git
