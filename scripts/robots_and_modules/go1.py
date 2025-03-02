@@ -8,18 +8,18 @@ from robots_and_modules.helper_functions import maybe_include, create_state_dict
 class Robot:
     def __init__(self, set_of_states):
         # USER TUNED: ROBOT CHARACTERISTICS
-        self.form_factor = 'dog-shaped quadruped' # dog-shaped quadruped, humanoid, etc.
-        self.communication_modality = 'body pose' # locomotion, body pose, audio beeps etc.
+        self.form_factor = 'dog-shaped quadruped'     # dog-shaped quadruped, humanoid, etc.
+        self.communication_modality = 'body language' # locomotion, body language, audio beeps etc.
         
         # USER TUNED: PARAMETER DESCRIPTIONS
-        # Descriptions of each parameter. Note "" is the default description.
+        # Descriptions of each parameter.
         self.parameter_descriptions = {             
             "Body Direction": ["The robot faces the user in the scene.", "The robot faces a nearby strawberry in the scene."],
-            "Body Tilt": ["The robot tilts its torso to the left.", "", "The robot tilts its torso to the right."],
-            "Body Lean": ["The robot leans its torso backwards.", "", "The robot leans its torso forward."],
-            "Body Height": ["The robot lowers its body to the ground.", "", "The robot raises its torso as high as it can."],
-            "Motion Smoothness": ["The robot's motion is smooth without any disturbances.", "The robot's motion is unsmooth and shaky."],
-            "Motion Velocity": ["The robot moves slowly to achieve this pose.", "", "The robot moves quickly to achieve this pose."]
+            "Body Tilt": ["The robot tilts its torso to the left.", "The robot maintains a straight-standing torso position.", "The robot tilts its torso to the right."],
+            "Body Lean": ["The robot leans its torso backward.", "The robot does not lean forward nor backward.", "The robot leans its torso forward."],
+            "Body Height": ["The robot lowers its body to the ground.", "The robot maintains a natural body height.", "The robot raises its torso as high as it can."],
+            "Motion Smoothness": ["The robot's motion is smooth without any disturbances.", "The robot's motion is rough and shaky."],
+            "Motion Velocity": ["The robot moves slowly to achieve this pose.", "The robot moves at a normal speed to achieve this pose.", "The robot moves quickly to achieve this pose."]
         }
 
         # USER TUNED: INDECES OF PARAMETER DEFAULTS
@@ -77,11 +77,11 @@ class Robot:
         # USER TUNED: Adjust index of non-default descriptions to generate a dictionary of strings for each parameter
         parameter_strings = {
             "Body Direction": maybe_include(omission_probability, self.parameter_descriptions["Body Direction"][0] if self.active_parameters[0] == 0 else self.parameter_descriptions["Body Direction"][1] if self.active_parameters[0] == 1 else ""),
-            "Body Tilt": maybe_include(omission_probability, self.parameter_descriptions["Body Tilt"][0] if self.active_parameters[1] == 0 else self.parameter_descriptions["Body Tilt"][2] if self.active_parameters[1] == 2 else ""),
-            "Body Lean": maybe_include(omission_probability, self.parameter_descriptions["Body Lean"][0] if self.active_parameters[2] == 0 else self.parameter_descriptions["Body Lean"][2] if self.active_parameters[2] == 2 else ""),
-            "Body Height": maybe_include(omission_probability, self.parameter_descriptions["Body Height"][0] if self.active_parameters[3] == 0 else self.parameter_descriptions["Body Height"][2] if self.active_parameters[3] == 2 else ""),
+            "Body Tilt": maybe_include(omission_probability, self.parameter_descriptions["Body Tilt"][0] if self.active_parameters[1] == 0 else self.parameter_descriptions["Body Tilt"][1] if self.active_parameters[1] == 1 else self.parameter_descriptions["Body Tilt"][2] if self.active_parameters[1] == 2 else ""),
+            "Body Lean": maybe_include(omission_probability, self.parameter_descriptions["Body Lean"][0] if self.active_parameters[2] == 0 else self.parameter_descriptions["Body Lean"][1] if self.active_parameters[2] == 1 else self.parameter_descriptions["Body Lean"][2] if self.active_parameters[2] == 2 else ""),
+            "Body Height": maybe_include(omission_probability, self.parameter_descriptions["Body Height"][0] if self.active_parameters[3] == 0 else self.parameter_descriptions["Body Height"][1] if self.active_parameters[3] == 1 else self.parameter_descriptions["Body Height"][2] if self.active_parameters[3] == 2 else ""),
             "Motion Smoothness": maybe_include(omission_probability, self.parameter_descriptions["Motion Smoothness"][0] if self.active_parameters[4] == 0 else self.parameter_descriptions["Motion Smoothness"][1] if self.active_parameters[4] == 1 else ""),
-            "Motion Velocity": maybe_include(omission_probability, self.parameter_descriptions["Motion Velocity"][0] if self.active_parameters[5] == 0 else self.parameter_descriptions["Motion Velocity"][2] if self.active_parameters[5] == 2 else "")
+            "Motion Velocity": maybe_include(omission_probability, self.parameter_descriptions["Motion Velocity"][0] if self.active_parameters[5] == 0 else self.parameter_descriptions["Motion Velocity"][1] if self.active_parameters[5] == 1 else self.parameter_descriptions["Motion Velocity"][2] if self.active_parameters[5] == 2 else "")
         }
 
         ### Return the joined string after omission step
@@ -122,13 +122,13 @@ if __name__ == "__main__" and len(sys.argv) > 1 and sys.argv[1] == "test":
     test_values = [1, 1, 0, 0, 1, 0]  # Example values within range for each parameter
     test_omission_probability = 0.0
     test_set_of_states = [
-    "S01: [Waiting for Input, The robot is in standby mode waiting for a command from the user]",
-    "S02: [Analyzing Object, The robot is analyzing a target object in front of it on the ground]", 
-    "S03: [Found Object, The robot has found a target object in front of it on the ground]",
-    "S04: [Needs Help, The robot is experiencing an error and needs help from the user]",
-    "S05: [Confused, The robot is confused and unsure what to do]",
-    "S06: [Unsure, It is unclear as the robot does not appear to be in any of the described states.]"
-    ]
+        "S01: [Waiting for Input, The robot is in standby mode waiting for a command from the user.]",
+        "S02: [Analyzing Object, The robot is analyzing a target object in front of it on the ground.]", 
+        "S03: [Found Object, The robot is signalling to the user it has found a target object on the ground.]",
+        "S04: [Needs Help, The robot is experiencing an error and needs help from the user.]",
+        "S05: [Confused, The robot is confused and unsure what to do.]",
+        "S06: [Unsure, It is unclear as the robot does not appear to be in any of the described states.]"
+        ]
 
     robot = Robot(set_of_states=test_set_of_states)
     

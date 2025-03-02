@@ -7,16 +7,16 @@ from robots_and_modules.helper_functions import maybe_include, create_state_dict
 class Robot:
     def __init__(self, set_of_states):
         # USER TUNED: ROBOT CHARACTERISTICS
-        self.form_factor = 'rover-shaped quadruped' # dog-shaped quadruped, humanoid, etc.
+        self.form_factor = 'rover-shaped' # dog-shaped quadruped, humanoid, etc.
         self.communication_modality = 'audio beeps' # locomotion, body pose, audio beeps etc.
         
         # USER TUNED: PARAMETER DESCRIPTIONS
         # Descriptions of each parameter. Note "" is the default description.
         self.parameter_descriptions = {             
-            "Beats Per Loop": ["The robot beeps slowly 1 time per second.", "", "The robot beeps rapidly 4 times per second."],
-            "Pitch Bend": ["The pitch of the robot's beeps bend with downward inflections.", "", "The pitch of the robot's beeps bend with upwards inflections."],
-            "Gain": ["The robot's beeps are played at a very quiet volume.", "", "The robots beeps are played at a very loud volume."],
-            "Distortion": ["", "The robot's beeps are mildly distorted.", "The robots sound are sharply distorted."]
+            "Beats Per Loop": ["The robot beeps slowly 1 time per second.", "The robot beeps at a normal speed 2 times per second.", "The robot beeps rapidly 4 times per second."],
+            "Pitch Bend": ["The pitch of the robot's beeps bend with a downward inflection.", "The pitch of the robot's beeps remains monotone.", "The pitch of the robot's beeps bend with an upwards inflection."],
+            "Gain": ["The robot's beeps are played at a very quiet volume.", "The robot's beeps are played at a normal volume.", "The robot's beeps are played at a very loud volume."],
+            "Distortion": ["The robot's beeps are clean with no distortion.", "The robot's beeps are mildly distorted.", "The robot's beeps are highly distorted and sharp sounding."]
             }
 
         # USER TUNED: INDECES OF PARAMETER DEFAULTS
@@ -70,10 +70,10 @@ class Robot:
 
         # USER TUNED: Adjust index of non-default descriptions to generate a dictionary of strings for each parameter
         parameter_strings = {
-            "Beats Per Loop": maybe_include(omission_probability, self.parameter_descriptions["Beats Per Loop"][0] if self.active_parameters[0] == 0 else self.parameter_descriptions["Beats Per Loop"][2] if self.active_parameters[0] == 2 else ""),
-            "Pitch Bend": maybe_include(omission_probability, self.parameter_descriptions["Pitch Bend"][0] if self.active_parameters[1] == 0 else self.parameter_descriptions["Pitch Bend"][2] if self.active_parameters[1] == 2 else ""),
-            "Gain": maybe_include(omission_probability, self.parameter_descriptions["Gain"][0] if self.active_parameters[2] == 0 else self.parameter_descriptions["Gain"][2] if self.active_parameters[2] == 2 else ""),
-            "Distortion": maybe_include(omission_probability, self.parameter_descriptions["Distortion"][1] if self.active_parameters[3] == 1 else self.parameter_descriptions["Distortion"][2] if self.active_parameters[3] == 2 else "")
+            "Beats Per Loop": maybe_include(omission_probability, self.parameter_descriptions["Beats Per Loop"][0] if self.active_parameters[0] == 0 else self.parameter_descriptions["Beats Per Loop"][1] if self.active_parameters[0] == 1 else self.parameter_descriptions["Beats Per Loop"][2] if self.active_parameters[0] == 2 else ""),
+            "Pitch Bend": maybe_include(omission_probability, self.parameter_descriptions["Pitch Bend"][0] if self.active_parameters[1] == 0 else self.parameter_descriptions["Pitch Bend"][1] if self.active_parameters[1] == 1 else self.parameter_descriptions["Pitch Bend"][2] if self.active_parameters[1] == 2 else ""),
+            "Gain": maybe_include(omission_probability, self.parameter_descriptions["Gain"][0] if self.active_parameters[2] == 0 else self.parameter_descriptions["Gain"][1] if self.active_parameters[2] == 1 else self.parameter_descriptions["Gain"][2] if self.active_parameters[2] == 2 else ""),
+            "Distortion": maybe_include(omission_probability, self.parameter_descriptions["Distortion"][0] if self.active_parameters[3] == 0 else self.parameter_descriptions["Distortion"][1] if self.active_parameters[3] == 1 else self.parameter_descriptions["Distortion"][2] if self.active_parameters[3] == 2 else "")
         }
 
         ### Return the joined string after omission step
@@ -114,11 +114,11 @@ if __name__ == "__main__" and len(sys.argv) > 1 and sys.argv[1] == "test":
     test_values = [1, 1, 2, 2]  # Example values within range for each parameter
     test_omission_probability = 0.0
     test_set_of_states = [
-            "S01: [Processing, The robot is analyzing the request and planning the navigation route.]",
-            "S02: [Navigating, The robot is actively navigating toward the destination and does not require assistance.]",
-            "S03: [Danger, The robot is signaling for the user's attention due to a detected hazard.]",
-            "S04: [Stuck, The robot is signaling for the user's attention as its path is blocked.]",
-            "S05: [Accomplished, The robot has successfully reached the requested destination.]",
+            "S01: [Processing, The robot is calculating it's navigation route to the delivery destination.]",
+            "S02: [Navigating, The robot is navigating normally towards the delivery destination.]",
+            "S03: [Danger, The robot is signaling for the user's attention due to a dangerous hazard.]",
+            "S04: [Stuck, The robot is signaling for the user's attention as its wheel being stuck.]",
+            "S05: [Accomplished, The robot is signaling that it has successfully reached the delivery destination.]",
             "S06: [Unsure, The robot's statr is unclear as it does not appear to be in any of the described states.]"
         ]
 
