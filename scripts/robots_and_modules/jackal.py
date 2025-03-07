@@ -13,8 +13,8 @@ class Robot:
         # USER TUNED: PARAMETER DESCRIPTIONS
         # Descriptions of each parameter. Note "" is the default description.
         self.parameter_descriptions = {             
-            "Beats Per Loop": ["The robot beeps slowly 1 time per second.", "The robot beeps at a normal speed 2 times per second.", "The robot beeps rapidly 4 times per second."],
-            "Pitch Bend": ["The pitch of the robot's beeps bend with a downward inflection.", "The pitch of the robot's beeps remains monotone.", "The pitch of the robot's beeps bend with an upwards inflection."],
+            "Beats Per Loop": ["The robot beeps slowly and relaxed 1 time per second.", "The robot beeps at a normal speed 2 times per second.", "The robot beeps rapidly and franticly 4 times per second."],
+            "Pitch Bend": ["The pitch of the robot's beeps bend with a downward sad inflection.", "The pitch of the robot's beeps remains monotone.", "The pitch of the robot's beeps bend with an upwards happy inflection."],
             "Gain": ["The robot's beeps are played at a very quiet volume.", "The robot's beeps are played at a normal volume.", "The robot's beeps are played at a very loud volume."],
             "Distortion": ["The robot's beeps are clean with no distortion.", "The robot's beeps are mildly distorted.", "The robot's beeps are highly distorted and sharp sounding."]
             }
