@@ -14,10 +14,10 @@ class Robot:
         # USER TUNED: PARAMETER DESCRIPTIONS
         # Descriptions of each parameter.
         self.parameter_descriptions = {             
-            "Body Direction": ["The robot faces the user in the scene.", "The robot faces a nearby strawberry in the scene."],
-            "Body Tilt": ["The robot tilts its torso to the left.", "The robot maintains a straight-standing torso position.", "The robot tilts its torso to the right."],
-            "Body Lean": ["The robot leans its torso backward.", "The robot does not lean forward nor backward.", "The robot leans its torso forward."],
-            "Body Height": ["The robot lowers its body to the ground.", "The robot maintains a natural body height.", "The robot raises its torso as high as it can."],
+            "Body Direction": ["The robot turns its whole body to directly face the user in the scene.", "The robot turns its whole body to directly face a nearby strawberry in the scene."],
+            "Body Tilt": ["The robot tilts its torso to the left as if its listening or confused.", "The robot maintains a straight-standing torso position.", "The robot tilts its torso to the right as if its listening or confused."],
+            "Body Lean": ["The robot leans its torso backward so its gaze faces up to meet your gaze eye-level.", "The robot does not lean forward nor backward.", "The robot leans its torso forward so its gaze faces down to the ground."],
+            "Body Height": ["The robot lowers its body to the ground to appear more submissive.", "The robot maintains a natural body height.", "The robot raises its torso as high as it can to appear more dominant."],
             "Motion Smoothness": ["The robot's motion is smooth without any disturbances.", "The robot's motion is rough and shaky."],
             "Motion Velocity": ["The robot moves slowly to achieve this pose.", "The robot moves at a normal speed to achieve this pose.", "The robot moves quickly to achieve this pose."]
         }

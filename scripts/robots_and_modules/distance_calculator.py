@@ -155,8 +155,14 @@ if __name__ == "__main__" and len(sys.argv) > 1 and sys.argv[1] == "test":
 
     test_action_space_shape = (2, 3, 3, 3, 2, 3)
 
-    np_pose_a = np.array([1, 2, 2, 2, 1, 2])
-    np_pose_b = np.array([0, 0, 0, 0, 0, 0])
+    transformed_trajectory_save_string = "./../../data/freedog/data/go1_transformed_trajectory_array.npy"
+    TRAJECTORY_ARRAY_FILE = transformed_trajectory_save_string     # File containing trajectory array
+    go1_transformed_trajectory_array = np.load(TRAJECTORY_ARRAY_FILE, allow_pickle=True)
+
+
+
+    np_pose_a = np.array([1, 1, 1, 1, 0, 1])
+    np_pose_b = np.array([0, 1, 1, 1, 0, 1])
 
     print("Input arrays:")
     print("np_pose_a shape", np_pose_a.shape)
@@ -164,7 +170,6 @@ if __name__ == "__main__" and len(sys.argv) > 1 and sys.argv[1] == "test":
 
     print("None distance:", calculate_distance(distance_type="none", np_pose_a=np_pose_a, np_pose_b=np_pose_b))  
     print("EMD distance:", calculate_distance(distance_type="emd", np_pose_a=np_pose_a, np_pose_b=np_pose_b, action_space_shape=test_action_space_shape))
-    print("Dynamic distance:", calculate_distance(distance_type="dynamic", np_pose_a=np_pose_a, np_pose_b=np_pose_b))  # Placeholder
-
-
-
+    print("Dynamic distance:", calculate_distance(distance_type="dynamic", trajectory_array=go1_transformed_trajectory_array, np_pose_a=np_pose_a, np_pose_b=np_pose_b, action_space_shape=test_action_space_shape, max_dynamic_distance=338.5619))
+                                                  
+    
