@@ -7,16 +7,17 @@ from robots_and_modules.helper_functions import maybe_include, create_state_dict
 class Robot:
     def __init__(self, set_of_states):
         # USER TUNED: ROBOT CHARACTERISTICS
-        self.form_factor = 'rover-shaped' # dog-shaped quadruped, humanoid, etc.
+        self.form_factor = 'dog-shaped quadruped'     # dog-shaped quadruped, humanoid, etc.
         self.communication_modality = 'audio beeps' # locomotion, body pose, audio beeps etc.
         
         # USER TUNED: PARAMETER DESCRIPTIONS
         # Descriptions of each parameter. Note "" is the default description.
         self.parameter_descriptions = {             
-            "Beats Per Loop": ["The robot beeps slowly and relaxed 1 time per second.", "The robot beeps at a normal speed 2 times per second.", "The robot beeps rapidly and franticly 4 times per second."],
-            "Pitch Bend": ["The pitch of the robot's beeps bend with a downward sad inflection.", "The pitch of the robot's beeps remains monotone.", "The pitch of the robot's beeps bend with an upwards happy inflection."],
+            "Beats Per Loop": ["The robot beeps slowly 1 time per second.", "The robot beeps at a normal speed 2 times per second.", "The robot beeps rapidly 4 times per second."],
+            "Pitch Bend": ["The pitch of the robot's beeps bend with a downward inflection.", "The pitch of the robot's beeps remains monotone.", "The pitch of the robot's beeps bend with an upwards inflection."],
             "Gain": ["The robot's beeps are played at a very quiet volume.", "The robot's beeps are played at a normal volume.", "The robot's beeps are played at a very loud volume."],
-            "Distortion": ["The robot's beeps are clean with no distortion.", "The robot's beeps are mildly distorted.", "The robot's beeps are highly distorted and sharp sounding."]
+            "Distortion": ["The robot's beeps are clean with no distortion.", "The robot's beeps are mildly distorted.", "The robot's beeps are highly distorted and sharp sounding."],
+            "Audio Continuity": ["The robot's audio is smooth and uninterrupted.", "The robot's audio is choppy, gated, discontinuous, gitchy."]
             }
 
         # USER TUNED: INDECES OF PARAMETER DEFAULTS
@@ -24,9 +25,9 @@ class Robot:
             "Beats Per Loop": 1,
             "Pitch Bend": 1,
             "Gain": 1,
-            "Distortion": 0
+            "Distortion": 0,
+            "Audio Continuity": 0
             }
-
 
         # PASSIVE PARAMETERS
         self.parameter_ranges = {          # Number of values for each parameter          
@@ -73,7 +74,8 @@ class Robot:
             "Beats Per Loop": maybe_include(omission_probability, self.parameter_descriptions["Beats Per Loop"][0] if self.active_parameters[0] == 0 else self.parameter_descriptions["Beats Per Loop"][1] if self.active_parameters[0] == 1 else self.parameter_descriptions["Beats Per Loop"][2] if self.active_parameters[0] == 2 else ""),
             "Pitch Bend": maybe_include(omission_probability, self.parameter_descriptions["Pitch Bend"][0] if self.active_parameters[1] == 0 else self.parameter_descriptions["Pitch Bend"][1] if self.active_parameters[1] == 1 else self.parameter_descriptions["Pitch Bend"][2] if self.active_parameters[1] == 2 else ""),
             "Gain": maybe_include(omission_probability, self.parameter_descriptions["Gain"][0] if self.active_parameters[2] == 0 else self.parameter_descriptions["Gain"][1] if self.active_parameters[2] == 1 else self.parameter_descriptions["Gain"][2] if self.active_parameters[2] == 2 else ""),
-            "Distortion": maybe_include(omission_probability, self.parameter_descriptions["Distortion"][0] if self.active_parameters[3] == 0 else self.parameter_descriptions["Distortion"][1] if self.active_parameters[3] == 1 else self.parameter_descriptions["Distortion"][2] if self.active_parameters[3] == 2 else "")
+            "Distortion": maybe_include(omission_probability, self.parameter_descriptions["Distortion"][0] if self.active_parameters[3] == 0 else self.parameter_descriptions["Distortion"][1] if self.active_parameters[3] == 1 else self.parameter_descriptions["Distortion"][2] if self.active_parameters[3] == 2 else ""),
+            "Audio Continuity": maybe_include(omission_probability, self.parameter_descriptions["Audio Continuity"][0] if self.active_parameters[4] == 0 else self.parameter_descriptions["Audio Continuity"][1] if self.active_parameters[4] == 1 else "")
         }
 
         ### Return the joined string after omission step
