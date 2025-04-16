@@ -55,15 +55,15 @@ regression_data_trim$Correct <- factor(regression_data_trim$Correct) # Now conve
 
 
 # Change GroupOrder to factors (catagorical)
-regression_data_trim[regression_data_trim$GroupOrder == "three_then_five",]$GroupOrder <- "=three_five"
-regression_data_trim[regression_data_trim$GroupOrder == "five_then_three",]$GroupOrder <- "=five_three"
-regression_data_trim$GroupOrder <- factor(regression_data_trim$GroupOrder, levels=c("=five_three", "=three_five"))
+regression_data_trim[regression_data_trim$GroupOrder == "three_then_five",]$GroupOrder <- "=three_then_five"
+regression_data_trim[regression_data_trim$GroupOrder == "five_then_three",]$GroupOrder <- "=five_then_three"
+regression_data_trim$GroupOrder <- factor(regression_data_trim$GroupOrder, levels=c("=five_then_three", "=three_then_five"))
 
 
-# # Change StateSpaceSize to factors (catagorical)
-regression_data_trim[regression_data_trim$StateSpaceSize == "five",]$StateSpaceSize <- "=five"
-regression_data_trim[regression_data_trim$StateSpaceSize == "three",]$StateSpaceSize <- "=three"
-regression_data_trim$StateSpaceSize <- factor(regression_data_trim$StateSpaceSize, levels=c("=five", "=three"))
+# # Change VocabularySize to factors (catagorical)
+regression_data_trim[regression_data_trim$VocabularySize == "five",]$VocabularySize <- "=five"
+regression_data_trim[regression_data_trim$VocabularySize == "three",]$VocabularySize <- "=three"
+regression_data_trim$VocabularySize <- factor(regression_data_trim$VocabularySize, levels=c("=five", "=three"))
 
 
 # Change GenerationMethod to factors (catagorical)
@@ -71,8 +71,8 @@ regression_data_trim$StateSpaceSize <- factor(regression_data_trim$StateSpaceSiz
 regression_data_trim[regression_data_trim$GenerationMethod == "iso",]$GenerationMethod <- "=iso"
 regression_data_trim[regression_data_trim$GenerationMethod == "non",]$GenerationMethod <- "=proxy"
 regression_data_trim[regression_data_trim$GenerationMethod == "emd",]$GenerationMethod <- "=proxy+emd"
-regression_data_trim[regression_data_trim$GenerationMethod == "dyn",]$GenerationMethod <- "=proxy+dyn"
-regression_data_trim$GenerationMethod <- factor(regression_data_trim$GenerationMethod, levels=c("=iso", "=proxy", "=proxy+emd", "=proxy+dyn"))
+regression_data_trim[regression_data_trim$GenerationMethod == "dyn",]$GenerationMethod <- "=proxy+kin"
+regression_data_trim$GenerationMethod <- factor(regression_data_trim$GenerationMethod, levels=c("=iso", "=proxy", "=proxy+emd", "=proxy+kin"))
 
 
 # Look at the data structure again (see what type of data is in each column)
@@ -87,22 +87,23 @@ table(regression_data_trim$Correct)
 # since +/- one or two samples can have a large effect on the odds/log(odds)
 # We only need to do this for our data that is catagorical (not continuous)
 xtabs(~ Correct + GroupOrder, data=regression_data_trim)
-xtabs(~ Correct + StateSpaceSize, data=regression_data_trim)
+xtabs(~ Correct + VocabularySize, data=regression_data_trim)
 xtabs(~ Correct + GenerationMethod, data=regression_data_trim)
 
 
 # First let check if there are any interactions between our variables (A, B, C, AB, AC, BC, etc... )
-interactions_logit <- glm(Correct ~ GroupOrder + StateSpaceSize + GenerationMethod +
-  (GroupOrder * StateSpaceSize) + (GroupOrder * GenerationMethod) +
-  (StateSpaceSize * GenerationMethod),
+interactions_logit <- glm(Correct ~ GroupOrder + VocabularySize + GenerationMethod +
+  (GroupOrder * VocabularySize) + (GroupOrder * GenerationMethod) +
+  (VocabularySize * GenerationMethod),
   data = regression_data_trim, family = "binomial")
 summary(interactions_logit)
 
 
 # Now lets run a logistic regression using the glm function
 # Lets look at the model with all variables
-regression_logit <- glm(Correct ~ GroupOrder + StateSpaceSize + GenerationMethod + (StateSpaceSize * GenerationMethod),
+regression_logit <- glm(Correct ~ GroupOrder + VocabularySize + GenerationMethod + (VocabularySize * GenerationMethod),
                          data=regression_data_trim, family='binomial')
 
 summary(regression_logit)
+
 
