@@ -2,10 +2,12 @@ keys.txt
 keys_extra.txt
 archive/
 videos/
-stats/locating_profile.r
 data/acc_arrays/archive/
 data/acc_arrays/test/
 data/selected_poses/archive/
-scripts/archive/
 data/study_results/archive/
 data/study_results/emails/
+scripts/__pycache__/
+scripts/.ipynb_checkpoints/
+scripts/archive/
+stats/locating_profile.r
