@@ -6,5 +6,5 @@ data/acc_arrays/archive/
 data/acc_arrays/test/
 data/selected_poses/archive/
 scripts/archive/
-study_results/archive/
-study_results/emails/
+data/study_results/archive/
+data/study_results/emails/
