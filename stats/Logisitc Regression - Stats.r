@@ -54,10 +54,10 @@ regression_data_trim$Correct <- ifelse(test=regression_data_trim$Correct == 1, y
 regression_data_trim$Correct <- factor(regression_data_trim$Correct) # Now convert to a factor
 
 
-# Change GroupOrder to factors (catagorical)
-regression_data_trim[regression_data_trim$GroupOrder == "three_then_five",]$GroupOrder <- "=three_then_five"
-regression_data_trim[regression_data_trim$GroupOrder == "five_then_three",]$GroupOrder <- "=five_then_three"
-regression_data_trim$GroupOrder <- factor(regression_data_trim$GroupOrder, levels=c("=five_then_three", "=three_then_five"))
+# Change BlockOrder to factors (catagorical)
+regression_data_trim[regression_data_trim$BlockOrder == "three_then_five",]$BlockOrder <- "=three_then_five"
+regression_data_trim[regression_data_trim$BlockOrder == "five_then_three",]$BlockOrder <- "=five_then_three"
+regression_data_trim$BlockOrder <- factor(regression_data_trim$BlockOrder, levels=c("=five_then_three", "=three_then_five"))
 
 
 # # Change VocabularySize to factors (catagorical)
@@ -86,14 +86,14 @@ table(regression_data_trim$Correct)
 # Good practice: exclude variables that only have 1 or 2 samples in a category
 # since +/- one or two samples can have a large effect on the odds/log(odds)
 # We only need to do this for our data that is catagorical (not continuous)
-xtabs(~ Correct + GroupOrder, data=regression_data_trim)
+xtabs(~ Correct + BlockOrder, data=regression_data_trim)
 xtabs(~ Correct + VocabularySize, data=regression_data_trim)
 xtabs(~ Correct + GenerationMethod, data=regression_data_trim)
 
 
 # First let check if there are any interactions between our variables (A, B, C, AB, AC, BC, etc... )
-interactions_logit <- glm(Correct ~ GroupOrder + VocabularySize + GenerationMethod +
-  (GroupOrder * VocabularySize) + (GroupOrder * GenerationMethod) +
+interactions_logit <- glm(Correct ~ BlockOrder + VocabularySize + GenerationMethod +
+  (BlockOrder * VocabularySize) + (BlockOrder * GenerationMethod) +
   (VocabularySize * GenerationMethod),
   data = regression_data_trim, family = "binomial")
 summary(interactions_logit)
@@ -101,9 +101,13 @@ summary(interactions_logit)
 
 # Now lets run a logistic regression using the glm function
 # Lets look at the model with all variables
-regression_logit <- glm(Correct ~ GroupOrder + VocabularySize + GenerationMethod + (VocabularySize * GenerationMethod),
+regression_logit <- glm(Correct ~ BlockOrder + VocabularySize + GenerationMethod + (VocabularySize * GenerationMethod),
                          data=regression_data_trim, family='binomial')
 
 summary(regression_logit)
+
+
+
+
 
 
