@@ -11,19 +11,21 @@ This codebase uses the framework as described in our submitted paper. In this im
 
 
 ### Jupyter Notebook used to Generate the Accuracy Arrays and run the Optimization Hill-Climb: 
-(Start of this notebook includes an explanation of the OpenAI API hyper-parameters used in this work)
+Notebook includes explanations of the OpenAI API hyper-parameters used in this task, along with values.
 https://github.com/liamreneroy/LLM_vocab_optimization/blob/main/scripts/main.ipynb
 
 
 ### Pseudo-Code for the Optimization Hill-Climb Algorithm and Sub-Methods: 
+Sub methods include distance calculation, objecive function scoring method, initialization method.
 https://github.com/liamreneroy/LLM_vocab_optimization/tree/main/media/algorithm_pseudocode
 
 
 ### Jupyter Notebook used to Validate the Accuracy Proxy Using the Test Dataset
+Notebook includes explanations of the OpenAI API hyper-parameters used in this task, along with values.
 https://github.com/liamreneroy/LLM_vocab_optimization/blob/main/scripts/proxy_validation.ipynb
 
 
-### Prompt-Reply Format Used for the Accuracy Proxy 
+### Prompt Format Used for the Accuracy Proxy. Includes Sample Response.
 https://github.com/liamreneroy/LLM_vocab_optimization/blob/main/media/accuracy_proxy/acc_proxcy_prompt_reply.txt
 
 
@@ -31,7 +33,7 @@ https://github.com/liamreneroy/LLM_vocab_optimization/blob/main/media/accuracy_p
 https://github.com/liamreneroy/LLM_vocab_optimization/blob/main/media/optimization/main_output_with_weight_analysis.txt
 
 
-### Excel File Containing the Motion Outputs Selected from the Optimization Function
+### Excel File Containing Motions Selected from the Optimization Function
 https://github.com/liamreneroy/LLM_vocab_optimization/tree/main/data/study_results
 
 
