@@ -1,4 +1,77 @@
 # LLM_vocabulary
-Generating optimized expressive robot vocabulary sets.
+Generating expressive robot vocabulary sets via proxy-based optimization.
 
-## The public-facing side of this repository is a work-in-progress. 
+### Link to Research Paper
+TBD
+
+## Main Files and User Study
+This codebase uses the framework as described in our submitted paper. In this implimentation, the GPT-4o model is used. The main files in this repo are:
+
+
+
+
+### Jupyter Notebook used to Generate the Accuracy Arrays and run the Optimization Hill-Climb: 
+(Start of this notebook includes an explanation of the OpenAI API hyper-parameters used in this work)
+https://github.com/liamreneroy/LLM_vocab_optimization/blob/main/scripts/main.ipynb
+
+
+### Pseudo-Code for the Optimization Hill-Climb Algorithm and Sub-Methods: 
+https://github.com/liamreneroy/LLM_vocab_optimization/tree/main/media/algorithm_pseudocode
+
+
+### Jupyter Notebook used to Validate the Accuracy Proxy Using the Test Dataset
+https://github.com/liamreneroy/LLM_vocab_optimization/blob/main/scripts/proxy_validation.ipynb
+
+
+### Prompt-Reply Format Used for the Accuracy Proxy 
+https://github.com/liamreneroy/LLM_vocab_optimization/blob/main/media/accuracy_proxy/acc_proxcy_prompt_reply.txt
+
+
+### Outputs of the Main Optimization Hill-Climb Algorithm with Weight Analysis
+https://github.com/liamreneroy/LLM_vocab_optimization/blob/main/media/optimization/main_output_with_weight_analysis.txt
+
+
+### Excel File Containing the Motion Outputs Selected from the Optimization Function
+https://github.com/liamreneroy/LLM_vocab_optimization/tree/main/data/study_results
+
+
+### Excel File Containing Raw and Organized Results of the User Study
+https://github.com/liamreneroy/LLM_vocab_optimization/tree/main/data/study_results
+
+
+### All Confusion Matrices Plots
+https://github.com/liamreneroy/LLM_vocab_optimization/tree/main/plots/conf_matrix
+
+
+### Statistical Analyses Implimented in R
+https://github.com/liamreneroy/LLM_vocab_optimization/tree/main/stats
+
+
+
+## Packages to Install:
+pygame   (see this webpage ~ https://www.pygame.org/wiki/GettingStarted)  
+jupyterlab, numpy, termcolor, openpyxl, nbconvert-webpdf, openai, wandb  
+
+
+Either use:    
+--> sudo apt-get install <package_name>  
+--> python3 -m pip install <package_name>  
+--> conda install -c conda-forge <package_name>  
+
+
+Example using conda:  
+--> conda install -c conda-forge <package_name>  
+
+jupyterlab or notebook  
+numpy  
+termcolor  
+openpyxl  
+nbconvert-webpdf              
+openai
+wandb  
+
+
+## Owner: 
+Liam Rene Roy
+Liamreneroy@gmail.com
+Liam.roy@monash.edu
