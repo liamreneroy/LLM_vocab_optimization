@@ -8,8 +8,6 @@ TBD
 This codebase uses the framework as described in our submitted paper. In this implimentation, the GPT-4o model is used. The main files in this repo are:
 
 
-
-
 ### Jupyter Notebook used to Generate the Accuracy Arrays and run the Optimization Hill-Climb: 
 Notebook includes explanations of the OpenAI API hyper-parameters used in this task, along with values.
 https://github.com/liamreneroy/LLM_vocab_optimization/blob/main/scripts/main.ipynb
@@ -35,6 +33,10 @@ https://github.com/liamreneroy/LLM_vocab_optimization/blob/main/media/optimizati
 
 ### Excel File Containing Motions Selected from the Optimization Function
 https://github.com/liamreneroy/LLM_vocab_optimization/tree/main/data/study_results
+
+
+### Video Files of a Few Example Motions on Quadruped Robot
+https://github.com/liamreneroy/LLM_vocab_optimization/tree/main/media/example_motions
 
 
 ### Excel File Containing Raw and Organized Results of the User Study
