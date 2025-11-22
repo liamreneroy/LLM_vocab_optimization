@@ -14,7 +14,7 @@ class Robot:
         # USER TUNED: PARAMETER DESCRIPTIONS
         # Descriptions of each parameter.
         self.parameter_descriptions = {             
-            "Body Direction": ["The robot turns its whole body to directly face the user in the scene.", "The robot turns its whole body to directly face a nearby pinecone in the scene."],
+            "Body Direction": ["The robot turns its whole body to directly face the user in the scene.", "The robot turns its whole body to directly face a nearby box in the scene.", "The robot turns its whole body to directly face the charging dock in the scene."],
             "Body Tilt": ["The robot tilts its torso to the left.", "The robot maintains a straight-standing torso position.", "The robot tilts its torso to the right."],
             "Body Lean": ["The robot leans its torso backward to face the sky.", "The robot does not lean forward nor backward.", "The robot leans its torso forward to face the ground."],
             "Body Height": ["The robot lowers its body to the ground.", "The robot maintains a natural body height.", "The robot raises its torso as high as it can."],
@@ -76,7 +76,7 @@ class Robot:
 
         # USER TUNED: Adjust index of non-default descriptions to generate a dictionary of strings for each parameter
         parameter_strings = {
-            "Body Direction": maybe_include(omission_probability, self.parameter_descriptions["Body Direction"][0] if self.active_parameters[0] == 0 else self.parameter_descriptions["Body Direction"][1] if self.active_parameters[0] == 1 else ""),
+            "Body Direction": maybe_include(omission_probability, self.parameter_descriptions["Body Direction"][0] if self.active_parameters[0] == 0 else self.parameter_descriptions["Body Direction"][1] if self.active_parameters[0] == 1 else self.parameter_descriptions["Body Direction"][2] if self.active_parameters[0] == 2 else ""),
             "Body Tilt": maybe_include(omission_probability, self.parameter_descriptions["Body Tilt"][0] if self.active_parameters[1] == 0 else self.parameter_descriptions["Body Tilt"][1] if self.active_parameters[1] == 1 else self.parameter_descriptions["Body Tilt"][2] if self.active_parameters[1] == 2 else ""),
             "Body Lean": maybe_include(omission_probability, self.parameter_descriptions["Body Lean"][0] if self.active_parameters[2] == 0 else self.parameter_descriptions["Body Lean"][1] if self.active_parameters[2] == 1 else self.parameter_descriptions["Body Lean"][2] if self.active_parameters[2] == 2 else ""),
             "Body Height": maybe_include(omission_probability, self.parameter_descriptions["Body Height"][0] if self.active_parameters[3] == 0 else self.parameter_descriptions["Body Height"][1] if self.active_parameters[3] == 1 else self.parameter_descriptions["Body Height"][2] if self.active_parameters[3] == 2 else ""),
