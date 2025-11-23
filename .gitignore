@@ -1,3 +1,4 @@
+extra_code.txt
 keys.txt
 keys_extra.txt
 archive/
@@ -11,3 +12,4 @@ scripts/__pycache__/
 scripts/.ipynb_checkpoints/
 scripts/archive/
 stats/locating_profile.r
+.DS_Store

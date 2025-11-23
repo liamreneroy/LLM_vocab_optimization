@@ -15,11 +15,11 @@ class Robot:
         # Descriptions of each parameter.
         self.parameter_descriptions = {             
             "Body Direction": ["The robot turns its whole body to directly face the user in the scene.", "The robot turns its whole body to directly face a nearby box in the scene.", "The robot turns its whole body to directly face the charging dock in the scene."],
-            "Body Tilt": ["The robot tilts its torso to the left.", "The robot maintains a straight-standing torso position.", "The robot tilts its torso to the right."],
+            "Body Tilt": ["The robot tilts its head to the left as if it curious or confused.", "The robot maintains a straight-standing torso position.", "The robot tilts its head to the right as if it curious or confused."],
             "Body Lean": ["The robot leans its torso backward to face the sky.", "The robot does not lean forward nor backward.", "The robot leans its torso forward to face the ground."],
-            "Body Height": ["The robot lowers its body to the ground.", "The robot maintains a natural body height.", "The robot raises its torso as high as it can."],
-            "Motion Smoothness": ["The robot's motion is smooth without any disturbances.", "The robot's motion is rough and shaky."],
-            "Motion Velocity": ["The robot moves slowly to achieve this pose.", "The robot moves at a normal speed to achieve this pose.", "The robot moves quickly to achieve this pose."]
+            "Body Height": ["The robot lowers its body and lays on the ground.", "The robot maintains a natural body height.", "The robot firmly raises its torso as high as it can."],
+            "Motion Smoothness": ["The robot's motion is smooth without any disturbances.", "The robot's motion is rough, jittery and shaky."],
+            "Motion Velocity": ["The robot moves very slowly to achieve this pose.", "The robot moves quickly to achieve this pose."]
         }
 
         # USER TUNED: INDECES OF PARAMETER DEFAULTS
@@ -81,7 +81,7 @@ class Robot:
             "Body Lean": maybe_include(omission_probability, self.parameter_descriptions["Body Lean"][0] if self.active_parameters[2] == 0 else self.parameter_descriptions["Body Lean"][1] if self.active_parameters[2] == 1 else self.parameter_descriptions["Body Lean"][2] if self.active_parameters[2] == 2 else ""),
             "Body Height": maybe_include(omission_probability, self.parameter_descriptions["Body Height"][0] if self.active_parameters[3] == 0 else self.parameter_descriptions["Body Height"][1] if self.active_parameters[3] == 1 else self.parameter_descriptions["Body Height"][2] if self.active_parameters[3] == 2 else ""),
             "Motion Smoothness": maybe_include(omission_probability, self.parameter_descriptions["Motion Smoothness"][0] if self.active_parameters[4] == 0 else self.parameter_descriptions["Motion Smoothness"][1] if self.active_parameters[4] == 1 else ""),
-            "Motion Velocity": maybe_include(omission_probability, self.parameter_descriptions["Motion Velocity"][0] if self.active_parameters[5] == 0 else self.parameter_descriptions["Motion Velocity"][1] if self.active_parameters[5] == 1 else self.parameter_descriptions["Motion Velocity"][2] if self.active_parameters[5] == 2 else "")
+            "Motion Velocity": maybe_include(omission_probability, self.parameter_descriptions["Motion Velocity"][0] if self.active_parameters[5] == 0 else self.parameter_descriptions["Motion Velocity"][1] if self.active_parameters[5] == 1 else "")
         }
 
         ### Return the joined string after omission step
@@ -113,6 +113,19 @@ class Robot:
     def get_parameter_names(self):
         """Returns list of parameter names in order they appear in action space"""
         return list(self.parameter_ranges.keys())
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,5 +1,8 @@
 import random
 import sys
+import uuid
+
+
 
 def build_prompt(expression_string, state_list, deployment_context, llm_assistant_prompt, expression_modality):
     """Build a prompt for llm based on robot parameters and states"""
@@ -9,8 +12,11 @@ def build_prompt(expression_string, state_list, deployment_context, llm_assistan
     random.shuffle(shuffled_states)
     shuffled_states.append(state_list[-1])  # Ensure the last state is always last
     shuffled_states_str = "\n".join(shuffled_states)
+    task_id = str(uuid.uuid4())
 
     prompt = f'''
+"Task ID: {task_id}
+    
 {llm_assistant_prompt}
 
 {deployment_context}
