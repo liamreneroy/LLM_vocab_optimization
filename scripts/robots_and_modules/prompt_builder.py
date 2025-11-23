@@ -15,7 +15,8 @@ def build_prompt(expression_string, state_list, deployment_context, llm_assistan
     task_id = str(uuid.uuid4())
 
     prompt = f'''
-"Task ID: {task_id}
+    
+Task ID: {task_id}
     
 {llm_assistant_prompt}
 
