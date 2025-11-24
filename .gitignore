@@ -3,6 +3,7 @@ keys.txt
 keys_extra.txt
 archive/
 videos/
+data/proxy_validation/proxy_validation_backup.xlsx
 data/acc_arrays/archive/
 data/acc_arrays/test/
 data/selected_poses/archive/
