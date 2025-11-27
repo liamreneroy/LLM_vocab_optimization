@@ -36,7 +36,7 @@ Below is a description of the robot using {expression_modality} to express its s
     
 Your task:
 
-Please estimate what state you think the robot is in based on this description. If none of the states seem to match the description, select 'Unsure'. However, if you can confidently match the description to one of the states, please do so.
+Please estimate what state you think the robot is in based on this description. If none of the states seem to match the description, select 'Unsure'. Please do your best to accuratly match the description to one of the robot states.
 
 Your response MUST be a single line in the exact format shown below (see example and reference):
 

@@ -15,7 +15,7 @@ class Robot:
         # Descriptions of each parameter.
         self.parameter_descriptions = {             
             "Body Direction": ["The robot turns its whole body to directly face the user in the scene.", "The robot turns its whole body to directly face a nearby box in the scene.", "The robot turns its whole body to directly face the charging dock in the scene."],
-            "Body Tilt": ["The robot tilts its head to the left as if it curious or confused.", "The robot maintains a straight-standing torso position.", "The robot tilts its head to the right as if it curious or confused."],
+            "Body Tilt": ["The robot tilts its head to the left.", "The robot maintains a straight-standing torso position.", "The robot tilts its head to the right."],
             "Body Lean": ["The robot leans its torso backward to face the sky.", "The robot does not lean forward nor backward.", "The robot leans its torso forward to face the ground."],
             "Body Height": ["The robot lowers its body and lays on the ground.", "The robot maintains a natural body height.", "The robot firmly raises its torso as high as it can."],
             "Motion Smoothness": ["The robot's motion is smooth without any disturbances.", "The robot's motion is rough, jittery and shaky."],
