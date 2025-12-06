@@ -13,4 +13,5 @@ scripts/__pycache__/
 scripts/.ipynb_checkpoints/
 scripts/archive/
 stats/locating_profile.r
+stats/archive/
 .DS_Store
