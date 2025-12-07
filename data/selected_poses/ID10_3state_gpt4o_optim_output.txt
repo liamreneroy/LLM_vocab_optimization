@@ -1,0 +1,2322 @@
+########################
+
+
+::: COST FUNCTION WEIGHTING: 0.001
+
+
+########################
+
+
+::: Using main robot for 'minimized' state space. - robot_selection = go1_motion_main
+
+
+========================================
+::: Starting optimization for state_space='minimized' | distance_method='none'
+========================================
+
+
+::: Loading accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Different accuracy array file detected. Loading new file...
+
+:::  Load successful || accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Skip load step - No trajectory array needed for distance_method_selection=none
+
+########################
+Robot		 | go1_motion_main
+Weight Value	 | 0.001
+State Space	 | minimized
+Dist Method	 | none
+Action Space	 | (2, 3, 3, 3, 2, 3)
+Param Ranges	 | {'Body Direction': 2, 'Body Tilt': 3, 'Body Lean': 3, 'Body Height': 3, 'Motion Smoothness': 2, 'Motion Velocity': 3}
+Robot States	 | {'S01': 'Waiting for Input', 'S02': 'Interacting with Pinecone', 'S03': 'Needs Help', 'S04': 'Unsure'}
+########################
+
+::: INIT | Norm Score: 0.0005, Norm Acc: 1.0000, Norm Dist: 0.0000
+::: Itteration 1 | Steps without Improvement: 1
+::: Itteration 2 | Steps without Improvement: 2
+
+::: Local search ended after 2 iteration(s). Best score=0.0005
+
+
+********************
+***** RESULTS ******
+********************
+
+Final States:
+ S01 -> (0, 1, 0, 1, 0, 1), accuracy=1.0000 | Waiting for Input
+ S02 -> (1, 0, 2, 0, 0, 1), accuracy=1.0000 | Interacting with Pinecone
+ S03 -> (0, 0, 2, 2, 1, 1), accuracy=1.0000 | Needs Help
+
+Parameter Legend:
+P1: Body Direction
+P2: Body Tilt
+P3: Body Lean
+P4: Body Height
+P5: Motion Smoothness
+P6: Motion Velocity
+
+Average Accuracy Score: 	1.0000
+Normalized Distance Score: 	0.0000
+Normalized Objective Score: 	0.0005
+
+
+
+
+
+
+
+========================================
+::: Starting optimization for state_space='minimized' | distance_method='emd'
+========================================
+
+
+::: Loading accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Using previously loaded accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Skip load step - No trajectory array needed for distance_method_selection=emd
+
+########################
+Robot		 | go1_motion_main
+Weight Value	 | 0.001
+State Space	 | minimized
+Dist Method	 | emd
+Action Space	 | (2, 3, 3, 3, 2, 3)
+Param Ranges	 | {'Body Direction': 2, 'Body Tilt': 3, 'Body Lean': 3, 'Body Height': 3, 'Motion Smoothness': 2, 'Motion Velocity': 3}
+Robot States	 | {'S01': 'Waiting for Input', 'S02': 'Interacting with Pinecone', 'S03': 'Needs Help', 'S04': 'Unsure'}
+########################
+
+::: INIT | Norm Score: 0.2336, Norm Acc: 1.0000, Norm Dist: 0.4667
+::: ITERATION 1: swapped state=S02 from (1, 0, 2, 0, 0, 1) to (1, 1, 2, 0, 0, 0)
+::: NEW | Norm Score: 0.2669, Norm Acc: 0.9833, Norm Dist: 0.5333
+::: Itteration 1 | Reset Steps without Improvement: 0
+::: Itteration 1 | Steps without Improvement: 1
+::: ITERATION 2: swapped state=S01 from (0, 1, 0, 1, 0, 1) to (1, 2, 0, 0, 0, 1)
+::: NEW | Norm Score: 0.3001, Norm Acc: 0.7167, Norm Dist: 0.6000
+::: Itteration 2 | Reset Steps without Improvement: 0
+::: Itteration 2 | Steps without Improvement: 1
+::: ITERATION 3: swapped state=S01 from (1, 2, 0, 0, 0, 1) to (1, 2, 0, 0, 1, 2)
+::: NEW | Norm Score: 0.3333, Norm Acc: 0.6667, Norm Dist: 0.6667
+::: Itteration 3 | Reset Steps without Improvement: 0
+::: Itteration 3 | Steps without Improvement: 1
+::: ITERATION 4: swapped state=S01 from (1, 2, 0, 0, 1, 2) to (1, 2, 0, 2, 0, 2)
+::: NEW | Norm Score: 0.3334, Norm Acc: 0.7500, Norm Dist: 0.6667
+::: Itteration 4 | Reset Steps without Improvement: 0
+::: Itteration 4 | Steps without Improvement: 1
+::: ITERATION 5: swapped state=S02 from (1, 1, 2, 0, 0, 0) to (1, 2, 2, 0, 0, 0)
+::: NEW | Norm Score: 0.3334, Norm Acc: 0.7667, Norm Dist: 0.6667
+::: Itteration 5 | Reset Steps without Improvement: 0
+::: Itteration 5 | Steps without Improvement: 1
+::: ITERATION 6: swapped state=S01 from (1, 2, 0, 2, 0, 2) to (0, 0, 0, 1, 0, 2)
+::: NEW | Norm Score: 0.3335, Norm Acc: 0.9123, Norm Dist: 0.6667
+::: Itteration 6 | Reset Steps without Improvement: 0
+::: Itteration 6 | Steps without Improvement: 1
+::: ITERATION 7: swapped state=S01 from (0, 0, 0, 1, 0, 2) to (0, 1, 0, 1, 0, 2)
+::: NEW | Norm Score: 0.3335, Norm Acc: 0.9500, Norm Dist: 0.6667
+::: Itteration 7 | Reset Steps without Improvement: 0
+::: Itteration 7 | Steps without Improvement: 1
+::: Itteration 8 | Steps without Improvement: 2
+
+::: Local search ended after 8 iteration(s). Best score=0.3335
+
+
+********************
+***** RESULTS ******
+********************
+
+Final States:
+ S01 -> (0, 1, 0, 1, 0, 2), accuracy=0.8500 | Waiting for Input
+ S02 -> (1, 2, 2, 0, 0, 0), accuracy=1.0000 | Interacting with Pinecone
+ S03 -> (0, 0, 2, 2, 1, 1), accuracy=1.0000 | Needs Help
+
+Parameter Legend:
+P1: Body Direction
+P2: Body Tilt
+P3: Body Lean
+P4: Body Height
+P5: Motion Smoothness
+P6: Motion Velocity
+
+Average Accuracy Score: 	0.9500
+Normalized Distance Score: 	0.6667
+Normalized Objective Score: 	0.3335
+
+
+
+
+
+
+
+========================================
+::: Starting optimization for state_space='minimized' | distance_method='dynamic'
+========================================
+
+
+::: Loading accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Using previously loaded accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Loading trajectory array file: ../data/freedog/data/go1_transformed_trajectory_array_pinecone.npy
+
+::: Different trajectory array file detected. Loading new file...
+
+::: Load successful || trajectory array file: ../data/freedog/data/go1_transformed_trajectory_array_pinecone.npy
+
+########################
+Robot		 | go1_motion_main
+Weight Value	 | 0.001
+State Space	 | minimized
+Dist Method	 | dynamic
+Action Space	 | (2, 3, 3, 3, 2, 3)
+Param Ranges	 | {'Body Direction': 2, 'Body Tilt': 3, 'Body Lean': 3, 'Body Height': 3, 'Motion Smoothness': 2, 'Motion Velocity': 3}
+Robot States	 | {'S01': 'Waiting for Input', 'S02': 'Interacting with Pinecone', 'S03': 'Needs Help', 'S04': 'Unsure'}
+########################
+
+::: INIT | Norm Score: 0.3029, Norm Acc: 1.0000, Norm Dist: 0.6053
+::: ITERATION 1: swapped state=S01 from (0, 1, 0, 1, 0, 1) to (1, 2, 0, 0, 0, 1)
+::: NEW | Norm Score: 0.3170, Norm Acc: 0.7333, Norm Dist: 0.6339
+::: Itteration 1 | Reset Steps without Improvement: 0
+::: Itteration 1 | Steps without Improvement: 1
+::: ITERATION 2: swapped state=S02 from (1, 0, 2, 0, 0, 1) to (1, 1, 2, 2, 1, 2)
+::: NEW | Norm Score: 0.3323, Norm Acc: 0.5000, Norm Dist: 0.6647
+::: Itteration 2 | Reset Steps without Improvement: 0
+::: Itteration 2 | Steps without Improvement: 1
+::: ITERATION 3: swapped state=S03 from (0, 0, 2, 2, 1, 1) to (0, 2, 2, 0, 1, 0)
+::: NEW | Norm Score: 0.3338, Norm Acc: 0.4500, Norm Dist: 0.6679
+::: Itteration 3 | Reset Steps without Improvement: 0
+::: Itteration 3 | Steps without Improvement: 1
+::: ITERATION 4: swapped state=S01 from (1, 2, 0, 0, 0, 1) to (1, 2, 1, 0, 1, 2)
+::: NEW | Norm Score: 0.3452, Norm Acc: 0.3833, Norm Dist: 0.6907
+::: Itteration 4 | Reset Steps without Improvement: 0
+::: Itteration 4 | Steps without Improvement: 1
+::: ITERATION 5: swapped state=S03 from (0, 2, 2, 0, 1, 0) to (0, 0, 1, 2, 0, 2)
+::: NEW | Norm Score: 0.3497, Norm Acc: 0.2579, Norm Dist: 0.6998
+::: Itteration 5 | Reset Steps without Improvement: 0
+::: Itteration 5 | Steps without Improvement: 1
+::: ITERATION 6: swapped state=S03 from (0, 0, 1, 2, 0, 2) to (0, 2, 2, 0, 1, 2)
+::: NEW | Norm Score: 0.3553, Norm Acc: 0.3000, Norm Dist: 0.7109
+::: Itteration 6 | Reset Steps without Improvement: 0
+::: Itteration 6 | Steps without Improvement: 1
+::: ITERATION 7: swapped state=S03 from (0, 2, 2, 0, 1, 2) to (0, 0, 2, 2, 1, 2)
+::: NEW | Norm Score: 0.3639, Norm Acc: 0.3667, Norm Dist: 0.7282
+::: Itteration 7 | Reset Steps without Improvement: 0
+::: Itteration 7 | Steps without Improvement: 1
+::: ITERATION 8: swapped state=S01 from (1, 2, 1, 0, 1, 2) to (0, 2, 2, 0, 1, 2)
+::: NEW | Norm Score: 0.3650, Norm Acc: 0.3833, Norm Dist: 0.7303
+::: Itteration 8 | Reset Steps without Improvement: 0
+::: Itteration 8 | Steps without Improvement: 1
+::: ITERATION 9: swapped state=S01 from (0, 2, 2, 0, 1, 2) to (0, 0, 0, 0, 1, 1)
+::: NEW | Norm Score: 0.3681, Norm Acc: 0.4018, Norm Dist: 0.7366
+::: Itteration 9 | Reset Steps without Improvement: 0
+::: Itteration 9 | Steps without Improvement: 1
+::: ITERATION 10: swapped state=S03 from (0, 0, 2, 2, 1, 2) to (0, 2, 1, 2, 1, 2)
+::: NEW | Norm Score: 0.3717, Norm Acc: 0.4158, Norm Dist: 0.7436
+::: Itteration 10 | Reset Steps without Improvement: 0
+::: Itteration 10 | Steps without Improvement: 1
+::: ITERATION 11: swapped state=S01 from (0, 0, 0, 0, 1, 1) to (0, 2, 1, 0, 1, 2)
+::: NEW | Norm Score: 0.3772, Norm Acc: 0.3982, Norm Dist: 0.7547
+::: Itteration 11 | Reset Steps without Improvement: 0
+::: Itteration 11 | Steps without Improvement: 1
+::: ITERATION 12: swapped state=S02 from (1, 1, 2, 2, 1, 2) to (1, 2, 0, 0, 0, 1)
+::: NEW | Norm Score: 0.3881, Norm Acc: 0.5316, Norm Dist: 0.7764
+::: Itteration 12 | Reset Steps without Improvement: 0
+::: Itteration 12 | Steps without Improvement: 1
+::: ITERATION 13: swapped state=S02 from (1, 2, 0, 0, 0, 1) to (1, 2, 0, 0, 1, 2)
+::: NEW | Norm Score: 0.3883, Norm Acc: 0.4649, Norm Dist: 0.7770
+::: Itteration 13 | Reset Steps without Improvement: 0
+::: Itteration 13 | Steps without Improvement: 1
+::: ITERATION 14: swapped state=S02 from (1, 2, 0, 0, 1, 2) to (1, 2, 1, 0, 1, 2)
+::: NEW | Norm Score: 0.3891, Norm Acc: 0.4649, Norm Dist: 0.7785
+::: Itteration 14 | Reset Steps without Improvement: 0
+::: Itteration 14 | Steps without Improvement: 1
+::: ITERATION 15: swapped state=S02 from (1, 2, 1, 0, 1, 2) to (1, 1, 1, 2, 1, 2)
+::: NEW | Norm Score: 0.3932, Norm Acc: 0.3649, Norm Dist: 0.7868
+::: Itteration 15 | Reset Steps without Improvement: 0
+::: Itteration 15 | Steps without Improvement: 1
+::: ITERATION 16: swapped state=S03 from (0, 2, 1, 2, 1, 2) to (0, 2, 2, 2, 1, 2)
+::: NEW | Norm Score: 0.3937, Norm Acc: 0.3675, Norm Dist: 0.7878
+::: Itteration 16 | Reset Steps without Improvement: 0
+::: Itteration 16 | Steps without Improvement: 1
+::: ITERATION 17: swapped state=S02 from (1, 1, 1, 2, 1, 2) to (1, 2, 0, 2, 1, 1)
+::: NEW | Norm Score: 0.4003, Norm Acc: 0.4237, Norm Dist: 0.8009
+::: Itteration 17 | Reset Steps without Improvement: 0
+::: Itteration 17 | Steps without Improvement: 1
+::: Itteration 18 | Steps without Improvement: 2
+
+::: Local search ended after 18 iteration(s). Best score=0.4003
+
+
+********************
+***** RESULTS ******
+********************
+
+Final States:
+ S01 -> (0, 2, 1, 0, 1, 2), accuracy=0.0526 | Waiting for Input
+ S02 -> (1, 2, 0, 2, 1, 1), accuracy=0.3684 | Interacting with Pinecone
+ S03 -> (0, 2, 2, 2, 1, 2), accuracy=0.8500 | Needs Help
+
+Parameter Legend:
+P1: Body Direction
+P2: Body Tilt
+P3: Body Lean
+P4: Body Height
+P5: Motion Smoothness
+P6: Motion Velocity
+
+Average Accuracy Score: 	0.4237
+Normalized Distance Score: 	0.8009
+Normalized Objective Score: 	0.4003
+
+
+
+
+
+::: ALL CONDITIONS COMPLETE FOR WEIGHT [w=0.001]
+
+
+
+
+
+
+
+########################
+
+
+::: COST FUNCTION WEIGHTING: 0.1
+
+
+########################
+
+
+::: Using main robot for 'minimized' state space. - robot_selection = go1_motion_main
+
+
+========================================
+::: Starting optimization for state_space='minimized' | distance_method='none'
+========================================
+
+
+::: Loading accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Using previously loaded accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Skip load step - No trajectory array needed for distance_method_selection=none
+
+########################
+Robot		 | go1_motion_main
+Weight Value	 | 0.1
+State Space	 | minimized
+Dist Method	 | none
+Action Space	 | (2, 3, 3, 3, 2, 3)
+Param Ranges	 | {'Body Direction': 2, 'Body Tilt': 3, 'Body Lean': 3, 'Body Height': 3, 'Motion Smoothness': 2, 'Motion Velocity': 3}
+Robot States	 | {'S01': 'Waiting for Input', 'S02': 'Interacting with Pinecone', 'S03': 'Needs Help', 'S04': 'Unsure'}
+########################
+
+::: INIT | Norm Score: 0.0500, Norm Acc: 1.0000, Norm Dist: 0.0000
+::: Itteration 1 | Steps without Improvement: 1
+::: Itteration 2 | Steps without Improvement: 2
+
+::: Local search ended after 2 iteration(s). Best score=0.0500
+
+
+********************
+***** RESULTS ******
+********************
+
+Final States:
+ S01 -> (0, 1, 0, 1, 0, 1), accuracy=1.0000 | Waiting for Input
+ S02 -> (1, 0, 2, 0, 0, 1), accuracy=1.0000 | Interacting with Pinecone
+ S03 -> (0, 0, 2, 2, 1, 1), accuracy=1.0000 | Needs Help
+
+Parameter Legend:
+P1: Body Direction
+P2: Body Tilt
+P3: Body Lean
+P4: Body Height
+P5: Motion Smoothness
+P6: Motion Velocity
+
+Average Accuracy Score: 	1.0000
+Normalized Distance Score: 	0.0000
+Normalized Objective Score: 	0.0500
+
+
+
+
+
+
+
+========================================
+::: Starting optimization for state_space='minimized' | distance_method='emd'
+========================================
+
+
+::: Loading accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Using previously loaded accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Skip load step - No trajectory array needed for distance_method_selection=emd
+
+########################
+Robot		 | go1_motion_main
+Weight Value	 | 0.1
+State Space	 | minimized
+Dist Method	 | emd
+Action Space	 | (2, 3, 3, 3, 2, 3)
+Param Ranges	 | {'Body Direction': 2, 'Body Tilt': 3, 'Body Lean': 3, 'Body Height': 3, 'Motion Smoothness': 2, 'Motion Velocity': 3}
+Robot States	 | {'S01': 'Waiting for Input', 'S02': 'Interacting with Pinecone', 'S03': 'Needs Help', 'S04': 'Unsure'}
+########################
+
+::: INIT | Norm Score: 0.2600, Norm Acc: 1.0000, Norm Dist: 0.4667
+::: ITERATION 1: swapped state=S03 from (0, 0, 2, 2, 1, 1) to (1, 2, 2, 1, 1, 0)
+::: NEW | Norm Score: 0.2812, Norm Acc: 0.8246, Norm Dist: 0.5333
+::: Itteration 1 | Reset Steps without Improvement: 0
+::: Itteration 1 | Steps without Improvement: 1
+::: ITERATION 2: swapped state=S01 from (0, 1, 0, 1, 0, 1) to (0, 1, 0, 1, 1, 2)
+::: NEW | Norm Score: 0.2971, Norm Acc: 0.5412, Norm Dist: 0.6000
+::: Itteration 2 | Reset Steps without Improvement: 0
+::: Itteration 2 | Steps without Improvement: 1
+::: ITERATION 3: swapped state=S01 from (0, 1, 0, 1, 1, 2) to (0, 0, 1, 2, 0, 2)
+::: NEW | Norm Score: 0.3025, Norm Acc: 0.6491, Norm Dist: 0.6000
+::: Itteration 3 | Reset Steps without Improvement: 0
+::: Itteration 3 | Steps without Improvement: 1
+::: ITERATION 4: swapped state=S03 from (1, 2, 2, 1, 1, 0) to (0, 2, 2, 0, 1, 0)
+::: NEW | Norm Score: 0.3087, Norm Acc: 0.7746, Norm Dist: 0.6000
+::: Itteration 4 | Reset Steps without Improvement: 0
+::: Itteration 4 | Steps without Improvement: 1
+::: ITERATION 5: swapped state=S03 from (0, 2, 2, 0, 1, 0) to (1, 2, 1, 0, 1, 0)
+::: NEW | Norm Score: 0.3104, Norm Acc: 0.8079, Norm Dist: 0.6000
+::: Itteration 5 | Reset Steps without Improvement: 0
+::: Itteration 5 | Steps without Improvement: 1
+::: ITERATION 6: swapped state=S01 from (0, 0, 1, 2, 0, 2) to (0, 2, 0, 2, 0, 1)
+::: NEW | Norm Score: 0.3127, Norm Acc: 0.8537, Norm Dist: 0.6000
+::: Itteration 6 | Reset Steps without Improvement: 0
+::: Itteration 6 | Steps without Improvement: 1
+::: ITERATION 7: swapped state=S02 from (1, 0, 2, 0, 0, 1) to (1, 0, 2, 0, 0, 2)
+::: NEW | Norm Score: 0.3418, Norm Acc: 0.8362, Norm Dist: 0.6667
+::: Itteration 7 | Reset Steps without Improvement: 0
+::: Itteration 7 | Steps without Improvement: 1
+::: ITERATION 8: swapped state=S03 from (1, 2, 1, 0, 1, 0) to (0, 2, 0, 0, 1, 0)
+::: NEW | Norm Score: 0.3426, Norm Acc: 0.8528, Norm Dist: 0.6667
+::: Itteration 8 | Reset Steps without Improvement: 0
+::: Itteration 8 | Steps without Improvement: 1
+::: ITERATION 9: swapped state=S02 from (1, 0, 2, 0, 0, 2) to (1, 0, 2, 1, 0, 2)
+::: NEW | Norm Score: 0.3435, Norm Acc: 0.8704, Norm Dist: 0.6667
+::: Itteration 9 | Reset Steps without Improvement: 0
+::: Itteration 9 | Steps without Improvement: 1
+::: ITERATION 10: swapped state=S01 from (0, 2, 0, 2, 0, 1) to (0, 2, 0, 2, 0, 0)
+::: NEW | Norm Score: 0.3439, Norm Acc: 0.8772, Norm Dist: 0.6667
+::: Itteration 10 | Reset Steps without Improvement: 0
+::: Itteration 10 | Steps without Improvement: 1
+::: ITERATION 11: swapped state=S01 from (0, 2, 0, 2, 0, 0) to (0, 2, 1, 2, 0, 1)
+::: NEW | Norm Score: 0.3454, Norm Acc: 0.9074, Norm Dist: 0.6667
+::: Itteration 11 | Reset Steps without Improvement: 0
+::: Itteration 11 | Steps without Improvement: 1
+::: ITERATION 12: swapped state=S01 from (0, 2, 1, 2, 0, 1) to (0, 1, 1, 2, 0, 0)
+::: NEW | Norm Score: 0.3475, Norm Acc: 0.9500, Norm Dist: 0.6667
+::: Itteration 12 | Reset Steps without Improvement: 0
+::: Itteration 12 | Steps without Improvement: 1
+::: Itteration 13 | Steps without Improvement: 2
+
+::: Local search ended after 13 iteration(s). Best score=0.3475
+
+
+********************
+***** RESULTS ******
+********************
+
+Final States:
+ S01 -> (0, 1, 1, 2, 0, 0), accuracy=0.8500 | Waiting for Input
+ S02 -> (1, 0, 2, 1, 0, 2), accuracy=1.0000 | Interacting with Pinecone
+ S03 -> (0, 2, 0, 0, 1, 0), accuracy=1.0000 | Needs Help
+
+Parameter Legend:
+P1: Body Direction
+P2: Body Tilt
+P3: Body Lean
+P4: Body Height
+P5: Motion Smoothness
+P6: Motion Velocity
+
+Average Accuracy Score: 	0.9500
+Normalized Distance Score: 	0.6667
+Normalized Objective Score: 	0.3475
+
+
+
+
+
+
+
+========================================
+::: Starting optimization for state_space='minimized' | distance_method='dynamic'
+========================================
+
+
+::: Loading accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Using previously loaded accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Loading trajectory array file: ../data/freedog/data/go1_transformed_trajectory_array_pinecone.npy
+
+::: Using previously loaded trajectory array file: ../data/freedog/data/go1_transformed_trajectory_array_pinecone.npy
+
+########################
+Robot		 | go1_motion_main
+Weight Value	 | 0.1
+State Space	 | minimized
+Dist Method	 | dynamic
+Action Space	 | (2, 3, 3, 3, 2, 3)
+Param Ranges	 | {'Body Direction': 2, 'Body Tilt': 3, 'Body Lean': 3, 'Body Height': 3, 'Motion Smoothness': 2, 'Motion Velocity': 3}
+Robot States	 | {'S01': 'Waiting for Input', 'S02': 'Interacting with Pinecone', 'S03': 'Needs Help', 'S04': 'Unsure'}
+########################
+
+::: INIT | Norm Score: 0.3224, Norm Acc: 1.0000, Norm Dist: 0.6053
+::: ITERATION 1: swapped state=S03 from (0, 0, 2, 2, 1, 1) to (1, 1, 1, 2, 1, 2)
+::: NEW | Norm Score: 0.3481, Norm Acc: 0.9000, Norm Dist: 0.6735
+::: Itteration 1 | Reset Steps without Improvement: 0
+::: Itteration 1 | Steps without Improvement: 1
+::: ITERATION 2: swapped state=S02 from (1, 0, 2, 0, 0, 1) to (1, 2, 1, 0, 1, 2)
+::: NEW | Norm Score: 0.3492, Norm Acc: 0.7333, Norm Dist: 0.6944
+::: Itteration 2 | Reset Steps without Improvement: 0
+::: Itteration 2 | Steps without Improvement: 1
+::: ITERATION 3: swapped state=S01 from (0, 1, 0, 1, 0, 1) to (0, 2, 1, 1, 0, 0)
+::: NEW | Norm Score: 0.3501, Norm Acc: 0.6500, Norm Dist: 0.7057
+::: Itteration 3 | Reset Steps without Improvement: 0
+::: Itteration 3 | Steps without Improvement: 1
+::: ITERATION 4: swapped state=S01 from (0, 2, 1, 1, 0, 0) to (0, 0, 1, 2, 0, 0)
+::: NEW | Norm Score: 0.3583, Norm Acc: 0.5754, Norm Dist: 0.7323
+::: Itteration 4 | Reset Steps without Improvement: 0
+::: Itteration 4 | Steps without Improvement: 1
+::: ITERATION 5: swapped state=S01 from (0, 0, 1, 2, 0, 0) to (0, 2, 2, 0, 1, 0)
+::: NEW | Norm Score: 0.3594, Norm Acc: 0.4000, Norm Dist: 0.7542
+::: Itteration 5 | Reset Steps without Improvement: 0
+::: Itteration 5 | Steps without Improvement: 1
+::: ITERATION 6: swapped state=S01 from (0, 2, 2, 0, 1, 0) to (0, 1, 1, 0, 0, 0)
+::: NEW | Norm Score: 0.3602, Norm Acc: 0.5833, Norm Dist: 0.7357
+::: Itteration 6 | Reset Steps without Improvement: 0
+::: Itteration 6 | Steps without Improvement: 1
+::: ITERATION 7: swapped state=S01 from (0, 1, 1, 0, 0, 0) to (0, 0, 1, 2, 0, 2)
+::: NEW | Norm Score: 0.3620, Norm Acc: 0.5579, Norm Dist: 0.7424
+::: Itteration 7 | Reset Steps without Improvement: 0
+::: Itteration 7 | Steps without Improvement: 1
+::: ITERATION 8: swapped state=S01 from (0, 0, 1, 2, 0, 2) to (0, 2, 1, 0, 0, 1)
+::: NEW | Norm Score: 0.3630, Norm Acc: 0.5579, Norm Dist: 0.7448
+::: Itteration 8 | Reset Steps without Improvement: 0
+::: Itteration 8 | Steps without Improvement: 1
+::: ITERATION 9: swapped state=S03 from (1, 1, 1, 2, 1, 2) to (0, 2, 1, 2, 1, 2)
+::: NEW | Norm Score: 0.3652, Norm Acc: 0.6053, Norm Dist: 0.7444
+::: Itteration 9 | Reset Steps without Improvement: 0
+::: Itteration 9 | Steps without Improvement: 1
+::: ITERATION 10: swapped state=S01 from (0, 2, 1, 0, 0, 1) to (0, 2, 2, 0, 1, 2)
+::: NEW | Norm Score: 0.3751, Norm Acc: 0.4640, Norm Dist: 0.7821
+::: Itteration 10 | Reset Steps without Improvement: 0
+::: Itteration 10 | Steps without Improvement: 1
+::: ITERATION 11: swapped state=S02 from (1, 2, 1, 0, 1, 2) to (1, 2, 0, 0, 0, 2)
+::: NEW | Norm Score: 0.3780, Norm Acc: 0.5307, Norm Dist: 0.7811
+::: Itteration 11 | Reset Steps without Improvement: 0
+::: Itteration 11 | Steps without Improvement: 1
+::: ITERATION 12: swapped state=S01 from (0, 2, 2, 0, 1, 2) to (0, 2, 1, 0, 1, 2)
+::: NEW | Norm Score: 0.3792, Norm Acc: 0.5316, Norm Dist: 0.7835
+::: Itteration 12 | Reset Steps without Improvement: 0
+::: Itteration 12 | Steps without Improvement: 1
+::: ITERATION 13: swapped state=S02 from (1, 2, 0, 0, 0, 2) to (1, 0, 2, 0, 0, 2)
+::: NEW | Norm Score: 0.3819, Norm Acc: 0.6140, Norm Dist: 0.7805
+::: Itteration 13 | Reset Steps without Improvement: 0
+::: Itteration 13 | Steps without Improvement: 1
+::: ITERATION 14: swapped state=S01 from (0, 2, 1, 0, 1, 2) to (0, 0, 0, 0, 1, 1)
+::: NEW | Norm Score: 0.3852, Norm Acc: 0.6316, Norm Dist: 0.7858
+::: Itteration 14 | Reset Steps without Improvement: 0
+::: Itteration 14 | Steps without Improvement: 1
+::: Itteration 15 | Steps without Improvement: 2
+
+::: Local search ended after 15 iteration(s). Best score=0.3852
+
+
+********************
+***** RESULTS ******
+********************
+
+Final States:
+ S01 -> (0, 0, 0, 0, 1, 1), accuracy=0.1053 | Waiting for Input
+ S02 -> (1, 0, 2, 0, 0, 2), accuracy=0.9474 | Interacting with Pinecone
+ S03 -> (0, 2, 1, 2, 1, 2), accuracy=0.8421 | Needs Help
+
+Parameter Legend:
+P1: Body Direction
+P2: Body Tilt
+P3: Body Lean
+P4: Body Height
+P5: Motion Smoothness
+P6: Motion Velocity
+
+Average Accuracy Score: 	0.6316
+Normalized Distance Score: 	0.7858
+Normalized Objective Score: 	0.3852
+
+
+
+
+
+::: ALL CONDITIONS COMPLETE FOR WEIGHT [w=0.1]
+
+
+
+
+
+
+
+########################
+
+
+::: COST FUNCTION WEIGHTING: 0.2
+
+
+########################
+
+
+::: Using main robot for 'minimized' state space. - robot_selection = go1_motion_main
+
+
+========================================
+::: Starting optimization for state_space='minimized' | distance_method='none'
+========================================
+
+
+::: Loading accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Using previously loaded accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Skip load step - No trajectory array needed for distance_method_selection=none
+
+########################
+Robot		 | go1_motion_main
+Weight Value	 | 0.2
+State Space	 | minimized
+Dist Method	 | none
+Action Space	 | (2, 3, 3, 3, 2, 3)
+Param Ranges	 | {'Body Direction': 2, 'Body Tilt': 3, 'Body Lean': 3, 'Body Height': 3, 'Motion Smoothness': 2, 'Motion Velocity': 3}
+Robot States	 | {'S01': 'Waiting for Input', 'S02': 'Interacting with Pinecone', 'S03': 'Needs Help', 'S04': 'Unsure'}
+########################
+
+::: INIT | Norm Score: 0.1000, Norm Acc: 1.0000, Norm Dist: 0.0000
+::: Itteration 1 | Steps without Improvement: 1
+::: Itteration 2 | Steps without Improvement: 2
+
+::: Local search ended after 2 iteration(s). Best score=0.1000
+
+
+********************
+***** RESULTS ******
+********************
+
+Final States:
+ S01 -> (0, 1, 0, 1, 0, 1), accuracy=1.0000 | Waiting for Input
+ S02 -> (1, 0, 2, 0, 0, 1), accuracy=1.0000 | Interacting with Pinecone
+ S03 -> (0, 0, 2, 2, 1, 1), accuracy=1.0000 | Needs Help
+
+Parameter Legend:
+P1: Body Direction
+P2: Body Tilt
+P3: Body Lean
+P4: Body Height
+P5: Motion Smoothness
+P6: Motion Velocity
+
+Average Accuracy Score: 	1.0000
+Normalized Distance Score: 	0.0000
+Normalized Objective Score: 	0.1000
+
+
+
+
+
+
+
+========================================
+::: Starting optimization for state_space='minimized' | distance_method='emd'
+========================================
+
+
+::: Loading accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Using previously loaded accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Skip load step - No trajectory array needed for distance_method_selection=emd
+
+########################
+Robot		 | go1_motion_main
+Weight Value	 | 0.2
+State Space	 | minimized
+Dist Method	 | emd
+Action Space	 | (2, 3, 3, 3, 2, 3)
+Param Ranges	 | {'Body Direction': 2, 'Body Tilt': 3, 'Body Lean': 3, 'Body Height': 3, 'Motion Smoothness': 2, 'Motion Velocity': 3}
+Robot States	 | {'S01': 'Waiting for Input', 'S02': 'Interacting with Pinecone', 'S03': 'Needs Help', 'S04': 'Unsure'}
+########################
+
+::: INIT | Norm Score: 0.2867, Norm Acc: 1.0000, Norm Dist: 0.4667
+::: ITERATION 1: swapped state=S03 from (0, 0, 2, 2, 1, 1) to (1, 2, 2, 1, 1, 0)
+::: NEW | Norm Score: 0.2958, Norm Acc: 0.8246, Norm Dist: 0.5333
+::: Itteration 1 | Reset Steps without Improvement: 0
+::: Itteration 1 | Steps without Improvement: 1
+::: ITERATION 2: swapped state=S02 from (1, 0, 2, 0, 0, 1) to (1, 0, 1, 0, 1, 2)
+::: NEW | Norm Score: 0.3025, Norm Acc: 0.6246, Norm Dist: 0.6000
+::: Itteration 2 | Reset Steps without Improvement: 0
+::: Itteration 2 | Steps without Improvement: 1
+::: ITERATION 3: swapped state=S03 from (1, 2, 2, 1, 1, 0) to (0, 2, 2, 0, 1, 0)
+::: NEW | Norm Score: 0.3150, Norm Acc: 0.7500, Norm Dist: 0.6000
+::: Itteration 3 | Reset Steps without Improvement: 0
+::: Itteration 3 | Steps without Improvement: 1
+::: ITERATION 4: swapped state=S01 from (0, 1, 0, 1, 0, 1) to (0, 2, 0, 2, 0, 1)
+::: NEW | Norm Score: 0.3287, Norm Acc: 0.6204, Norm Dist: 0.6667
+::: Itteration 4 | Reset Steps without Improvement: 0
+::: Itteration 4 | Steps without Improvement: 1
+::: ITERATION 5: swapped state=S01 from (0, 2, 0, 2, 0, 1) to (0, 2, 0, 2, 0, 0)
+::: NEW | Norm Score: 0.3294, Norm Acc: 0.6272, Norm Dist: 0.6667
+::: Itteration 5 | Reset Steps without Improvement: 0
+::: Itteration 5 | Steps without Improvement: 1
+::: ITERATION 6: swapped state=S03 from (0, 2, 2, 0, 1, 0) to (0, 0, 2, 2, 1, 1)
+::: NEW | Norm Score: 0.3344, Norm Acc: 0.6772, Norm Dist: 0.6667
+::: Itteration 6 | Reset Steps without Improvement: 0
+::: Itteration 6 | Steps without Improvement: 1
+::: ITERATION 7: swapped state=S02 from (1, 0, 1, 0, 1, 2) to (1, 2, 0, 0, 1, 2)
+::: NEW | Norm Score: 0.3377, Norm Acc: 0.7105, Norm Dist: 0.6667
+::: Itteration 7 | Reset Steps without Improvement: 0
+::: Itteration 7 | Steps without Improvement: 1
+::: ITERATION 8: swapped state=S01 from (0, 2, 0, 2, 0, 0) to (0, 2, 1, 1, 0, 0)
+::: NEW | Norm Score: 0.3417, Norm Acc: 0.7500, Norm Dist: 0.6667
+::: Itteration 8 | Reset Steps without Improvement: 0
+::: Itteration 8 | Steps without Improvement: 1
+::: ITERATION 9: swapped state=S01 from (0, 2, 1, 1, 0, 0) to (0, 2, 0, 1, 0, 0)
+::: NEW | Norm Score: 0.3467, Norm Acc: 0.8000, Norm Dist: 0.6667
+::: Itteration 9 | Reset Steps without Improvement: 0
+::: Itteration 9 | Steps without Improvement: 1
+::: ITERATION 10: swapped state=S02 from (1, 2, 0, 0, 1, 2) to (1, 0, 2, 0, 0, 2)
+::: NEW | Norm Score: 0.3616, Norm Acc: 0.9491, Norm Dist: 0.6667
+::: Itteration 10 | Reset Steps without Improvement: 0
+::: Itteration 10 | Steps without Improvement: 1
+::: ITERATION 11: swapped state=S02 from (1, 0, 2, 0, 0, 2) to (1, 2, 2, 0, 0, 2)
+::: NEW | Norm Score: 0.3617, Norm Acc: 0.9500, Norm Dist: 0.6667
+::: Itteration 11 | Reset Steps without Improvement: 0
+::: Itteration 11 | Steps without Improvement: 1
+::: ITERATION 12: swapped state=S01 from (0, 2, 0, 1, 0, 0) to (0, 1, 0, 1, 0, 0)
+::: NEW | Norm Score: 0.3632, Norm Acc: 0.9658, Norm Dist: 0.6667
+::: Itteration 12 | Reset Steps without Improvement: 0
+::: Itteration 12 | Steps without Improvement: 1
+::: Itteration 13 | Steps without Improvement: 2
+
+::: Local search ended after 13 iteration(s). Best score=0.3632
+
+
+********************
+***** RESULTS ******
+********************
+
+Final States:
+ S01 -> (0, 1, 0, 1, 0, 0), accuracy=0.9474 | Waiting for Input
+ S02 -> (1, 2, 2, 0, 0, 2), accuracy=0.9500 | Interacting with Pinecone
+ S03 -> (0, 0, 2, 2, 1, 1), accuracy=1.0000 | Needs Help
+
+Parameter Legend:
+P1: Body Direction
+P2: Body Tilt
+P3: Body Lean
+P4: Body Height
+P5: Motion Smoothness
+P6: Motion Velocity
+
+Average Accuracy Score: 	0.9658
+Normalized Distance Score: 	0.6667
+Normalized Objective Score: 	0.3632
+
+
+
+
+
+
+
+========================================
+::: Starting optimization for state_space='minimized' | distance_method='dynamic'
+========================================
+
+
+::: Loading accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Using previously loaded accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Loading trajectory array file: ../data/freedog/data/go1_transformed_trajectory_array_pinecone.npy
+
+::: Using previously loaded trajectory array file: ../data/freedog/data/go1_transformed_trajectory_array_pinecone.npy
+
+########################
+Robot		 | go1_motion_main
+Weight Value	 | 0.2
+State Space	 | minimized
+Dist Method	 | dynamic
+Action Space	 | (2, 3, 3, 3, 2, 3)
+Param Ranges	 | {'Body Direction': 2, 'Body Tilt': 3, 'Body Lean': 3, 'Body Height': 3, 'Motion Smoothness': 2, 'Motion Velocity': 3}
+Robot States	 | {'S01': 'Waiting for Input', 'S02': 'Interacting with Pinecone', 'S03': 'Needs Help', 'S04': 'Unsure'}
+########################
+
+::: INIT | Norm Score: 0.3421, Norm Acc: 1.0000, Norm Dist: 0.6053
+::: ITERATION 1: swapped state=S01 from (0, 1, 0, 1, 0, 1) to (0, 1, 1, 0, 0, 0)
+::: NEW | Norm Score: 0.3461, Norm Acc: 0.8500, Norm Dist: 0.6527
+::: Itteration 1 | Reset Steps without Improvement: 0
+::: Itteration 1 | Steps without Improvement: 1
+::: ITERATION 2: swapped state=S02 from (1, 0, 2, 0, 0, 1) to (1, 0, 2, 0, 0, 2)
+::: NEW | Norm Score: 0.3477, Norm Acc: 0.8325, Norm Dist: 0.6611
+::: Itteration 2 | Reset Steps without Improvement: 0
+::: Itteration 2 | Steps without Improvement: 1
+::: ITERATION 3: swapped state=S03 from (0, 0, 2, 2, 1, 1) to (1, 1, 1, 2, 1, 2)
+::: NEW | Norm Score: 0.3630, Norm Acc: 0.7325, Norm Dist: 0.7245
+::: Itteration 3 | Reset Steps without Improvement: 0
+::: Itteration 3 | Steps without Improvement: 1
+::: ITERATION 4: swapped state=S01 from (0, 1, 1, 0, 0, 0) to (0, 2, 1, 0, 0, 1)
+::: NEW | Norm Score: 0.3633, Norm Acc: 0.7070, Norm Dist: 0.7314
+::: Itteration 4 | Reset Steps without Improvement: 0
+::: Itteration 4 | Steps without Improvement: 1
+::: ITERATION 5: swapped state=S01 from (0, 2, 1, 0, 0, 1) to (0, 1, 1, 0, 0, 2)
+::: NEW | Norm Score: 0.3680, Norm Acc: 0.7325, Norm Dist: 0.7369
+::: Itteration 5 | Reset Steps without Improvement: 0
+::: Itteration 5 | Steps without Improvement: 1
+::: ITERATION 6: swapped state=S01 from (0, 1, 1, 0, 0, 2) to (0, 1, 1, 0, 0, 1)
+::: NEW | Norm Score: 0.3712, Norm Acc: 0.7825, Norm Dist: 0.7325
+::: Itteration 6 | Reset Steps without Improvement: 0
+::: Itteration 6 | Steps without Improvement: 1
+::: ITERATION 7: swapped state=S01 from (0, 1, 1, 0, 0, 1) to (0, 0, 0, 0, 0, 1)
+::: NEW | Norm Score: 0.3758, Norm Acc: 0.7947, Norm Dist: 0.7407
+::: Itteration 7 | Reset Steps without Improvement: 0
+::: Itteration 7 | Steps without Improvement: 1
+::: ITERATION 8: swapped state=S01 from (0, 0, 0, 0, 0, 1) to (0, 2, 0, 0, 0, 1)
+::: NEW | Norm Score: 0.3762, Norm Acc: 0.8123, Norm Dist: 0.7373
+::: Itteration 8 | Reset Steps without Improvement: 0
+::: Itteration 8 | Steps without Improvement: 1
+::: ITERATION 9: swapped state=S03 from (1, 1, 1, 2, 1, 2) to (0, 2, 1, 2, 1, 2)
+::: NEW | Norm Score: 0.3853, Norm Acc: 0.8596, Norm Dist: 0.7484
+::: Itteration 9 | Reset Steps without Improvement: 0
+::: Itteration 9 | Steps without Improvement: 1
+::: Itteration 10 | Steps without Improvement: 2
+
+::: Local search ended after 10 iteration(s). Best score=0.3853
+
+
+********************
+***** RESULTS ******
+********************
+
+Final States:
+ S01 -> (0, 2, 0, 0, 0, 1), accuracy=0.7895 | Waiting for Input
+ S02 -> (1, 0, 2, 0, 0, 2), accuracy=0.9474 | Interacting with Pinecone
+ S03 -> (0, 2, 1, 2, 1, 2), accuracy=0.8421 | Needs Help
+
+Parameter Legend:
+P1: Body Direction
+P2: Body Tilt
+P3: Body Lean
+P4: Body Height
+P5: Motion Smoothness
+P6: Motion Velocity
+
+Average Accuracy Score: 	0.8596
+Normalized Distance Score: 	0.7484
+Normalized Objective Score: 	0.3853
+
+
+
+
+
+::: ALL CONDITIONS COMPLETE FOR WEIGHT [w=0.2]
+
+
+
+
+
+
+
+########################
+
+
+::: COST FUNCTION WEIGHTING: 0.3
+
+
+########################
+
+
+::: Using main robot for 'minimized' state space. - robot_selection = go1_motion_main
+
+
+========================================
+::: Starting optimization for state_space='minimized' | distance_method='none'
+========================================
+
+
+::: Loading accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Using previously loaded accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Skip load step - No trajectory array needed for distance_method_selection=none
+
+########################
+Robot		 | go1_motion_main
+Weight Value	 | 0.3
+State Space	 | minimized
+Dist Method	 | none
+Action Space	 | (2, 3, 3, 3, 2, 3)
+Param Ranges	 | {'Body Direction': 2, 'Body Tilt': 3, 'Body Lean': 3, 'Body Height': 3, 'Motion Smoothness': 2, 'Motion Velocity': 3}
+Robot States	 | {'S01': 'Waiting for Input', 'S02': 'Interacting with Pinecone', 'S03': 'Needs Help', 'S04': 'Unsure'}
+########################
+
+::: INIT | Norm Score: 0.1500, Norm Acc: 1.0000, Norm Dist: 0.0000
+::: Itteration 1 | Steps without Improvement: 1
+::: Itteration 2 | Steps without Improvement: 2
+
+::: Local search ended after 2 iteration(s). Best score=0.1500
+
+
+********************
+***** RESULTS ******
+********************
+
+Final States:
+ S01 -> (0, 1, 0, 1, 0, 1), accuracy=1.0000 | Waiting for Input
+ S02 -> (1, 0, 2, 0, 0, 1), accuracy=1.0000 | Interacting with Pinecone
+ S03 -> (0, 0, 2, 2, 1, 1), accuracy=1.0000 | Needs Help
+
+Parameter Legend:
+P1: Body Direction
+P2: Body Tilt
+P3: Body Lean
+P4: Body Height
+P5: Motion Smoothness
+P6: Motion Velocity
+
+Average Accuracy Score: 	1.0000
+Normalized Distance Score: 	0.0000
+Normalized Objective Score: 	0.1500
+
+
+
+
+
+
+
+========================================
+::: Starting optimization for state_space='minimized' | distance_method='emd'
+========================================
+
+
+::: Loading accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Using previously loaded accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Skip load step - No trajectory array needed for distance_method_selection=emd
+
+########################
+Robot		 | go1_motion_main
+Weight Value	 | 0.3
+State Space	 | minimized
+Dist Method	 | emd
+Action Space	 | (2, 3, 3, 3, 2, 3)
+Param Ranges	 | {'Body Direction': 2, 'Body Tilt': 3, 'Body Lean': 3, 'Body Height': 3, 'Motion Smoothness': 2, 'Motion Velocity': 3}
+Robot States	 | {'S01': 'Waiting for Input', 'S02': 'Interacting with Pinecone', 'S03': 'Needs Help', 'S04': 'Unsure'}
+########################
+
+::: INIT | Norm Score: 0.3133, Norm Acc: 1.0000, Norm Dist: 0.4667
+::: ITERATION 1: swapped state=S03 from (0, 0, 2, 2, 1, 1) to (0, 2, 2, 1, 1, 2)
+::: NEW | Norm Score: 0.3142, Norm Acc: 0.8500, Norm Dist: 0.5333
+::: Itteration 1 | Reset Steps without Improvement: 0
+::: Itteration 1 | Steps without Improvement: 1
+::: ITERATION 2: swapped state=S01 from (0, 1, 0, 1, 0, 1) to (1, 0, 0, 2, 0, 0)
+::: NEW | Norm Score: 0.3208, Norm Acc: 0.5833, Norm Dist: 0.6667
+::: Itteration 2 | Reset Steps without Improvement: 0
+::: Itteration 2 | Steps without Improvement: 1
+::: ITERATION 3: swapped state=S03 from (0, 2, 2, 1, 1, 2) to (0, 2, 2, 0, 1, 2)
+::: NEW | Norm Score: 0.3233, Norm Acc: 0.6000, Norm Dist: 0.6667
+::: Itteration 3 | Reset Steps without Improvement: 0
+::: Itteration 3 | Steps without Improvement: 1
+::: ITERATION 4: swapped state=S01 from (1, 0, 0, 2, 0, 0) to (0, 2, 0, 2, 0, 0)
+::: NEW | Norm Score: 0.3449, Norm Acc: 0.7439, Norm Dist: 0.6667
+::: Itteration 4 | Reset Steps without Improvement: 0
+::: Itteration 4 | Steps without Improvement: 1
+::: ITERATION 5: swapped state=S03 from (0, 2, 2, 0, 1, 2) to (0, 1, 0, 1, 1, 2)
+::: NEW | Norm Score: 0.3574, Norm Acc: 0.8272, Norm Dist: 0.6667
+::: Itteration 5 | Reset Steps without Improvement: 0
+::: Itteration 5 | Steps without Improvement: 1
+::: ITERATION 6: swapped state=S03 from (0, 1, 0, 1, 1, 2) to (0, 0, 0, 0, 1, 2)
+::: NEW | Norm Score: 0.3624, Norm Acc: 0.8605, Norm Dist: 0.6667
+::: Itteration 6 | Reset Steps without Improvement: 0
+::: Itteration 6 | Steps without Improvement: 1
+::: Itteration 7 | Steps without Improvement: 2
+
+::: Local search ended after 7 iteration(s). Best score=0.3624
+
+
+********************
+***** RESULTS ******
+********************
+
+Final States:
+ S01 -> (0, 2, 0, 2, 0, 0), accuracy=0.6316 | Waiting for Input
+ S02 -> (1, 0, 2, 0, 0, 1), accuracy=1.0000 | Interacting with Pinecone
+ S03 -> (0, 0, 0, 0, 1, 2), accuracy=0.9500 | Needs Help
+
+Parameter Legend:
+P1: Body Direction
+P2: Body Tilt
+P3: Body Lean
+P4: Body Height
+P5: Motion Smoothness
+P6: Motion Velocity
+
+Average Accuracy Score: 	0.8605
+Normalized Distance Score: 	0.6667
+Normalized Objective Score: 	0.3624
+
+
+
+
+
+
+
+========================================
+::: Starting optimization for state_space='minimized' | distance_method='dynamic'
+========================================
+
+
+::: Loading accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Using previously loaded accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Loading trajectory array file: ../data/freedog/data/go1_transformed_trajectory_array_pinecone.npy
+
+::: Using previously loaded trajectory array file: ../data/freedog/data/go1_transformed_trajectory_array_pinecone.npy
+
+########################
+Robot		 | go1_motion_main
+Weight Value	 | 0.3
+State Space	 | minimized
+Dist Method	 | dynamic
+Action Space	 | (2, 3, 3, 3, 2, 3)
+Param Ranges	 | {'Body Direction': 2, 'Body Tilt': 3, 'Body Lean': 3, 'Body Height': 3, 'Motion Smoothness': 2, 'Motion Velocity': 3}
+Robot States	 | {'S01': 'Waiting for Input', 'S02': 'Interacting with Pinecone', 'S03': 'Needs Help', 'S04': 'Unsure'}
+########################
+
+::: INIT | Norm Score: 0.3619, Norm Acc: 1.0000, Norm Dist: 0.6053
+::: ITERATION 1: swapped state=S03 from (0, 0, 2, 2, 1, 1) to (1, 1, 1, 2, 1, 2)
+::: NEW | Norm Score: 0.3707, Norm Acc: 0.9000, Norm Dist: 0.6735
+::: Itteration 1 | Reset Steps without Improvement: 0
+::: Itteration 1 | Steps without Improvement: 1
+::: ITERATION 2: swapped state=S02 from (1, 0, 2, 0, 0, 1) to (1, 0, 2, 0, 0, 2)
+::: NEW | Norm Score: 0.3721, Norm Acc: 0.8825, Norm Dist: 0.6849
+::: Itteration 2 | Reset Steps without Improvement: 0
+::: Itteration 2 | Steps without Improvement: 1
+::: ITERATION 3: swapped state=S03 from (1, 1, 1, 2, 1, 2) to (0, 2, 1, 2, 1, 2)
+::: NEW | Norm Score: 0.3759, Norm Acc: 0.9298, Norm Dist: 0.6756
+::: Itteration 3 | Reset Steps without Improvement: 0
+::: Itteration 3 | Steps without Improvement: 1
+::: ITERATION 4: swapped state=S03 from (0, 2, 1, 2, 1, 2) to (1, 1, 0, 2, 1, 2)
+::: NEW | Norm Score: 0.3811, Norm Acc: 0.9658, Norm Dist: 0.6750
+::: Itteration 4 | Reset Steps without Improvement: 0
+::: Itteration 4 | Steps without Improvement: 1
+::: ITERATION 5: swapped state=S01 from (0, 1, 0, 1, 0, 1) to (0, 1, 1, 0, 0, 1)
+::: NEW | Norm Score: 0.3826, Norm Acc: 0.8658, Norm Dist: 0.7221
+::: Itteration 5 | Reset Steps without Improvement: 0
+::: Itteration 5 | Steps without Improvement: 1
+::: ITERATION 6: swapped state=S03 from (1, 1, 0, 2, 1, 2) to (0, 2, 1, 2, 1, 2)
+::: NEW | Norm Score: 0.3834, Norm Acc: 0.8298, Norm Dist: 0.7399
+::: Itteration 6 | Reset Steps without Improvement: 0
+::: Itteration 6 | Steps without Improvement: 1
+::: ITERATION 7: swapped state=S01 from (0, 1, 1, 0, 0, 1) to (0, 0, 0, 0, 0, 1)
+::: NEW | Norm Score: 0.3892, Norm Acc: 0.8421, Norm Dist: 0.7510
+::: Itteration 7 | Reset Steps without Improvement: 0
+::: Itteration 7 | Steps without Improvement: 1
+::: ITERATION 8: swapped state=S01 from (0, 0, 0, 0, 0, 1) to (0, 2, 0, 0, 0, 1)
+::: NEW | Norm Score: 0.3909, Norm Acc: 0.8596, Norm Dist: 0.7484
+::: Itteration 8 | Reset Steps without Improvement: 0
+::: Itteration 8 | Steps without Improvement: 1
+::: Itteration 9 | Steps without Improvement: 2
+
+::: Local search ended after 9 iteration(s). Best score=0.3909
+
+
+********************
+***** RESULTS ******
+********************
+
+Final States:
+ S01 -> (0, 2, 0, 0, 0, 1), accuracy=0.7895 | Waiting for Input
+ S02 -> (1, 0, 2, 0, 0, 2), accuracy=0.9474 | Interacting with Pinecone
+ S03 -> (0, 2, 1, 2, 1, 2), accuracy=0.8421 | Needs Help
+
+Parameter Legend:
+P1: Body Direction
+P2: Body Tilt
+P3: Body Lean
+P4: Body Height
+P5: Motion Smoothness
+P6: Motion Velocity
+
+Average Accuracy Score: 	0.8596
+Normalized Distance Score: 	0.7484
+Normalized Objective Score: 	0.3909
+
+
+
+
+
+::: ALL CONDITIONS COMPLETE FOR WEIGHT [w=0.3]
+
+
+
+
+
+
+
+########################
+
+
+::: COST FUNCTION WEIGHTING: 0.4
+
+
+########################
+
+
+::: Using main robot for 'minimized' state space. - robot_selection = go1_motion_main
+
+
+========================================
+::: Starting optimization for state_space='minimized' | distance_method='none'
+========================================
+
+
+::: Loading accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Using previously loaded accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Skip load step - No trajectory array needed for distance_method_selection=none
+
+########################
+Robot		 | go1_motion_main
+Weight Value	 | 0.4
+State Space	 | minimized
+Dist Method	 | none
+Action Space	 | (2, 3, 3, 3, 2, 3)
+Param Ranges	 | {'Body Direction': 2, 'Body Tilt': 3, 'Body Lean': 3, 'Body Height': 3, 'Motion Smoothness': 2, 'Motion Velocity': 3}
+Robot States	 | {'S01': 'Waiting for Input', 'S02': 'Interacting with Pinecone', 'S03': 'Needs Help', 'S04': 'Unsure'}
+########################
+
+::: INIT | Norm Score: 0.2000, Norm Acc: 1.0000, Norm Dist: 0.0000
+::: Itteration 1 | Steps without Improvement: 1
+::: Itteration 2 | Steps without Improvement: 2
+
+::: Local search ended after 2 iteration(s). Best score=0.2000
+
+
+********************
+***** RESULTS ******
+********************
+
+Final States:
+ S01 -> (0, 1, 0, 1, 0, 1), accuracy=1.0000 | Waiting for Input
+ S02 -> (1, 0, 2, 0, 0, 1), accuracy=1.0000 | Interacting with Pinecone
+ S03 -> (0, 0, 2, 2, 1, 1), accuracy=1.0000 | Needs Help
+
+Parameter Legend:
+P1: Body Direction
+P2: Body Tilt
+P3: Body Lean
+P4: Body Height
+P5: Motion Smoothness
+P6: Motion Velocity
+
+Average Accuracy Score: 	1.0000
+Normalized Distance Score: 	0.0000
+Normalized Objective Score: 	0.2000
+
+
+
+
+
+
+
+========================================
+::: Starting optimization for state_space='minimized' | distance_method='emd'
+========================================
+
+
+::: Loading accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Using previously loaded accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Skip load step - No trajectory array needed for distance_method_selection=emd
+
+########################
+Robot		 | go1_motion_main
+Weight Value	 | 0.4
+State Space	 | minimized
+Dist Method	 | emd
+Action Space	 | (2, 3, 3, 3, 2, 3)
+Param Ranges	 | {'Body Direction': 2, 'Body Tilt': 3, 'Body Lean': 3, 'Body Height': 3, 'Motion Smoothness': 2, 'Motion Velocity': 3}
+Robot States	 | {'S01': 'Waiting for Input', 'S02': 'Interacting with Pinecone', 'S03': 'Needs Help', 'S04': 'Unsure'}
+########################
+
+::: INIT | Norm Score: 0.3400, Norm Acc: 1.0000, Norm Dist: 0.4667
+::: ITERATION 1: swapped state=S03 from (0, 0, 2, 2, 1, 1) to (0, 2, 2, 0, 1, 0)
+::: NEW | Norm Score: 0.3500, Norm Acc: 0.9500, Norm Dist: 0.5333
+::: Itteration 1 | Reset Steps without Improvement: 0
+::: Itteration 1 | Steps without Improvement: 1
+::: ITERATION 2: swapped state=S02 from (1, 0, 2, 0, 0, 1) to (1, 0, 2, 0, 0, 2)
+::: NEW | Norm Score: 0.3665, Norm Acc: 0.9325, Norm Dist: 0.6000
+::: Itteration 2 | Reset Steps without Improvement: 0
+::: Itteration 2 | Steps without Improvement: 1
+::: ITERATION 3: swapped state=S01 from (0, 1, 0, 1, 0, 1) to (0, 1, 0, 2, 0, 1)
+::: NEW | Norm Score: 0.3698, Norm Acc: 0.8491, Norm Dist: 0.6667
+::: Itteration 3 | Reset Steps without Improvement: 0
+::: Itteration 3 | Steps without Improvement: 1
+::: ITERATION 4: swapped state=S03 from (0, 2, 2, 0, 1, 0) to (1, 2, 1, 0, 1, 0)
+::: NEW | Norm Score: 0.3765, Norm Acc: 0.8825, Norm Dist: 0.6667
+::: Itteration 4 | Reset Steps without Improvement: 0
+::: Itteration 4 | Steps without Improvement: 1
+::: ITERATION 5: swapped state=S03 from (1, 2, 1, 0, 1, 0) to (0, 2, 0, 0, 1, 0)
+::: NEW | Norm Score: 0.3798, Norm Acc: 0.8991, Norm Dist: 0.6667
+::: Itteration 5 | Reset Steps without Improvement: 0
+::: Itteration 5 | Steps without Improvement: 1
+::: ITERATION 6: swapped state=S01 from (0, 1, 0, 2, 0, 1) to (0, 1, 1, 2, 0, 0)
+::: NEW | Norm Score: 0.3865, Norm Acc: 0.9325, Norm Dist: 0.6667
+::: Itteration 6 | Reset Steps without Improvement: 0
+::: Itteration 6 | Steps without Improvement: 1
+::: ITERATION 7: swapped state=S02 from (1, 0, 2, 0, 0, 2) to (1, 0, 2, 1, 0, 2)
+::: NEW | Norm Score: 0.3900, Norm Acc: 0.9500, Norm Dist: 0.6667
+::: Itteration 7 | Reset Steps without Improvement: 0
+::: Itteration 7 | Steps without Improvement: 1
+::: Itteration 8 | Steps without Improvement: 2
+
+::: Local search ended after 8 iteration(s). Best score=0.3900
+
+
+********************
+***** RESULTS ******
+********************
+
+Final States:
+ S01 -> (0, 1, 1, 2, 0, 0), accuracy=0.8500 | Waiting for Input
+ S02 -> (1, 0, 2, 1, 0, 2), accuracy=1.0000 | Interacting with Pinecone
+ S03 -> (0, 2, 0, 0, 1, 0), accuracy=1.0000 | Needs Help
+
+Parameter Legend:
+P1: Body Direction
+P2: Body Tilt
+P3: Body Lean
+P4: Body Height
+P5: Motion Smoothness
+P6: Motion Velocity
+
+Average Accuracy Score: 	0.9500
+Normalized Distance Score: 	0.6667
+Normalized Objective Score: 	0.3900
+
+
+
+
+
+
+
+========================================
+::: Starting optimization for state_space='minimized' | distance_method='dynamic'
+========================================
+
+
+::: Loading accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Using previously loaded accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Loading trajectory array file: ../data/freedog/data/go1_transformed_trajectory_array_pinecone.npy
+
+::: Using previously loaded trajectory array file: ../data/freedog/data/go1_transformed_trajectory_array_pinecone.npy
+
+########################
+Robot		 | go1_motion_main
+Weight Value	 | 0.4
+State Space	 | minimized
+Dist Method	 | dynamic
+Action Space	 | (2, 3, 3, 3, 2, 3)
+Param Ranges	 | {'Body Direction': 2, 'Body Tilt': 3, 'Body Lean': 3, 'Body Height': 3, 'Motion Smoothness': 2, 'Motion Velocity': 3}
+Robot States	 | {'S01': 'Waiting for Input', 'S02': 'Interacting with Pinecone', 'S03': 'Needs Help', 'S04': 'Unsure'}
+########################
+
+::: INIT | Norm Score: 0.3816, Norm Acc: 1.0000, Norm Dist: 0.6053
+::: ITERATION 1: swapped state=S03 from (0, 0, 2, 2, 1, 1) to (1, 1, 1, 2, 1, 2)
+::: NEW | Norm Score: 0.3820, Norm Acc: 0.9000, Norm Dist: 0.6735
+::: Itteration 1 | Reset Steps without Improvement: 0
+::: Itteration 1 | Steps without Improvement: 1
+::: ITERATION 2: swapped state=S01 from (0, 1, 0, 1, 0, 1) to (0, 2, 0, 0, 0, 1)
+::: NEW | Norm Score: 0.3843, Norm Acc: 0.8298, Norm Dist: 0.7277
+::: Itteration 2 | Reset Steps without Improvement: 0
+::: Itteration 2 | Steps without Improvement: 1
+::: ITERATION 3: swapped state=S03 from (1, 1, 1, 2, 1, 2) to (0, 0, 2, 2, 1, 1)
+::: NEW | Norm Score: 0.3879, Norm Acc: 0.9298, Norm Dist: 0.6731
+::: Itteration 3 | Reset Steps without Improvement: 0
+::: Itteration 3 | Steps without Improvement: 1
+::: ITERATION 4: swapped state=S03 from (0, 0, 2, 2, 1, 1) to (0, 0, 2, 2, 1, 2)
+::: NEW | Norm Score: 0.3882, Norm Acc: 0.8632, Norm Dist: 0.7185
+::: Itteration 4 | Reset Steps without Improvement: 0
+::: Itteration 4 | Steps without Improvement: 1
+::: ITERATION 5: swapped state=S03 from (0, 0, 2, 2, 1, 2) to (0, 2, 1, 2, 1, 2)
+::: NEW | Norm Score: 0.3974, Norm Acc: 0.8772, Norm Dist: 0.7400
+::: Itteration 5 | Reset Steps without Improvement: 0
+::: Itteration 5 | Steps without Improvement: 1
+::: ITERATION 6: swapped state=S03 from (0, 2, 1, 2, 1, 2) to (1, 1, 0, 2, 1, 2)
+::: NEW | Norm Score: 0.3980, Norm Acc: 0.9132, Norm Dist: 0.7179
+::: Itteration 6 | Reset Steps without Improvement: 0
+::: Itteration 6 | Steps without Improvement: 1
+::: Itteration 7 | Steps without Improvement: 2
+
+::: Local search ended after 7 iteration(s). Best score=0.3980
+
+
+********************
+***** RESULTS ******
+********************
+
+Final States:
+ S01 -> (0, 2, 0, 0, 0, 1), accuracy=0.7895 | Waiting for Input
+ S02 -> (1, 0, 2, 0, 0, 1), accuracy=1.0000 | Interacting with Pinecone
+ S03 -> (1, 1, 0, 2, 1, 2), accuracy=0.9500 | Needs Help
+
+Parameter Legend:
+P1: Body Direction
+P2: Body Tilt
+P3: Body Lean
+P4: Body Height
+P5: Motion Smoothness
+P6: Motion Velocity
+
+Average Accuracy Score: 	0.9132
+Normalized Distance Score: 	0.7179
+Normalized Objective Score: 	0.3980
+
+
+
+
+
+::: ALL CONDITIONS COMPLETE FOR WEIGHT [w=0.4]
+
+
+
+
+
+
+
+########################
+
+
+::: COST FUNCTION WEIGHTING: 0.5
+
+
+########################
+
+
+::: Using main robot for 'minimized' state space. - robot_selection = go1_motion_main
+
+
+========================================
+::: Starting optimization for state_space='minimized' | distance_method='none'
+========================================
+
+
+::: Loading accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Using previously loaded accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Skip load step - No trajectory array needed for distance_method_selection=none
+
+########################
+Robot		 | go1_motion_main
+Weight Value	 | 0.5
+State Space	 | minimized
+Dist Method	 | none
+Action Space	 | (2, 3, 3, 3, 2, 3)
+Param Ranges	 | {'Body Direction': 2, 'Body Tilt': 3, 'Body Lean': 3, 'Body Height': 3, 'Motion Smoothness': 2, 'Motion Velocity': 3}
+Robot States	 | {'S01': 'Waiting for Input', 'S02': 'Interacting with Pinecone', 'S03': 'Needs Help', 'S04': 'Unsure'}
+########################
+
+::: INIT | Norm Score: 0.2500, Norm Acc: 1.0000, Norm Dist: 0.0000
+::: Itteration 1 | Steps without Improvement: 1
+::: Itteration 2 | Steps without Improvement: 2
+
+::: Local search ended after 2 iteration(s). Best score=0.2500
+
+
+********************
+***** RESULTS ******
+********************
+
+Final States:
+ S01 -> (0, 1, 0, 1, 0, 1), accuracy=1.0000 | Waiting for Input
+ S02 -> (1, 0, 2, 0, 0, 1), accuracy=1.0000 | Interacting with Pinecone
+ S03 -> (0, 0, 2, 2, 1, 1), accuracy=1.0000 | Needs Help
+
+Parameter Legend:
+P1: Body Direction
+P2: Body Tilt
+P3: Body Lean
+P4: Body Height
+P5: Motion Smoothness
+P6: Motion Velocity
+
+Average Accuracy Score: 	1.0000
+Normalized Distance Score: 	0.0000
+Normalized Objective Score: 	0.2500
+
+
+
+
+
+
+
+========================================
+::: Starting optimization for state_space='minimized' | distance_method='emd'
+========================================
+
+
+::: Loading accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Using previously loaded accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Skip load step - No trajectory array needed for distance_method_selection=emd
+
+########################
+Robot		 | go1_motion_main
+Weight Value	 | 0.5
+State Space	 | minimized
+Dist Method	 | emd
+Action Space	 | (2, 3, 3, 3, 2, 3)
+Param Ranges	 | {'Body Direction': 2, 'Body Tilt': 3, 'Body Lean': 3, 'Body Height': 3, 'Motion Smoothness': 2, 'Motion Velocity': 3}
+Robot States	 | {'S01': 'Waiting for Input', 'S02': 'Interacting with Pinecone', 'S03': 'Needs Help', 'S04': 'Unsure'}
+########################
+
+::: INIT | Norm Score: 0.3667, Norm Acc: 1.0000, Norm Dist: 0.4667
+::: ITERATION 1: swapped state=S01 from (0, 1, 0, 1, 0, 1) to (0, 2, 0, 2, 0, 0)
+::: NEW | Norm Score: 0.3693, Norm Acc: 0.8772, Norm Dist: 0.6000
+::: Itteration 1 | Reset Steps without Improvement: 0
+::: Itteration 1 | Steps without Improvement: 1
+::: ITERATION 2: swapped state=S02 from (1, 0, 2, 0, 0, 1) to (1, 0, 2, 0, 0, 2)
+::: NEW | Norm Score: 0.3816, Norm Acc: 0.8596, Norm Dist: 0.6667
+::: Itteration 2 | Reset Steps without Improvement: 0
+::: Itteration 2 | Steps without Improvement: 1
+::: ITERATION 3: swapped state=S02 from (1, 0, 2, 0, 0, 2) to (1, 2, 2, 0, 0, 2)
+::: NEW | Norm Score: 0.3818, Norm Acc: 0.8605, Norm Dist: 0.6667
+::: Itteration 3 | Reset Steps without Improvement: 0
+::: Itteration 3 | Steps without Improvement: 1
+::: ITERATION 4: swapped state=S01 from (0, 2, 0, 2, 0, 0) to (0, 0, 0, 1, 0, 0)
+::: NEW | Norm Score: 0.3833, Norm Acc: 0.8667, Norm Dist: 0.6667
+::: Itteration 4 | Reset Steps without Improvement: 0
+::: Itteration 4 | Steps without Improvement: 1
+::: ITERATION 5: swapped state=S01 from (0, 0, 0, 1, 0, 0) to (0, 2, 0, 1, 0, 0)
+::: NEW | Norm Score: 0.4042, Norm Acc: 0.9500, Norm Dist: 0.6667
+::: Itteration 5 | Reset Steps without Improvement: 0
+::: Itteration 5 | Steps without Improvement: 1
+::: ITERATION 6: swapped state=S01 from (0, 2, 0, 1, 0, 0) to (0, 1, 0, 1, 0, 0)
+::: NEW | Norm Score: 0.4081, Norm Acc: 0.9658, Norm Dist: 0.6667
+::: Itteration 6 | Reset Steps without Improvement: 0
+::: Itteration 6 | Steps without Improvement: 1
+::: Itteration 7 | Steps without Improvement: 2
+
+::: Local search ended after 7 iteration(s). Best score=0.4081
+
+
+********************
+***** RESULTS ******
+********************
+
+Final States:
+ S01 -> (0, 1, 0, 1, 0, 0), accuracy=0.9474 | Waiting for Input
+ S02 -> (1, 2, 2, 0, 0, 2), accuracy=0.9500 | Interacting with Pinecone
+ S03 -> (0, 0, 2, 2, 1, 1), accuracy=1.0000 | Needs Help
+
+Parameter Legend:
+P1: Body Direction
+P2: Body Tilt
+P3: Body Lean
+P4: Body Height
+P5: Motion Smoothness
+P6: Motion Velocity
+
+Average Accuracy Score: 	0.9658
+Normalized Distance Score: 	0.6667
+Normalized Objective Score: 	0.4081
+
+
+
+
+
+
+
+========================================
+::: Starting optimization for state_space='minimized' | distance_method='dynamic'
+========================================
+
+
+::: Loading accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Using previously loaded accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Loading trajectory array file: ../data/freedog/data/go1_transformed_trajectory_array_pinecone.npy
+
+::: Using previously loaded trajectory array file: ../data/freedog/data/go1_transformed_trajectory_array_pinecone.npy
+
+########################
+Robot		 | go1_motion_main
+Weight Value	 | 0.5
+State Space	 | minimized
+Dist Method	 | dynamic
+Action Space	 | (2, 3, 3, 3, 2, 3)
+Param Ranges	 | {'Body Direction': 2, 'Body Tilt': 3, 'Body Lean': 3, 'Body Height': 3, 'Motion Smoothness': 2, 'Motion Velocity': 3}
+Robot States	 | {'S01': 'Waiting for Input', 'S02': 'Interacting with Pinecone', 'S03': 'Needs Help', 'S04': 'Unsure'}
+########################
+
+::: INIT | Norm Score: 0.4013, Norm Acc: 1.0000, Norm Dist: 0.6053
+::: ITERATION 1: swapped state=S03 from (0, 0, 2, 2, 1, 1) to (0, 2, 1, 2, 1, 2)
+::: NEW | Norm Score: 0.4032, Norm Acc: 0.9474, Norm Dist: 0.6655
+::: Itteration 1 | Reset Steps without Improvement: 0
+::: Itteration 1 | Steps without Improvement: 1
+::: ITERATION 2: swapped state=S01 from (0, 1, 0, 1, 0, 1) to (0, 2, 0, 0, 0, 1)
+::: NEW | Norm Score: 0.4043, Norm Acc: 0.8772, Norm Dist: 0.7400
+::: Itteration 2 | Reset Steps without Improvement: 0
+::: Itteration 2 | Steps without Improvement: 1
+::: ITERATION 3: swapped state=S03 from (0, 2, 1, 2, 1, 2) to (1, 1, 0, 2, 1, 2)
+::: NEW | Norm Score: 0.4078, Norm Acc: 0.9132, Norm Dist: 0.7179
+::: Itteration 3 | Reset Steps without Improvement: 0
+::: Itteration 3 | Steps without Improvement: 1
+::: ITERATION 4: swapped state=S01 from (0, 2, 0, 0, 0, 1) to (0, 1, 0, 1, 0, 1)
+::: NEW | Norm Score: 0.4118, Norm Acc: 0.9833, Norm Dist: 0.6638
+::: Itteration 4 | Reset Steps without Improvement: 0
+::: Itteration 4 | Steps without Improvement: 1
+::: Itteration 5 | Steps without Improvement: 2
+
+::: Local search ended after 5 iteration(s). Best score=0.4118
+
+
+********************
+***** RESULTS ******
+********************
+
+Final States:
+ S01 -> (0, 1, 0, 1, 0, 1), accuracy=1.0000 | Waiting for Input
+ S02 -> (1, 0, 2, 0, 0, 1), accuracy=1.0000 | Interacting with Pinecone
+ S03 -> (1, 1, 0, 2, 1, 2), accuracy=0.9500 | Needs Help
+
+Parameter Legend:
+P1: Body Direction
+P2: Body Tilt
+P3: Body Lean
+P4: Body Height
+P5: Motion Smoothness
+P6: Motion Velocity
+
+Average Accuracy Score: 	0.9833
+Normalized Distance Score: 	0.6638
+Normalized Objective Score: 	0.4118
+
+
+
+
+
+::: ALL CONDITIONS COMPLETE FOR WEIGHT [w=0.5]
+
+
+
+
+
+
+
+########################
+
+
+::: COST FUNCTION WEIGHTING: 0.6
+
+
+########################
+
+
+::: Using main robot for 'minimized' state space. - robot_selection = go1_motion_main
+
+
+========================================
+::: Starting optimization for state_space='minimized' | distance_method='none'
+========================================
+
+
+::: Loading accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Using previously loaded accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Skip load step - No trajectory array needed for distance_method_selection=none
+
+########################
+Robot		 | go1_motion_main
+Weight Value	 | 0.6
+State Space	 | minimized
+Dist Method	 | none
+Action Space	 | (2, 3, 3, 3, 2, 3)
+Param Ranges	 | {'Body Direction': 2, 'Body Tilt': 3, 'Body Lean': 3, 'Body Height': 3, 'Motion Smoothness': 2, 'Motion Velocity': 3}
+Robot States	 | {'S01': 'Waiting for Input', 'S02': 'Interacting with Pinecone', 'S03': 'Needs Help', 'S04': 'Unsure'}
+########################
+
+::: INIT | Norm Score: 0.3000, Norm Acc: 1.0000, Norm Dist: 0.0000
+::: Itteration 1 | Steps without Improvement: 1
+::: Itteration 2 | Steps without Improvement: 2
+
+::: Local search ended after 2 iteration(s). Best score=0.3000
+
+
+********************
+***** RESULTS ******
+********************
+
+Final States:
+ S01 -> (0, 1, 0, 1, 0, 1), accuracy=1.0000 | Waiting for Input
+ S02 -> (1, 0, 2, 0, 0, 1), accuracy=1.0000 | Interacting with Pinecone
+ S03 -> (0, 0, 2, 2, 1, 1), accuracy=1.0000 | Needs Help
+
+Parameter Legend:
+P1: Body Direction
+P2: Body Tilt
+P3: Body Lean
+P4: Body Height
+P5: Motion Smoothness
+P6: Motion Velocity
+
+Average Accuracy Score: 	1.0000
+Normalized Distance Score: 	0.0000
+Normalized Objective Score: 	0.3000
+
+
+
+
+
+
+
+========================================
+::: Starting optimization for state_space='minimized' | distance_method='emd'
+========================================
+
+
+::: Loading accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Using previously loaded accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Skip load step - No trajectory array needed for distance_method_selection=emd
+
+########################
+Robot		 | go1_motion_main
+Weight Value	 | 0.6
+State Space	 | minimized
+Dist Method	 | emd
+Action Space	 | (2, 3, 3, 3, 2, 3)
+Param Ranges	 | {'Body Direction': 2, 'Body Tilt': 3, 'Body Lean': 3, 'Body Height': 3, 'Motion Smoothness': 2, 'Motion Velocity': 3}
+Robot States	 | {'S01': 'Waiting for Input', 'S02': 'Interacting with Pinecone', 'S03': 'Needs Help', 'S04': 'Unsure'}
+########################
+
+::: INIT | Norm Score: 0.3933, Norm Acc: 1.0000, Norm Dist: 0.4667
+::: ITERATION 1: swapped state=S03 from (0, 0, 2, 2, 1, 1) to (1, 2, 1, 0, 1, 0)
+::: NEW | Norm Score: 0.4017, Norm Acc: 0.9833, Norm Dist: 0.5333
+::: Itteration 1 | Reset Steps without Improvement: 0
+::: Itteration 1 | Steps without Improvement: 1
+::: ITERATION 2: swapped state=S02 from (1, 0, 2, 0, 0, 1) to (1, 0, 2, 0, 0, 2)
+::: NEW | Norm Score: 0.4097, Norm Acc: 0.9658, Norm Dist: 0.6000
+::: Itteration 2 | Reset Steps without Improvement: 0
+::: Itteration 2 | Steps without Improvement: 1
+::: ITERATION 3: swapped state=S03 from (1, 2, 1, 0, 1, 0) to (0, 2, 0, 2, 1, 0)
+::: NEW | Norm Score: 0.4123, Norm Acc: 0.9298, Norm Dist: 0.6667
+::: Itteration 3 | Reset Steps without Improvement: 0
+::: Itteration 3 | Steps without Improvement: 1
+::: ITERATION 4: swapped state=S03 from (0, 2, 0, 2, 1, 0) to (0, 2, 1, 2, 1, 0)
+::: NEW | Norm Score: 0.4170, Norm Acc: 0.9454, Norm Dist: 0.6667
+::: Itteration 4 | Reset Steps without Improvement: 0
+::: Itteration 4 | Steps without Improvement: 1
+::: ITERATION 5: swapped state=S03 from (0, 2, 1, 2, 1, 0) to (0, 2, 2, 2, 1, 0)
+::: NEW | Norm Score: 0.4181, Norm Acc: 0.9491, Norm Dist: 0.6667
+::: Itteration 5 | Reset Steps without Improvement: 0
+::: Itteration 5 | Steps without Improvement: 1
+::: Itteration 6 | Steps without Improvement: 2
+
+::: Local search ended after 6 iteration(s). Best score=0.4181
+
+
+********************
+***** RESULTS ******
+********************
+
+Final States:
+ S01 -> (0, 1, 0, 1, 0, 1), accuracy=1.0000 | Waiting for Input
+ S02 -> (1, 0, 2, 0, 0, 2), accuracy=0.9474 | Interacting with Pinecone
+ S03 -> (0, 2, 2, 2, 1, 0), accuracy=0.9000 | Needs Help
+
+Parameter Legend:
+P1: Body Direction
+P2: Body Tilt
+P3: Body Lean
+P4: Body Height
+P5: Motion Smoothness
+P6: Motion Velocity
+
+Average Accuracy Score: 	0.9491
+Normalized Distance Score: 	0.6667
+Normalized Objective Score: 	0.4181
+
+
+
+
+
+
+
+========================================
+::: Starting optimization for state_space='minimized' | distance_method='dynamic'
+========================================
+
+
+::: Loading accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Using previously loaded accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Loading trajectory array file: ../data/freedog/data/go1_transformed_trajectory_array_pinecone.npy
+
+::: Using previously loaded trajectory array file: ../data/freedog/data/go1_transformed_trajectory_array_pinecone.npy
+
+########################
+Robot		 | go1_motion_main
+Weight Value	 | 0.6
+State Space	 | minimized
+Dist Method	 | dynamic
+Action Space	 | (2, 3, 3, 3, 2, 3)
+Param Ranges	 | {'Body Direction': 2, 'Body Tilt': 3, 'Body Lean': 3, 'Body Height': 3, 'Motion Smoothness': 2, 'Motion Velocity': 3}
+Robot States	 | {'S01': 'Waiting for Input', 'S02': 'Interacting with Pinecone', 'S03': 'Needs Help', 'S04': 'Unsure'}
+########################
+
+::: INIT | Norm Score: 0.4211, Norm Acc: 1.0000, Norm Dist: 0.6053
+::: ITERATION 1: swapped state=S03 from (0, 0, 2, 2, 1, 1) to (1, 1, 0, 2, 1, 2)
+::: NEW | Norm Score: 0.4278, Norm Acc: 0.9833, Norm Dist: 0.6638
+::: Itteration 1 | Reset Steps without Improvement: 0
+::: Itteration 1 | Steps without Improvement: 1
+::: Itteration 2 | Steps without Improvement: 2
+
+::: Local search ended after 2 iteration(s). Best score=0.4278
+
+
+********************
+***** RESULTS ******
+********************
+
+Final States:
+ S01 -> (0, 1, 0, 1, 0, 1), accuracy=1.0000 | Waiting for Input
+ S02 -> (1, 0, 2, 0, 0, 1), accuracy=1.0000 | Interacting with Pinecone
+ S03 -> (1, 1, 0, 2, 1, 2), accuracy=0.9500 | Needs Help
+
+Parameter Legend:
+P1: Body Direction
+P2: Body Tilt
+P3: Body Lean
+P4: Body Height
+P5: Motion Smoothness
+P6: Motion Velocity
+
+Average Accuracy Score: 	0.9833
+Normalized Distance Score: 	0.6638
+Normalized Objective Score: 	0.4278
+
+
+
+
+
+::: ALL CONDITIONS COMPLETE FOR WEIGHT [w=0.6]
+
+
+
+
+
+
+
+########################
+
+
+::: COST FUNCTION WEIGHTING: 0.7
+
+
+########################
+
+
+::: Using main robot for 'minimized' state space. - robot_selection = go1_motion_main
+
+
+========================================
+::: Starting optimization for state_space='minimized' | distance_method='none'
+========================================
+
+
+::: Loading accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Using previously loaded accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Skip load step - No trajectory array needed for distance_method_selection=none
+
+########################
+Robot		 | go1_motion_main
+Weight Value	 | 0.7
+State Space	 | minimized
+Dist Method	 | none
+Action Space	 | (2, 3, 3, 3, 2, 3)
+Param Ranges	 | {'Body Direction': 2, 'Body Tilt': 3, 'Body Lean': 3, 'Body Height': 3, 'Motion Smoothness': 2, 'Motion Velocity': 3}
+Robot States	 | {'S01': 'Waiting for Input', 'S02': 'Interacting with Pinecone', 'S03': 'Needs Help', 'S04': 'Unsure'}
+########################
+
+::: INIT | Norm Score: 0.3500, Norm Acc: 1.0000, Norm Dist: 0.0000
+::: Itteration 1 | Steps without Improvement: 1
+::: Itteration 2 | Steps without Improvement: 2
+
+::: Local search ended after 2 iteration(s). Best score=0.3500
+
+
+********************
+***** RESULTS ******
+********************
+
+Final States:
+ S01 -> (0, 1, 0, 1, 0, 1), accuracy=1.0000 | Waiting for Input
+ S02 -> (1, 0, 2, 0, 0, 1), accuracy=1.0000 | Interacting with Pinecone
+ S03 -> (0, 0, 2, 2, 1, 1), accuracy=1.0000 | Needs Help
+
+Parameter Legend:
+P1: Body Direction
+P2: Body Tilt
+P3: Body Lean
+P4: Body Height
+P5: Motion Smoothness
+P6: Motion Velocity
+
+Average Accuracy Score: 	1.0000
+Normalized Distance Score: 	0.0000
+Normalized Objective Score: 	0.3500
+
+
+
+
+
+
+
+========================================
+::: Starting optimization for state_space='minimized' | distance_method='emd'
+========================================
+
+
+::: Loading accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Using previously loaded accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Skip load step - No trajectory array needed for distance_method_selection=emd
+
+########################
+Robot		 | go1_motion_main
+Weight Value	 | 0.7
+State Space	 | minimized
+Dist Method	 | emd
+Action Space	 | (2, 3, 3, 3, 2, 3)
+Param Ranges	 | {'Body Direction': 2, 'Body Tilt': 3, 'Body Lean': 3, 'Body Height': 3, 'Motion Smoothness': 2, 'Motion Velocity': 3}
+Robot States	 | {'S01': 'Waiting for Input', 'S02': 'Interacting with Pinecone', 'S03': 'Needs Help', 'S04': 'Unsure'}
+########################
+
+::: INIT | Norm Score: 0.4200, Norm Acc: 1.0000, Norm Dist: 0.4667
+::: ITERATION 1: swapped state=S03 from (0, 0, 2, 2, 1, 1) to (1, 2, 1, 0, 1, 0)
+::: NEW | Norm Score: 0.4242, Norm Acc: 0.9833, Norm Dist: 0.5333
+::: Itteration 1 | Reset Steps without Improvement: 0
+::: Itteration 1 | Steps without Improvement: 1
+::: ITERATION 2: swapped state=S02 from (1, 0, 2, 0, 0, 1) to (1, 0, 2, 0, 0, 2)
+::: NEW | Norm Score: 0.4280, Norm Acc: 0.9658, Norm Dist: 0.6000
+::: Itteration 2 | Reset Steps without Improvement: 0
+::: Itteration 2 | Steps without Improvement: 1
+::: ITERATION 3: swapped state=S02 from (1, 0, 2, 0, 0, 2) to (1, 0, 2, 1, 0, 2)
+::: NEW | Norm Score: 0.4342, Norm Acc: 0.9833, Norm Dist: 0.6000
+::: Itteration 3 | Reset Steps without Improvement: 0
+::: Itteration 3 | Steps without Improvement: 1
+::: ITERATION 4: swapped state=S03 from (1, 2, 1, 0, 1, 0) to (0, 2, 0, 0, 1, 0)
+::: NEW | Norm Score: 0.4400, Norm Acc: 1.0000, Norm Dist: 0.6000
+::: Itteration 4 | Reset Steps without Improvement: 0
+::: Itteration 4 | Steps without Improvement: 1
+::: Itteration 5 | Steps without Improvement: 2
+
+::: Local search ended after 5 iteration(s). Best score=0.4400
+
+
+********************
+***** RESULTS ******
+********************
+
+Final States:
+ S01 -> (0, 1, 0, 1, 0, 1), accuracy=1.0000 | Waiting for Input
+ S02 -> (1, 0, 2, 1, 0, 2), accuracy=1.0000 | Interacting with Pinecone
+ S03 -> (0, 2, 0, 0, 1, 0), accuracy=1.0000 | Needs Help
+
+Parameter Legend:
+P1: Body Direction
+P2: Body Tilt
+P3: Body Lean
+P4: Body Height
+P5: Motion Smoothness
+P6: Motion Velocity
+
+Average Accuracy Score: 	1.0000
+Normalized Distance Score: 	0.6000
+Normalized Objective Score: 	0.4400
+
+
+
+
+
+
+
+========================================
+::: Starting optimization for state_space='minimized' | distance_method='dynamic'
+========================================
+
+
+::: Loading accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Using previously loaded accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Loading trajectory array file: ../data/freedog/data/go1_transformed_trajectory_array_pinecone.npy
+
+::: Using previously loaded trajectory array file: ../data/freedog/data/go1_transformed_trajectory_array_pinecone.npy
+
+########################
+Robot		 | go1_motion_main
+Weight Value	 | 0.7
+State Space	 | minimized
+Dist Method	 | dynamic
+Action Space	 | (2, 3, 3, 3, 2, 3)
+Param Ranges	 | {'Body Direction': 2, 'Body Tilt': 3, 'Body Lean': 3, 'Body Height': 3, 'Motion Smoothness': 2, 'Motion Velocity': 3}
+Robot States	 | {'S01': 'Waiting for Input', 'S02': 'Interacting with Pinecone', 'S03': 'Needs Help', 'S04': 'Unsure'}
+########################
+
+::: INIT | Norm Score: 0.4408, Norm Acc: 1.0000, Norm Dist: 0.6053
+::: ITERATION 1: swapped state=S03 from (0, 0, 2, 2, 1, 1) to (1, 1, 0, 2, 1, 2)
+::: NEW | Norm Score: 0.4437, Norm Acc: 0.9833, Norm Dist: 0.6638
+::: Itteration 1 | Reset Steps without Improvement: 0
+::: Itteration 1 | Steps without Improvement: 1
+::: Itteration 2 | Steps without Improvement: 2
+
+::: Local search ended after 2 iteration(s). Best score=0.4437
+
+
+********************
+***** RESULTS ******
+********************
+
+Final States:
+ S01 -> (0, 1, 0, 1, 0, 1), accuracy=1.0000 | Waiting for Input
+ S02 -> (1, 0, 2, 0, 0, 1), accuracy=1.0000 | Interacting with Pinecone
+ S03 -> (1, 1, 0, 2, 1, 2), accuracy=0.9500 | Needs Help
+
+Parameter Legend:
+P1: Body Direction
+P2: Body Tilt
+P3: Body Lean
+P4: Body Height
+P5: Motion Smoothness
+P6: Motion Velocity
+
+Average Accuracy Score: 	0.9833
+Normalized Distance Score: 	0.6638
+Normalized Objective Score: 	0.4437
+
+
+
+
+
+::: ALL CONDITIONS COMPLETE FOR WEIGHT [w=0.7]
+
+
+
+
+
+
+
+########################
+
+
+::: COST FUNCTION WEIGHTING: 0.8
+
+
+########################
+
+
+::: Using main robot for 'minimized' state space. - robot_selection = go1_motion_main
+
+
+========================================
+::: Starting optimization for state_space='minimized' | distance_method='none'
+========================================
+
+
+::: Loading accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Using previously loaded accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Skip load step - No trajectory array needed for distance_method_selection=none
+
+########################
+Robot		 | go1_motion_main
+Weight Value	 | 0.8
+State Space	 | minimized
+Dist Method	 | none
+Action Space	 | (2, 3, 3, 3, 2, 3)
+Param Ranges	 | {'Body Direction': 2, 'Body Tilt': 3, 'Body Lean': 3, 'Body Height': 3, 'Motion Smoothness': 2, 'Motion Velocity': 3}
+Robot States	 | {'S01': 'Waiting for Input', 'S02': 'Interacting with Pinecone', 'S03': 'Needs Help', 'S04': 'Unsure'}
+########################
+
+::: INIT | Norm Score: 0.4000, Norm Acc: 1.0000, Norm Dist: 0.0000
+::: Itteration 1 | Steps without Improvement: 1
+::: Itteration 2 | Steps without Improvement: 2
+
+::: Local search ended after 2 iteration(s). Best score=0.4000
+
+
+********************
+***** RESULTS ******
+********************
+
+Final States:
+ S01 -> (0, 1, 0, 1, 0, 1), accuracy=1.0000 | Waiting for Input
+ S02 -> (1, 0, 2, 0, 0, 1), accuracy=1.0000 | Interacting with Pinecone
+ S03 -> (0, 0, 2, 2, 1, 1), accuracy=1.0000 | Needs Help
+
+Parameter Legend:
+P1: Body Direction
+P2: Body Tilt
+P3: Body Lean
+P4: Body Height
+P5: Motion Smoothness
+P6: Motion Velocity
+
+Average Accuracy Score: 	1.0000
+Normalized Distance Score: 	0.0000
+Normalized Objective Score: 	0.4000
+
+
+
+
+
+
+
+========================================
+::: Starting optimization for state_space='minimized' | distance_method='emd'
+========================================
+
+
+::: Loading accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Using previously loaded accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Skip load step - No trajectory array needed for distance_method_selection=emd
+
+########################
+Robot		 | go1_motion_main
+Weight Value	 | 0.8
+State Space	 | minimized
+Dist Method	 | emd
+Action Space	 | (2, 3, 3, 3, 2, 3)
+Param Ranges	 | {'Body Direction': 2, 'Body Tilt': 3, 'Body Lean': 3, 'Body Height': 3, 'Motion Smoothness': 2, 'Motion Velocity': 3}
+Robot States	 | {'S01': 'Waiting for Input', 'S02': 'Interacting with Pinecone', 'S03': 'Needs Help', 'S04': 'Unsure'}
+########################
+
+::: INIT | Norm Score: 0.4467, Norm Acc: 1.0000, Norm Dist: 0.4667
+::: ITERATION 1: swapped state=S02 from (1, 0, 2, 0, 0, 1) to (1, 1, 2, 0, 0, 0)
+::: NEW | Norm Score: 0.4467, Norm Acc: 0.9833, Norm Dist: 0.5333
+::: Itteration 1 | Reset Steps without Improvement: 0
+::: Itteration 1 | Steps without Improvement: 1
+::: ITERATION 2: swapped state=S02 from (1, 1, 2, 0, 0, 0) to (1, 2, 2, 0, 0, 0)
+::: NEW | Norm Score: 0.4600, Norm Acc: 1.0000, Norm Dist: 0.6000
+::: Itteration 2 | Reset Steps without Improvement: 0
+::: Itteration 2 | Steps without Improvement: 1
+::: Itteration 3 | Steps without Improvement: 2
+
+::: Local search ended after 3 iteration(s). Best score=0.4600
+
+
+********************
+***** RESULTS ******
+********************
+
+Final States:
+ S01 -> (0, 1, 0, 1, 0, 1), accuracy=1.0000 | Waiting for Input
+ S02 -> (1, 2, 2, 0, 0, 0), accuracy=1.0000 | Interacting with Pinecone
+ S03 -> (0, 0, 2, 2, 1, 1), accuracy=1.0000 | Needs Help
+
+Parameter Legend:
+P1: Body Direction
+P2: Body Tilt
+P3: Body Lean
+P4: Body Height
+P5: Motion Smoothness
+P6: Motion Velocity
+
+Average Accuracy Score: 	1.0000
+Normalized Distance Score: 	0.6000
+Normalized Objective Score: 	0.4600
+
+
+
+
+
+
+
+========================================
+::: Starting optimization for state_space='minimized' | distance_method='dynamic'
+========================================
+
+
+::: Loading accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Using previously loaded accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Loading trajectory array file: ../data/freedog/data/go1_transformed_trajectory_array_pinecone.npy
+
+::: Using previously loaded trajectory array file: ../data/freedog/data/go1_transformed_trajectory_array_pinecone.npy
+
+########################
+Robot		 | go1_motion_main
+Weight Value	 | 0.8
+State Space	 | minimized
+Dist Method	 | dynamic
+Action Space	 | (2, 3, 3, 3, 2, 3)
+Param Ranges	 | {'Body Direction': 2, 'Body Tilt': 3, 'Body Lean': 3, 'Body Height': 3, 'Motion Smoothness': 2, 'Motion Velocity': 3}
+Robot States	 | {'S01': 'Waiting for Input', 'S02': 'Interacting with Pinecone', 'S03': 'Needs Help', 'S04': 'Unsure'}
+########################
+
+::: INIT | Norm Score: 0.4605, Norm Acc: 1.0000, Norm Dist: 0.6053
+::: Itteration 1 | Steps without Improvement: 1
+::: Itteration 2 | Steps without Improvement: 2
+
+::: Local search ended after 2 iteration(s). Best score=0.4605
+
+
+********************
+***** RESULTS ******
+********************
+
+Final States:
+ S01 -> (0, 1, 0, 1, 0, 1), accuracy=1.0000 | Waiting for Input
+ S02 -> (1, 0, 2, 0, 0, 1), accuracy=1.0000 | Interacting with Pinecone
+ S03 -> (0, 0, 2, 2, 1, 1), accuracy=1.0000 | Needs Help
+
+Parameter Legend:
+P1: Body Direction
+P2: Body Tilt
+P3: Body Lean
+P4: Body Height
+P5: Motion Smoothness
+P6: Motion Velocity
+
+Average Accuracy Score: 	1.0000
+Normalized Distance Score: 	0.6053
+Normalized Objective Score: 	0.4605
+
+
+
+
+
+::: ALL CONDITIONS COMPLETE FOR WEIGHT [w=0.8]
+
+
+
+
+
+
+
+########################
+
+
+::: COST FUNCTION WEIGHTING: 0.9
+
+
+########################
+
+
+::: Using main robot for 'minimized' state space. - robot_selection = go1_motion_main
+
+
+========================================
+::: Starting optimization for state_space='minimized' | distance_method='none'
+========================================
+
+
+::: Loading accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Using previously loaded accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Skip load step - No trajectory array needed for distance_method_selection=none
+
+########################
+Robot		 | go1_motion_main
+Weight Value	 | 0.9
+State Space	 | minimized
+Dist Method	 | none
+Action Space	 | (2, 3, 3, 3, 2, 3)
+Param Ranges	 | {'Body Direction': 2, 'Body Tilt': 3, 'Body Lean': 3, 'Body Height': 3, 'Motion Smoothness': 2, 'Motion Velocity': 3}
+Robot States	 | {'S01': 'Waiting for Input', 'S02': 'Interacting with Pinecone', 'S03': 'Needs Help', 'S04': 'Unsure'}
+########################
+
+::: INIT | Norm Score: 0.4500, Norm Acc: 1.0000, Norm Dist: 0.0000
+::: Itteration 1 | Steps without Improvement: 1
+::: Itteration 2 | Steps without Improvement: 2
+
+::: Local search ended after 2 iteration(s). Best score=0.4500
+
+
+********************
+***** RESULTS ******
+********************
+
+Final States:
+ S01 -> (0, 1, 0, 1, 0, 1), accuracy=1.0000 | Waiting for Input
+ S02 -> (1, 0, 2, 0, 0, 1), accuracy=1.0000 | Interacting with Pinecone
+ S03 -> (0, 0, 2, 2, 1, 1), accuracy=1.0000 | Needs Help
+
+Parameter Legend:
+P1: Body Direction
+P2: Body Tilt
+P3: Body Lean
+P4: Body Height
+P5: Motion Smoothness
+P6: Motion Velocity
+
+Average Accuracy Score: 	1.0000
+Normalized Distance Score: 	0.0000
+Normalized Objective Score: 	0.4500
+
+
+
+
+
+
+
+========================================
+::: Starting optimization for state_space='minimized' | distance_method='emd'
+========================================
+
+
+::: Loading accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Using previously loaded accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Skip load step - No trajectory array needed for distance_method_selection=emd
+
+########################
+Robot		 | go1_motion_main
+Weight Value	 | 0.9
+State Space	 | minimized
+Dist Method	 | emd
+Action Space	 | (2, 3, 3, 3, 2, 3)
+Param Ranges	 | {'Body Direction': 2, 'Body Tilt': 3, 'Body Lean': 3, 'Body Height': 3, 'Motion Smoothness': 2, 'Motion Velocity': 3}
+Robot States	 | {'S01': 'Waiting for Input', 'S02': 'Interacting with Pinecone', 'S03': 'Needs Help', 'S04': 'Unsure'}
+########################
+
+::: INIT | Norm Score: 0.4733, Norm Acc: 1.0000, Norm Dist: 0.4667
+::: ITERATION 1: swapped state=S02 from (1, 0, 2, 0, 0, 1) to (1, 2, 2, 0, 0, 0)
+::: NEW | Norm Score: 0.4800, Norm Acc: 1.0000, Norm Dist: 0.6000
+::: Itteration 1 | Reset Steps without Improvement: 0
+::: Itteration 1 | Steps without Improvement: 1
+::: Itteration 2 | Steps without Improvement: 2
+
+::: Local search ended after 2 iteration(s). Best score=0.4800
+
+
+********************
+***** RESULTS ******
+********************
+
+Final States:
+ S01 -> (0, 1, 0, 1, 0, 1), accuracy=1.0000 | Waiting for Input
+ S02 -> (1, 2, 2, 0, 0, 0), accuracy=1.0000 | Interacting with Pinecone
+ S03 -> (0, 0, 2, 2, 1, 1), accuracy=1.0000 | Needs Help
+
+Parameter Legend:
+P1: Body Direction
+P2: Body Tilt
+P3: Body Lean
+P4: Body Height
+P5: Motion Smoothness
+P6: Motion Velocity
+
+Average Accuracy Score: 	1.0000
+Normalized Distance Score: 	0.6000
+Normalized Objective Score: 	0.4800
+
+
+
+
+
+
+
+========================================
+::: Starting optimization for state_space='minimized' | distance_method='dynamic'
+========================================
+
+
+::: Loading accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Using previously loaded accuracy array file: ./../data/acc_arrays/go1_motion_main_minimized_gpt-4o_10ID_020ITR_norm.npy
+
+::: Loading trajectory array file: ../data/freedog/data/go1_transformed_trajectory_array_pinecone.npy
+
+::: Using previously loaded trajectory array file: ../data/freedog/data/go1_transformed_trajectory_array_pinecone.npy
+
+########################
+Robot		 | go1_motion_main
+Weight Value	 | 0.9
+State Space	 | minimized
+Dist Method	 | dynamic
+Action Space	 | (2, 3, 3, 3, 2, 3)
+Param Ranges	 | {'Body Direction': 2, 'Body Tilt': 3, 'Body Lean': 3, 'Body Height': 3, 'Motion Smoothness': 2, 'Motion Velocity': 3}
+Robot States	 | {'S01': 'Waiting for Input', 'S02': 'Interacting with Pinecone', 'S03': 'Needs Help', 'S04': 'Unsure'}
+########################
+
+::: INIT | Norm Score: 0.4803, Norm Acc: 1.0000, Norm Dist: 0.6053
+::: Itteration 1 | Steps without Improvement: 1
+::: Itteration 2 | Steps without Improvement: 2
+
+::: Local search ended after 2 iteration(s). Best score=0.4803
+
+
+********************
+***** RESULTS ******
+********************
+
+Final States:
+ S01 -> (0, 1, 0, 1, 0, 1), accuracy=1.0000 | Waiting for Input
+ S02 -> (1, 0, 2, 0, 0, 1), accuracy=1.0000 | Interacting with Pinecone
+ S03 -> (0, 0, 2, 2, 1, 1), accuracy=1.0000 | Needs Help
+
+Parameter Legend:
+P1: Body Direction
+P2: Body Tilt
+P3: Body Lean
+P4: Body Height
+P5: Motion Smoothness
+P6: Motion Velocity
+
+Average Accuracy Score: 	1.0000
+Normalized Distance Score: 	0.6053
+Normalized Objective Score: 	0.4803
+
+
+
+
+
+::: ALL CONDITIONS COMPLETE FOR WEIGHT [w=0.9]
+
+
+::: ********************************************** : )
+::: ALL WEIGHT CONDITIONS COMPLETE - END OF SCRIPT : )
+::: ********************************************** : )
