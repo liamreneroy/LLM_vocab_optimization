@@ -1,8 +1,8 @@
-# LLM_vocabulary
+# LLM Vocabulary Optimization
 Generating expressive robot vocabulary sets via proxy-based optimization.
 
 ### Link to Research Paper
-TBD
+Published Jan 29 2026 with IEEE Robotics and Automation Letters (link TBD)
 
 
 ## Main Files and User Study
