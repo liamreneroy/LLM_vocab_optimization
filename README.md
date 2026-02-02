@@ -4,13 +4,14 @@ Generating expressive robot vocabulary sets via proxy-based optimization.
 ### Link to Research Paper
 TBD
 
+
 ## Main Files and User Study
-This codebase uses the framework as described in our submitted paper. In this implimentation, the GPT-4o model is used. The main files in this repo are:
+This codebase uses the framework as described in our submitted paper. In this implimentation, both the GPT-5.1 and GPT-4o model is used. The main files in this repo are:
 
 
 ### Jupyter Notebook used to Generate the Accuracy Arrays and run the Optimization Hill-Climb: 
 Notebook includes explanations of the OpenAI API hyper-parameters used in this task, along with values.
-https://github.com/liamreneroy/LLM_vocab_optimization/blob/main/scripts/main.ipynb
+https://github.com/liamreneroy/LLM_vocab_optimization/blob/main/scripts/main_R2.ipynb
 
 
 ### Pseudo-Code for the Optimization Hill-Climb Algorithm and Sub-Methods: 
@@ -20,23 +21,23 @@ https://github.com/liamreneroy/LLM_vocab_optimization/tree/main/media/algorithm_
 
 ### Jupyter Notebook used to Validate the Accuracy Proxy Using the Test Dataset
 Notebook includes explanations of the OpenAI API hyper-parameters used in this task, along with values.
-https://github.com/liamreneroy/LLM_vocab_optimization/blob/main/scripts/proxy_validation.ipynb
+https://github.com/liamreneroy/LLM_vocab_optimization/blob/main/scripts/proxy_validation_R2.ipynb
 
 
-### Prompt Format Used for the Accuracy Proxy. Includes Sample Response.
+### Accuracy Proxy Validation / Sensitivity Analysis Data
+https://github.com/liamreneroy/LLM_vocab_optimization/tree/main/data/proxy_validation
+
+
+### Accuracy Proxy Validation / Sensitivity Analysis Plots
+https://github.com/liamreneroy/LLM_vocab_optimization/tree/main/plots
+
+
+### Accuracy Proxy Prompt Format Including Sample Response
 https://github.com/liamreneroy/LLM_vocab_optimization/blob/main/media/accuracy_proxy/acc_proxcy_prompt_reply.txt
 
 
 ### Outputs of the Main Optimization Hill-Climb Algorithm with Weight Analysis
 https://github.com/liamreneroy/LLM_vocab_optimization/blob/main/media/optimization/main_output_with_weight_analysis.txt
-
-
-### Excel File Containing Motions Selected from the Optimization Function
-https://github.com/liamreneroy/LLM_vocab_optimization/tree/main/data/study_results
-
-
-### Video Files of a Few Example Motions on Quadruped Robot
-https://github.com/liamreneroy/LLM_vocab_optimization/tree/main/media/example_motions
 
 
 ### Excel File Containing Raw and Organized Results of the User Study
@@ -50,6 +51,10 @@ https://github.com/liamreneroy/LLM_vocab_optimization/tree/main/plots/conf_matri
 ### Statistical Analyses Implimented in R
 https://github.com/liamreneroy/LLM_vocab_optimization/tree/main/stats
 
+
+## Videos
+Videos are not stored in this directory. 
+YouTube playlist: https://tinyurl.com/all-robot-motions
 
 
 ## Packages to Install:
