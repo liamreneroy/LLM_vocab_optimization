@@ -2,7 +2,8 @@
 Generating expressive robot vocabulary sets via proxy-based optimization.
 
 ### Link to Research Paper
-Published Jan 29 2026 with IEEE Robotics and Automation Letters (link TBD)
+Published Feb 19 2026 with IEEE Robotics and Automation Letters
+LINK: https://ieeexplore.ieee.org/document/11399752
 
 
 ## Main Files and User Study
